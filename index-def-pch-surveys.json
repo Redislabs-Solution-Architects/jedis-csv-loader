@@ -1,0 +1,159 @@
+{
+
+    "type" : "JSON",
+    "prefix" : "pch:survey:",
+    "schema": [
+        {
+            "field" : "$.account_name",
+            "alias" : "AccountName",
+            "type" : "TEXT",
+            "sortable" : true,
+            "nostem" : true
+        },
+        {
+            "field" : "$.survey_name",
+            "alias" : "SurveyName",
+            "type" : "TEXT",
+            "sortable" : true,
+            "nostem" : true
+        },
+        {
+            "field" : "$.survey_qualifications[*].question_id",
+            "alias" : "QualQuestion",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.survey_qualifications[*].precodes[*]",
+            "alias" : "QualPrecode",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.survey_quotas[*].survey_quota_id",
+            "alias" : "QuotaID",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.survey_quotas[*].survey_quota_type",
+            "alias" : "QuotaType",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.survey_quotas[*].questions[*].question_id",
+            "alias" : "QuotaQuestion",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.survey_quotas[*].questions[*].precodes[*]",
+            "alias" : "QuotaPrecode",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.is_live",
+            "alias" : "IsLive",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.study_type",
+            "alias" : "StudyType",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.collects_pii",
+            "alias" : "CollectsPII",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.cpi",
+            "alias" : "CPI",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.total_remaining",
+            "alias" : "TotalRemaining",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.total_client_entrants",
+            "alias" : "TotalEntrants",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.completion_percentage",
+            "alias" : "CompletionPercentage",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.conversion",
+            "alias" : "Conversion",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.overall_completes",
+            "alias" : "OverallCompletes",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.mobile_conversion",
+            "alias" : "MobileConversion",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.earnings_per_click",
+            "alias" : "EarningsPerClick",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.length_of_interview",
+            "alias" : "InterviewLength",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.bid_length_of_interview",
+            "alias" : "BidLength",
+            "type" : "NUMERIC",
+            "sortable" : true
+        },
+        {
+            "field" : "$.termination_length_of_interview",
+            "alias" : "TerminationLength",
+            "type" : "NUMERIC",
+            "sortable" : true
+        }
+    ]
+}

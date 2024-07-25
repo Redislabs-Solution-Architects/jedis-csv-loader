@@ -1,0 +1,16 @@
+config.properties
+target/jsd-jedis-DEV.jar
+target/classes/com/jsd/jedis/App.class
+target/classes/com/jsd/jedis/RedisDataLoader.class
+target/classes/com/jsd/jedis/RedisSearch.class
+target/classes/com/jsd/jedis/VectorEmbedding.class
+target/classes/com/jsd/utils/CSVScanner.class
+target/maven-archiver/pom.properties
+target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+target/surefire-reports/com.jsd.jedis.AppTest.txt
+target/surefire-reports/TEST-com.jsd.jedis.AppTest.xml
+target/test-classes/com/jsd/jedis/AppTest.class
+.vscode/settings.json

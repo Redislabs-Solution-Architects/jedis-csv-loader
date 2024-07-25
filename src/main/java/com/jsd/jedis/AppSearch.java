@@ -31,23 +31,39 @@ import redis.clients.jedis.search.Document;
  */
 public class AppSearch {
 
-    public static void main(String[] args) throws Exception {
+    private RedisDataLoader redisDataLoader;
+    private Pipeline jedisPipeline;
+    private JedisPooled jedisPooled;
 
-        // set the config file
-        String configFile = "./config.properties";
+    private RedisIndexFactory indexFactory;
+    private Properties config;
 
-        Properties config = new Properties();
-        config.load(new FileInputStream(configFile));
+    private String indexName;
+    private String indexDefFile;
 
-        RedisDataLoader redisDataLoader = new RedisDataLoader(configFile);
-        Pipeline jedisPipeline = redisDataLoader.getJedisPipeline();
+    private Scanner s;
 
-        String indexName = config.getProperty("index.name");
-        String indexDefFile = config.getProperty("index.def.file");
+    public AppSearch(String configFile) throws Exception {
 
-        RedisIndexFactory indexFactory = new RedisIndexFactory(configFile);
+        this.config = new Properties();
+        this.config.load(new FileInputStream(configFile));
 
-        Scanner s = new Scanner(System.in);
+        this.redisDataLoader = new RedisDataLoader(configFile);
+        this.jedisPooled = redisDataLoader.getJedisPooled();
+        this.jedisPipeline = redisDataLoader.getJedisPipeline();
+
+        this.indexFactory = new RedisIndexFactory(configFile);
+
+        this.indexName = config.getProperty("index.name");
+        this.indexDefFile = config.getProperty("index.def.file");
+
+        this.s = new Scanner(System.in);
+
+    }
+
+    public void start() throws Exception {
+
+
         System.out.println("\nWould you like to Reload Data for: " + indexName + " ? (y/n)");
 
         String loadData = s.nextLine();
@@ -69,16 +85,26 @@ public class AppSearch {
                     config.getProperty("data.detail.field"),
                     config.getProperty("data.detail.attr.name"),
                     scanner, Integer.parseInt(config.getProperty("data.record.limit")));
+            
 
             // CREATE the INDEX
             indexFactory.createIndex(indexName, indexDefFile);
+            indexFactory.monitorIndex(indexName, this);
 
+            //startQueryPrompt();
+
+        } else {
+            startQueryPrompt();
         }
+
+
+
+    }
+
+    public void startQueryPrompt() throws Exception {
 
         // PRINT INDEX SCHEMA FOR REF
         System.out.println("\n" + printIndexSchema(indexFactory.getIndexObj(indexDefFile), indexName) + "\n");
-
-        // START SEARCHING
 
         while (true) {
 
@@ -104,7 +130,7 @@ public class AppSearch {
                 jedisPipeline.sync();
                 SearchResult searchResult = res0.get();
 
-                //dialect 4 stops execution once the return row count is reached, for optimization
+                // dialect 4 optimized to stop execution once return row count is reached
                 if (queryDialect != 4) {
                     System.out.println("Number of results: " + searchResult.getTotalResults());
                 }
@@ -121,9 +147,13 @@ public class AppSearch {
                         obj = arrObj.getJSONObject(0);
                         obj.isEmpty();
 
+                        //process object
+
                     } else {
                         obj = new JSONObject((String) doc.get("$"));
                         obj.isEmpty();
+
+                        //process object 
                     }
 
                     // print the keys for each result object
@@ -137,58 +167,27 @@ public class AppSearch {
             }
         }
 
+        
         System.out.print("BATCH MODE: Enter number of queries : ");
 
+        this.jedisPipeline.sync();
         int numQueries = Integer.parseInt(s.nextLine());
-
         runSprint(redisDataLoader, numQueries, indexName, indexFactory.getIndexObj(indexDefFile));
-
         s.close();
-        redisDataLoader.close();
-
     }
 
-    public static String printIndexSchema(JsonArray indexArray, String indexName) {
 
-        String schemaString = "SCHEMA: " + indexName + "\n";
-        HashMap<String, ArrayList<String>> fieldMap = new HashMap<String, ArrayList<String>>();
 
-        for (int i = 0; i < indexArray.size(); i++) {
-            JsonObject fieldObj = (JsonObject) indexArray.get(i);
 
-            String fieldType = fieldObj.getString("type");
-            String fieldName = fieldObj.getString("alias");
+    public void runSprint(RedisDataLoader redisDataLoader, int numQueries, String indexName, JsonArray indexSchema) {
 
-            if (fieldMap.get(fieldType) == null) {
-                ArrayList<String> al = new ArrayList<String>();
-                al.add(fieldName);
-                fieldMap.put(fieldType, al);
-            } else {
-                fieldMap.get(fieldType).add(fieldName);
-            }
+        System.out.println("[AppSearch] Start Sprint ");
+
+        if(!redisDataLoader.testPool()) {
+            this.jedisPipeline = redisDataLoader.getJedisPipeline();
+            this.jedisPooled = redisDataLoader.getJedisPooled();
         }
-
-        for (String type : new String[] { "TEXT", "TAG", "NUMERIC" }) {
-            ArrayList<String> fl = fieldMap.get(type);
-
-            schemaString = schemaString + type + ": ";
-
-            for (String field : fl) {
-                schemaString = schemaString + field + " | ";
-            }
-
-            schemaString = schemaString + "\n";
-        }
-
-        return schemaString;
-    }
-
-    public static void runSprint(RedisDataLoader redisDataLoader, int numQueries, String indexName,
-            JsonArray indexSchema) {
-
-        JedisPooled jedisPooled = redisDataLoader.getJedisPooled();
-        Pipeline jedisPipeline = redisDataLoader.getJedisPipeline();
-
+        
         ArrayList<String> tagFieldList = new ArrayList<String>();
         HashMap<String, ArrayList<String>> tagValueMap = new HashMap<String, ArrayList<String>>();
 
@@ -199,7 +198,7 @@ public class AppSearch {
             if ("TAG".equalsIgnoreCase(fieldObj.getString("type"))) {
                 String fieldName = fieldObj.getString("alias");
                 tagFieldList.add(fieldName);
-                tagValueMap.put(fieldName, toArrayList(jedisPooled.ftTagVals(indexName, fieldName)));
+                tagValueMap.put(fieldName, toArrayList(jedisPooled.ftTagVals(indexName, fieldName)));      
             }
         }
 
@@ -264,6 +263,42 @@ public class AppSearch {
 
     }
 
+
+    private static String printIndexSchema(JsonArray indexArray, String indexName) {
+
+        String schemaString = "SCHEMA: " + indexName + "\n";
+        HashMap<String, ArrayList<String>> fieldMap = new HashMap<String, ArrayList<String>>();
+
+        for (int i = 0; i < indexArray.size(); i++) {
+            JsonObject fieldObj = (JsonObject) indexArray.get(i);
+
+            String fieldType = fieldObj.getString("type");
+            String fieldName = fieldObj.getString("alias");
+
+            if (fieldMap.get(fieldType) == null) {
+                ArrayList<String> al = new ArrayList<String>();
+                al.add(fieldName);
+                fieldMap.put(fieldType, al);
+            } else {
+                fieldMap.get(fieldType).add(fieldName);
+            }
+        }
+
+        for (String type : new String[] { "TEXT", "TAG", "NUMERIC" }) {
+            ArrayList<String> fl = fieldMap.get(type);
+
+            schemaString = schemaString + type + ": ";
+
+            for (String field : fl) {
+                schemaString = schemaString + field + " | ";
+            }
+
+            schemaString = schemaString + "\n";
+        }
+
+        return schemaString;
+    }
+
     private static ArrayList<String> pickRandom(ArrayList<String> superList) {
         ArrayList<String> randomList = new ArrayList<String>();
 
@@ -314,13 +349,26 @@ public class AppSearch {
         return filter;
     }
 
-    static String getExecutionTime(long startTime, long endTime) {
+    private static String getExecutionTime(long startTime, long endTime) {
         long diff = endTime - startTime;
 
         long sec = Math.floorDiv(diff, 1000l);
         long msec = diff % 1000l;
 
         return "" + sec + " s : " + msec + " ms";
+    }
+
+    
+    public static void main(String[] args) throws Exception {
+
+        // set the config file
+        String configFile = "./config.properties";
+
+        AppSearch appSearch = new AppSearch(configFile);
+        appSearch.start();
+
+        appSearch.redisDataLoader.close();
+
     }
 
 }

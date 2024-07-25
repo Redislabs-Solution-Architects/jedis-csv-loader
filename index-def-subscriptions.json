@@ -1,0 +1,29 @@
+{
+
+    "type" : "JSON",
+    "prefix" : "healthcare:subscriptions:",
+    "schema": [
+        {
+            "field" : "$.SubscriberID",
+            "alias" : "SubscriberID",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.dependants[*].DependantID",
+            "alias" : "DependantID",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.SubscriberBalAmount1",
+            "alias" : "Amount",
+            "type" : "NUMERIC",
+            "sortable" : true
+        }
+    ]
+}

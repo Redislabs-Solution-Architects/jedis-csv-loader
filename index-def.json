@@ -1,0 +1,45 @@
+{
+
+    "type" : "JSON",
+    "prefix" : "support:tickets:",
+    "schema": [
+        {
+            "field" : "$.TicketID",
+            "alias" : "TicketID",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.CustomerID",
+            "alias" : "CustomerID",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.Priority",
+            "alias" : "Priority",
+            "type" : "TAG",
+            "sortable" : true,
+            "caseSensitive" : false,
+            "separator": ","
+        },
+        {
+            "field" : "$.Description",
+            "alias" : "Description",
+            "type" : "TEXT",
+            "sortable" : true,
+            "nostem" : false,
+            "phonetic" : "DM"
+        },
+        {
+            "field" : "$.ResolutionTime",
+            "alias" : "ResolutionTime",
+            "type" : "NUMERIC",
+            "sortable" : true
+        }
+    ]
+}

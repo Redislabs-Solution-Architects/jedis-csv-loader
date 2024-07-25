@@ -1,4 +1,4 @@
-This app uses Jedis (Jedis Pipelining) to load data from a CSV file into Redis Hash or JSON objects.
+This is a POC for Redis Search.
 
 It can add 1 level of nesting in JSON, to support 1 to Many use cases. e.g. Order Header > Order Line Items
 
