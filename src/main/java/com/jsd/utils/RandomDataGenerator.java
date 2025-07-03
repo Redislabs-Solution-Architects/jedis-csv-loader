@@ -33,9 +33,12 @@ public class RandomDataGenerator {
 
         for(int f = 0; f < schema.length(); f++) {
             JSONObject fieldObj = schema.getJSONObject(f);
-
+            
             if("TEXT".equalsIgnoreCase(fieldObj.getString("type"))) {
                 recordObj.put(fieldObj.getString("field"), getString(fieldObj.getJSONArray("options")));
+            }
+            else if("AUTO-TEXT".equalsIgnoreCase(fieldObj.getString("type"))) {
+                recordObj.put(fieldObj.getString("field"), fieldObj.getString("prefix") + getInt(fieldObj.getJSONArray("options")));
             }
             else if("UID".equalsIgnoreCase(fieldObj.getString("type"))) {
                 recordObj.put(fieldObj.getString("field"), fieldObj.getString("prefix") + getUID(objName + "-" + fieldObj.getString("field")));
@@ -61,6 +64,9 @@ public class RandomDataGenerator {
             if("TEXT".equalsIgnoreCase(fieldObj.getString("type"))) {
                 recordObj.put(fieldObj.getString("field"), getString(fieldObj.getJSONArray("options")));
             }
+            else if("AUTO-TEXT".equalsIgnoreCase(fieldObj.getString("type"))) {
+                recordObj.put(fieldObj.getString("field"), fieldObj.getString("prefix") + getInt(fieldObj.getJSONArray("options")));
+            }
             else if("UID".equalsIgnoreCase(fieldObj.getString("type"))) {
                 recordObj.put(fieldObj.getString("field"), fieldObj.getString("prefix") + getUID(objName + "-" + fieldObj.getString("field")));
             }
@@ -72,7 +78,13 @@ public class RandomDataGenerator {
             }
             else if("ARR".equalsIgnoreCase(fieldObj.getString("type"))) {
                 String refObj = fieldObj.getString("obj");
-                recordObj.put(fieldObj.getString("field"), getArray(refObj));
+
+                JSONArray arrRange = new JSONArray();
+                arrRange.put(1); arrRange.put(10);
+
+                try {arrRange = fieldObj.getJSONArray("range");} catch(Exception ex) {}
+
+                recordObj.put(fieldObj.getString("field"), getArray(refObj, arrRange));
             }
         }
 
@@ -105,8 +117,11 @@ public class RandomDataGenerator {
         return counter;
     }
 
-    private JSONArray getArray(String objName) {
-        int randLength = ThreadLocalRandom.current().nextInt(1, 10);
+    private JSONArray getArray(String objName, JSONArray range) {
+        int low = range.getInt(0);
+        int high = range.getInt(1);
+        //NUM OF ARRAY ELEMENTS
+        int randLength = ThreadLocalRandom.current().nextInt(low , high);
         JSONArray returnArr = new JSONArray();
 
         for(int i = 0; i < randLength; i++) {
