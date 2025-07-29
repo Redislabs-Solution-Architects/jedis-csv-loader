@@ -107,9 +107,10 @@ public class App {
         
         for (int b = 0; b < numBatch; b++) {
             String sysTime = "" + System.currentTimeMillis();
-            
+
             for(int r = 0; r <  batchSize; r++) {
                 jedisPipeline.incrBy(keyPrefix + sysTime + "-" + r, (long)ThreadLocalRandom.current().nextInt(1, 10000));
+                jedisPipeline.expire(keyPrefix + sysTime + "-" + r, 600l);
             }
 
             jedisPipeline.sync();
