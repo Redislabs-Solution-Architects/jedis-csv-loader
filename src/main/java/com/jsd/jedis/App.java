@@ -59,7 +59,7 @@ public class App {
             writeFailover(configFile);
 
         } else if ("4".equalsIgnoreCase(option)) {
-
+            redisDataLoader = new RedisDataLoader(configFile, true);
             clientSideCache(redisDataLoader, config);
         }
         else {
@@ -176,6 +176,7 @@ public class App {
 
             long endTime = System.currentTimeMillis();
 
+            System.out.println("[App] Last Key Read : " + keyPrefix0 + (cacheSize - 1));
             System.out.println("[App] Read Time ms : " + (endTime - startTime));
             System.out.println("[App] Client Cache Size : " + clientCache.getSize());
             System.out.println("[App] Client Cache Stats : " + clientCache.getAndResetStats());
