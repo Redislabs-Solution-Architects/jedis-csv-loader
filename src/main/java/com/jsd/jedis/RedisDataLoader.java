@@ -1,6 +1,5 @@
 package com.jsd.jedis;
 
-
 import com.jsd.utils.*;
 
 import java.io.FileInputStream;
@@ -36,7 +35,36 @@ public class RedisDataLoader {
         config.load(new FileInputStream(configFile));
 
         if ("true".equalsIgnoreCase(config.getProperty("client.cache", "false"))) {
-            // enable client side caching
+            // CLIENT-SIDE CACHING
+            HostAndPort host = HostAndPort.from(loadProperty("redis.host") + ":" + loadProperty("redis.port"));
+            JedisClientConfig clientConfig = DefaultJedisClientConfig.builder().resp3()
+                    .user(loadProperty("redis.user"))
+                    .password(loadProperty("redis.password"))
+                    .build();
+
+            CacheConfig cacheConfig = getCacheConfig();
+            this.clientCache = CacheFactory.getCache(cacheConfig);
+
+            this.jedisPooled = new JedisPooled(host, clientConfig, clientCache);
+
+            System.out.println("[RedisDataLoader] Client Side Caching Enabled");
+
+        } else {
+            this.jedisPooled = new JedisPooled(loadProperty("redis.host"), Integer.parseInt(loadProperty("redis.port")),
+                    loadProperty("redis.user"), loadProperty("redis.password"));
+        }
+
+        this.jedisPipeline = this.jedisPooled.pipelined();
+
+        System.out.println("[RedisDataLoader] Connection Successful PING >> " + jedisPooled.ping());
+    }
+
+    public RedisDataLoader(String configFile, boolean enableClientCache) throws Exception {
+        config = new Properties();
+        config.load(new FileInputStream(configFile));
+
+        if (enableClientCache) {
+            // CLIENT-SIDE CACHING
             HostAndPort host = HostAndPort.from(loadProperty("redis.host") + ":" + loadProperty("redis.port"));
             JedisClientConfig clientConfig = DefaultJedisClientConfig.builder().resp3()
                     .user(loadProperty("redis.user"))
@@ -81,7 +109,7 @@ public class RedisDataLoader {
         return prop;
     }
 
-    private  CacheConfig getCacheConfig() {
+    private CacheConfig getCacheConfig() {
 
         Cacheable cacheable = new DefaultCacheable() {
             @Override
@@ -89,12 +117,12 @@ public class RedisDataLoader {
                 boolean doCache = false;
 
                 for (Object key : keys) {
-                    if(key.toString().startsWith(config.getProperty("client.cache.key.prefix","NA"))) {
+                    if (key.toString().startsWith(config.getProperty("client.cache.key.prefix", "NA"))) {
                         doCache = true;
                     }
                 }
 
-                return (doCache && isDefaultCacheableCommand(command)) ;
+                return (doCache && isDefaultCacheableCommand(command));
             }
         };
 
@@ -148,7 +176,7 @@ public class RedisDataLoader {
 
     public Cache getClientCache() {
         return this.clientCache;
-    }  
+    }
 
     public void close() {
         this.jedisPooled.close();
@@ -345,6 +373,7 @@ public class RedisDataLoader {
 
     public int deleteKeys(String keyPrefix) {
 
+
         ScanParams scanParams = new ScanParams().count(10000).match(keyPrefix + "*"); // Set the chunk size
         String cursor = ScanParams.SCAN_POINTER_START;
 
@@ -356,7 +385,10 @@ public class RedisDataLoader {
             for (String key : scanResult.getResult()) {
                 keyCount++;
                 jedisPipeline.del(key);
+                //jedisPipeline.unlink(key);
             }
+
+            jedisPipeline.sync();
 
             cursor = scanResult.getCursor();
             if (cursor.equals("0")) {
@@ -364,9 +396,10 @@ public class RedisDataLoader {
             }
         }
 
-        jedisPipeline.sync();
+        
         return keyCount;
     }
+
 
     private void setValue(JSONObject jobj, String key, String stringValue) {
         try {
@@ -388,6 +421,7 @@ public class RedisDataLoader {
     }
 
     public static void main(String[] args) throws Exception {
-
+       
+       
     }
 }
