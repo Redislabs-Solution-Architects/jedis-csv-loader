@@ -33,6 +33,9 @@ import redis.clients.jedis.search.Document;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Redis Search Client using Jedis
  *
@@ -61,6 +64,9 @@ public class AppSearch {
 
         String indexName = config.getProperty("index.name");
         String indexDefFile = config.getProperty("index.def.file");
+
+        String searchMode = config.getProperty("search.mode", "search");
+        String searchDisplay = config.getProperty("search.display", "key");
 
         RedisIndexFactory indexFactory = new RedisIndexFactory(configFile);
 
@@ -107,21 +113,62 @@ public class AppSearch {
         String prevQueryStr = "";
         String queryStr = "";
         int resultCursor = 0;
+        int recordLimit = Integer.parseInt(config.getProperty("query.record.limit", "10"));
+
+        String returnString = "";
+        String sortByString = "";
+        String prevReturnString = "";
+        String prevSortByString = "";
+
+        String searchSortField = "";
+
+        String burstMode = config.getProperty("burst.mode", "n");
+        int burstCount = 0;
+        int maxBurst = Integer.parseInt(config.getProperty("burst.count", "5"));
+        int burstInterval = 1000;
+        int burstMarker = Integer.parseInt(config.getProperty("burst.start.sec", "20"));
+
+        if ("search".equalsIgnoreCase(searchMode)) {
+            // get sort field
+            System.out.print("Sort Field : ");
+            searchSortField = s.nextLine();
+        }
 
         while (true) {
 
             System.out.println("\n[----------------------------------------------------------------------------]");
-            System.out.println("Enter Search String :");
 
-            queryStr = s.nextLine();
+            if (burstCount == maxBurst) {
+                burstCount = 0;
+            }
+
+            if ("n".equalsIgnoreCase(burstMode) || (burstCount == 0)) {
+                System.out.println("Enter Search String :");
+                queryStr = s.nextLine();
+            }
+
+            if ("y".equalsIgnoreCase(burstMode)) {
+                if (burstCount == 0) {
+                    waitTillSec(burstMarker);
+                } else {
+                    burstInterval = Integer.parseInt(config.getProperty("burst.interval", "1000"));
+                    Thread.sleep(burstInterval);
+                }
+            }
+
+            burstCount++;
 
             if ("bye|quit".indexOf(queryStr) > -1) {
                 break;
             }
 
             try {
+
+                System.out.println("Time: " + getCurrentTime() + " ");
+
+                // TOP N QUERY
                 if (queryStr.startsWith("aggr")) {
-                    executeAggrQuery(queryStr, indexName, jedisPipeline);
+                    executeTopNQuery(queryStr, indexName, jedisPipeline);
                     continue;
                 }
 
@@ -129,20 +176,47 @@ public class AppSearch {
 
                 String queryStrExec = "";
 
-                if("next".equalsIgnoreCase(queryStr)) {
+                if ("next".equalsIgnoreCase(queryStr)) {
                     queryStrExec = prevQueryStr;
-                    resultCursor = resultCursor + 10;
-                }
-                else {
+
+                    returnString = prevReturnString;
+                    sortByString = prevSortByString;
+                    resultCursor = resultCursor + recordLimit;
+
+                } else {
                     queryStrExec = queryStr;
                     prevQueryStr = queryStr;
                     resultCursor = 0;
                 }
 
-            
+                // FT.AGGREGATE QUERY
+                if ("aggr".equalsIgnoreCase(searchMode)) {
+
+                    if (!"next".equalsIgnoreCase(queryStr)) {
+                        System.out.print("Return Fields (field1,field2,field3...) : ");
+                        returnString = s.nextLine();
+
+                        System.out.print("Sort By (field1,field2,flied3.. ASC|DESC): ");
+                        sortByString = s.nextLine();
+                    }
+
+                    executeAggrQuery(queryStrExec, indexName, jedisPipeline, s, resultCursor, returnString,
+                            sortByString);
+
+                    prevReturnString = returnString;
+                    prevSortByString = sortByString;
+
+                    continue;
+                }
+
+                // FT.SEARCH QUERY
                 Query q = new Query(queryStrExec);
                 q.dialect(queryDialect);
-                q.limit(resultCursor, Integer.parseInt(config.getProperty("query.record.limit", "10")));
+                q.limit(resultCursor, recordLimit);
+
+                if (!"".equals(searchSortField)) {
+                    q.setSortBy(searchSortField, true);
+                }
 
                 // EXECUTE QUERY
                 Response<SearchResult> res0 = jedisPipeline.ftSearch(indexName, q);
@@ -161,7 +235,9 @@ public class AppSearch {
                 for (Document doc : docs) {
 
                     // print the keys for each result object
-                    System.out.print(doc.getId() + " |");
+                    if ("key".equalsIgnoreCase(searchDisplay)) {
+                        System.out.print(doc.getId() + " |");
+                    }
 
                     JSONObject obj = null;
 
@@ -173,7 +249,11 @@ public class AppSearch {
 
                     } else {
                         obj = new JSONObject((String) doc.get("$"));
-                        //System.out.println(obj);
+
+                        if ("value".equalsIgnoreCase(searchDisplay)) {
+                            System.out.println(obj);
+                        }
+
                         obj.isEmpty();
                     }
 
@@ -197,12 +277,58 @@ public class AppSearch {
 
     }
 
-    public static void executeAggrQuery(String queryStr, String indexName, Pipeline jedisPipeline) throws Exception {
+    public static void executeAggrQuery(String queryString, String indexName, Pipeline jedisPipeline, Scanner s,
+            int resultCursor, String returnString, String sortByString) throws Exception {
 
-        // e.g 
-        //aggr Top 5 Customer by count
-        //aggr Top 3 Customer by sum Amount where @Product:{apple|orange}
-        //aggr show Top 5 Agent by Avg TalkTime
+        AggregationBuilder aggr = new AggregationBuilder(queryString);
+
+        // RETURN FIELDS
+        aggr.load(returnString.split(","));
+
+        // SORTBY FIELDS
+        if (!sortByString.endsWith("ASC") && !sortByString.endsWith("DESC")) {
+            sortByString = sortByString + " ASC";
+        }
+
+        // SORT FIELDS
+        String[] sortBy = sortByString.split(" ");
+        String fieldsPart = sortBy[0];
+        String sortOrder = sortBy[1];
+
+        String[] fields = fieldsPart.split(",");
+        SortedField[] sortedFields = new SortedField[fields.length];
+
+        for (int i = 0; i < fields.length; i++) {
+            if (sortOrder.equalsIgnoreCase("ASC")) {
+                sortedFields[i] = SortedField.asc("@" + fields[i]);
+            } else if (sortOrder.equalsIgnoreCase("DESC")) {
+                sortedFields[i] = SortedField.desc("@" + fields[i]);
+            }
+        }
+
+        aggr.sortBy(sortedFields);
+        aggr.limit(resultCursor, 5);
+
+        Response<AggregationResult> response = jedisPipeline.ftAggregate(indexName, aggr);
+        jedisPipeline.sync();
+
+        AggregationResult result = response.get();
+
+        // System.out.println("Num Records: " + result.getTotalResults());
+
+        List<Row> rows = result.getRows();
+
+        for (Row row : rows) {
+            System.out.println(row.toString());
+        }
+    }
+
+    public static void executeTopNQuery(String queryStr, String indexName, Pipeline jedisPipeline) throws Exception {
+
+        // e.g
+        // aggr Top 5 Customer by count
+        // aggr Top 3 Customer by sum Amount where @Product:{apple|orange}
+        // aggr show Top 5 Agent by Avg TalkTime
 
         String queryStr1 = queryStr;
 
@@ -223,24 +349,21 @@ public class AppSearch {
             String groupCol = matcher.group(2);
             String aggrCol = matcher.group(3);
 
- 
             if ("count".equalsIgnoreCase(aggrCol)) {
                 aggrCol = "Count";
                 aggr.groupBy("@" + groupCol, Reducers.count().as("Count"));
 
-            } else if(aggrCol.toUpperCase().startsWith("AVG")) {
+            } else if (aggrCol.toUpperCase().startsWith("AVG")) {
 
-                aggrCol= aggrCol.substring(4).trim();
+                aggrCol = aggrCol.substring(4).trim();
                 aggr.groupBy("@" + groupCol, Reducers.avg("@" + aggrCol).as(aggrCol));
-            }
-            else if(aggrCol.toUpperCase().startsWith("SUM")) {
+            } else if (aggrCol.toUpperCase().startsWith("SUM")) {
 
-                aggrCol= aggrCol.substring(4).trim();
+                aggrCol = aggrCol.substring(4).trim();
                 aggr.groupBy("@" + groupCol, Reducers.sum("@" + aggrCol).as(aggrCol));
-            }
-            else {
+            } else {
                 aggr.groupBy("@" + groupCol, Reducers.sum("@" + aggrCol).as(aggrCol));
-                
+
             }
 
             aggr.sortBy(SortedField.desc("@" + aggrCol));
@@ -248,11 +371,11 @@ public class AppSearch {
 
             Response<AggregationResult> response = jedisPipeline.ftAggregate(indexName, aggr);
             jedisPipeline.sync();
-    
+
             AggregationResult result = response.get();
-    
+
             List<Row> rows = result.getRows();
-    
+
             for (Row row : rows) {
                 System.out.println(row.toString());
             }
@@ -397,7 +520,7 @@ public class AppSearch {
             for (int i = 0; i <= rand; i++) {
                 randomList.add(superList.get(i));
 
-                if(++listSize > maxSize) {
+                if (++listSize > maxSize) {
                     break;
                 }
             }
@@ -405,7 +528,7 @@ public class AppSearch {
             for (int i = rand; i < superList.size(); i++) {
                 randomList.add(superList.get(i));
 
-                if(++listSize > maxSize) {
+                if (++listSize > maxSize) {
                     break;
                 }
             }
@@ -451,4 +574,26 @@ public class AppSearch {
         return "" + sec + " s : " + msec + " ms";
     }
 
+    static String getCurrentTime() {
+        // Get the current time
+        LocalTime now = LocalTime.now();
+
+        // Format the time to mm:ss.SSS
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("mm:ss.SSS");
+        String formattedTime = now.format(formatter);
+
+        // Print the formatted time
+        return formattedTime;
+    }
+
+    static void waitTillSec(int sec) {
+        while (true) {
+            LocalTime now = LocalTime.now();
+            if (now.getSecond() % sec == 0) {
+                break;
+            }
+        }
+
+        return;
+    }
 }
