@@ -164,7 +164,9 @@ public class AppSearch {
 
             try {
 
-                System.out.println("Time: " + getCurrentTime() + " ");
+                if ("y".equalsIgnoreCase(burstMode)) {
+                    System.out.println("Time: " + getCurrentTime() + " ");
+                }
 
                 // TOP N QUERY
                 if (queryStr.startsWith("aggr")) {
