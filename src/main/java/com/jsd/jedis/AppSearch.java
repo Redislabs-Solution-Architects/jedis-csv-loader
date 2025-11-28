@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 import javax.json.JsonArray;
@@ -114,6 +115,8 @@ public class AppSearch {
         String queryStr = "";
         int resultCursor = 0;
         int recordLimit = Integer.parseInt(config.getProperty("query.record.limit", "10"));
+        String recordType = config.getProperty("data.record.type", "JSON");
+        String hashDisplayFields = "";
 
         String returnString = "";
         String sortByString = "";
@@ -122,6 +125,7 @@ public class AppSearch {
 
         String searchSortField = "";
 
+        // BURST MODE SETTINGS
         String burstMode = config.getProperty("burst.mode", "n");
         int burstCount = 0;
         int maxBurst = Integer.parseInt(config.getProperty("burst.count", "5"));
@@ -132,6 +136,11 @@ public class AppSearch {
             // get sort field
             System.out.print("Sort Field : ");
             searchSortField = s.nextLine();
+
+            if ("HASH".equalsIgnoreCase(recordType)) {
+                System.out.print("Return Fields (field1,field2,field3...) : ");
+                hashDisplayFields = s.nextLine();
+            }
         }
 
         while (true) {
@@ -238,25 +247,45 @@ public class AppSearch {
 
                     // print the keys for each result object
                     if ("key".equalsIgnoreCase(searchDisplay)) {
-                        System.out.print(doc.getId() + " |");
+                        System.out.print(doc.getId() + " | ");
+                        continue;
                     }
 
-                    JSONObject obj = null;
+                    // HASH OBJECTS
+                    if ("HASH".equalsIgnoreCase(recordType)) {
 
-                    // Dialect 4 Returns a different Document Structure
-                    if (queryDialect == 4) {
-                        JSONArray arrObj = new JSONArray((String) doc.get("$"));
-                        obj = arrObj.getJSONObject(0);
-                        obj.isEmpty();
+                        int numDisplayFields = 10;
+                        int count = 0;
 
-                    } else {
-                        obj = new JSONObject((String) doc.get("$"));
-
-                        if ("value".equalsIgnoreCase(searchDisplay)) {
-                            System.out.println(obj);
+                        for (Map.Entry<String, Object> entry : doc.getProperties()) {
+                            if ("".equals(hashDisplayFields) || hashDisplayFields.indexOf(entry.getKey()) > -1) {
+                                System.out.print(" " + entry.getKey() + " : " + entry.getValue());
+                                count++;
+                                if (count >= numDisplayFields)
+                                    break;
+                            }
                         }
 
-                        obj.isEmpty();
+                        System.out.println("");
+
+                    } else {
+                        JSONObject obj = null;
+
+                        // Dialect 4 Returns a different Document Structure
+                        if (queryDialect == 4) {
+                            JSONArray arrObj = new JSONArray((String) doc.get("$"));
+                            obj = arrObj.getJSONObject(0);
+                            obj.isEmpty();
+
+                        } else {
+                            obj = new JSONObject((String) doc.get("$"));
+
+                            if ("value".equalsIgnoreCase(searchDisplay)) {
+                                System.out.println(obj);
+                            }
+
+                            obj.isEmpty();
+                        }
                     }
 
                 }
