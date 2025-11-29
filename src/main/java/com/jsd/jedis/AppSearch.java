@@ -62,6 +62,7 @@ public class AppSearch {
 
         RedisDataLoader redisDataLoader = new RedisDataLoader(configFile);
         Pipeline jedisPipeline = redisDataLoader.getJedisPipeline();
+        JedisPooled jedisPooled = redisDataLoader.getJedisPooled();
 
         String indexName = config.getProperty("index.name");
         String indexDefFile = config.getProperty("index.def.file");
@@ -138,7 +139,7 @@ public class AppSearch {
             searchSortField = s.nextLine();
 
             if ("HASH".equalsIgnoreCase(recordType)) {
-                System.out.print("Return Fields (field1,field2,field3...) : ");
+                System.out.print("\nReturn Fields (field1,field2,field3...) : ");
                 hashDisplayFields = s.nextLine();
             }
         }
@@ -179,7 +180,7 @@ public class AppSearch {
 
                 // TOP N QUERY
                 if (queryStr.startsWith("aggr")) {
-                    executeTopNQuery(queryStr, indexName, jedisPipeline);
+                    executeTopNQuery(queryStr, indexName, jedisPipeline, jedisPooled);
                     continue;
                 }
 
@@ -354,7 +355,8 @@ public class AppSearch {
         }
     }
 
-    public static void executeTopNQuery(String queryStr, String indexName, Pipeline jedisPipeline) throws Exception {
+    public static void executeTopNQuery(String queryStr, String indexName, Pipeline jedisPipeline,
+            JedisPooled jedisPooled) throws Exception {
 
         // e.g
         // aggr Top 5 Customer by count
@@ -397,20 +399,23 @@ public class AppSearch {
 
             }
 
+            int topN = Integer.parseInt(matcher.group(1).substring(4));
+
             aggr.sortBy(SortedField.desc("@" + aggrCol));
-            aggr.limit(0, Integer.parseInt(matcher.group(1).substring(4)));
+            aggr.limit(0, topN);
+            aggr.cursor(topN, 10000l);
+            aggr.timeout(20000l);
 
-            Response<AggregationResult> response = jedisPipeline.ftAggregate(indexName, aggr);
-            jedisPipeline.sync();
+            AggregationResult result = jedisPooled.ftAggregate(indexName, aggr);
 
-            AggregationResult result = response.get();
+            //long cursorID = result.getCursorId();
+            //AggregationResult cursorResult = jedisPooled.ftCursorRead(indexName, cursorID, topN);
 
             List<Row> rows = result.getRows();
 
             for (Row row : rows) {
                 System.out.println(row.toString());
             }
-
         }
 
     }
