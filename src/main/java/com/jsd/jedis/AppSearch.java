@@ -21,7 +21,7 @@ import com.jsd.utils.*;
 import redis.clients.jedis.JedisPooled;
 import redis.clients.jedis.Pipeline;
 import redis.clients.jedis.Response;
-
+import redis.clients.jedis.exceptions.JedisConnectionException;
 import redis.clients.jedis.search.Query;
 import redis.clients.jedis.search.SearchResult;
 import redis.clients.jedis.search.aggr.AggregationBuilder;
@@ -64,6 +64,8 @@ public class AppSearch {
         Pipeline jedisPipeline = redisDataLoader.getJedisPipeline();
         JedisPooled jedisPooled = redisDataLoader.getJedisPooled();
 
+        boolean reconnect = false;
+
         String indexName = config.getProperty("index.name");
         String indexDefFile = config.getProperty("index.def.file");
 
@@ -72,39 +74,12 @@ public class AppSearch {
 
         RedisIndexFactory indexFactory = new RedisIndexFactory(configFile);
 
-        System.out.print("\nWould you like to Reload Data for: " + indexName + " ? (y/n) ");
+        System.out.print("\nWould you like to Create the index: " + indexName + " ? (y/n) ");
+        String createIndex = s.nextLine();
 
-        String loadData = s.nextLine();
-
-        if ("y".equalsIgnoreCase(loadData)) {
-
-            String prefix = config.getProperty("data.key.prefix");
-
-            // DROP the INDEX
+        if ("y".equalsIgnoreCase(createIndex)) {
             indexFactory.dropIndex(indexName);
-
-            // DELETE existing KEYS
-            System.out.println("[AppSearch] Deleting Existing Keys");
-            System.out.println("[AppSearch] Deleted " + redisDataLoader.deleteKeys(prefix) + " Keys");
-
-            // LOAD DATA as JSON
-            CSVScanner scanner = new CSVScanner(config.getProperty("data.file"), ",", false);
-            redisDataLoader.loadJSON(prefix, "header", config.getProperty("data.header.field"),
-                    config.getProperty("data.detail.field"),
-                    config.getProperty("data.detail.attr.name"),
-                    scanner, Integer.parseInt(config.getProperty("data.record.limit")));
-
-            // CREATE the INDEX
             indexFactory.createIndex(indexName, indexDefFile);
-
-        } else {
-            System.out.print("\nWould you like to Create the index: " + indexName + " ? (y/n) ");
-            String createIndex = s.nextLine();
-
-            if ("y".equalsIgnoreCase(createIndex)) {
-                indexFactory.dropIndex(indexName);
-                indexFactory.createIndex(indexName, indexDefFile);
-            }
         }
 
         // PRINT INDEX SCHEMA FOR REF
@@ -135,8 +110,8 @@ public class AppSearch {
 
         if ("search".equalsIgnoreCase(searchMode)) {
             // get sort field
-            System.out.print("Sort Field : ");
-            searchSortField = s.nextLine();
+            // System.out.print("Sort Field : ");
+            // searchSortField = s.nextLine();
 
             if ("HASH".equalsIgnoreCase(recordType)) {
                 System.out.print("\nReturn Fields (field1,field2,field3...) : ");
@@ -145,8 +120,16 @@ public class AppSearch {
         }
 
         while (true) {
+        
+            if (reconnect) {
+                redisDataLoader = new RedisDataLoader(configFile);
+                jedisPipeline = redisDataLoader.getJedisPipeline();
+                jedisPooled = redisDataLoader.getJedisPooled();
+                reconnect = false;
+            }
 
             System.out.println("\n[----------------------------------------------------------------------------]");
+
 
             if (burstCount == maxBurst) {
                 burstCount = 0;
@@ -291,7 +274,14 @@ public class AppSearch {
 
                 }
 
+            } catch (JedisConnectionException jce) {
+                System.out.println("[AppSearch] ERROR Connecting to Redis DB, Trying Again :");
+                System.out.println(jce.toString());
+                reconnect = true;
+                Thread.sleep(5000l);
+
             } catch (Exception e) {
+
                 System.out.println("[AppSearch] ERROR in Query Execution, Please Try Again :");
                 System.out.println(e.toString());
                 continue;
@@ -408,8 +398,9 @@ public class AppSearch {
 
             AggregationResult result = jedisPooled.ftAggregate(indexName, aggr);
 
-            //long cursorID = result.getCursorId();
-            //AggregationResult cursorResult = jedisPooled.ftCursorRead(indexName, cursorID, topN);
+            // long cursorID = result.getCursorId();
+            // AggregationResult cursorResult = jedisPooled.ftCursorRead(indexName,
+            // cursorID, topN);
 
             List<Row> rows = result.getRows();
 
