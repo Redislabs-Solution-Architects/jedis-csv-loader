@@ -50,13 +50,22 @@ public class RedisDataLoader {
             System.out.println("[RedisDataLoader] Client Side Caching Enabled");
 
         } else {
-            this.jedisPooled = new JedisPooled(loadProperty("redis.host"), Integer.parseInt(loadProperty("redis.port")),
-                    loadProperty("redis.user"), loadProperty("redis.password"));
+
+            HostAndPort host = HostAndPort.from(loadProperty("redis.host") + ":" + loadProperty("redis.port"));
+            JedisClientConfig clientConfig = DefaultJedisClientConfig.builder().resp3()
+                    .user(loadProperty("redis.user"))
+                    .password(loadProperty("redis.password"))
+                    .socketTimeoutMillis(10000)
+                    .connectionTimeoutMillis(10000)
+                    .build();
+
+            this.jedisPooled = new JedisPooled(host, clientConfig);
+
         }
 
         this.jedisPipeline = this.jedisPooled.pipelined();
 
-        System.out.println("[RedisDataLoader] Connection Successful PING >> " + jedisPooled.ping());
+        System.out.println("[RedisDataLoader] Connection Successful Sent PING >>> Received " + jedisPooled.ping());
     }
 
     public RedisDataLoader(String configFile, boolean enableClientCache) throws Exception {
@@ -373,7 +382,6 @@ public class RedisDataLoader {
 
     public int deleteKeys(String keyPrefix) {
 
-
         ScanParams scanParams = new ScanParams().count(10000).match(keyPrefix + "*"); // Set the chunk size
         String cursor = ScanParams.SCAN_POINTER_START;
 
@@ -385,7 +393,7 @@ public class RedisDataLoader {
             for (String key : scanResult.getResult()) {
                 keyCount++;
                 jedisPipeline.del(key);
-                //jedisPipeline.unlink(key);
+                // jedisPipeline.unlink(key);
             }
 
             jedisPipeline.sync();
@@ -396,10 +404,8 @@ public class RedisDataLoader {
             }
         }
 
-        
         return keyCount;
     }
-
 
     private void setValue(JSONObject jobj, String key, String stringValue) {
         try {
@@ -421,7 +427,6 @@ public class RedisDataLoader {
     }
 
     public static void main(String[] args) throws Exception {
-       
-       
+
     }
 }
