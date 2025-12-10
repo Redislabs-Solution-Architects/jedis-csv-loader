@@ -110,8 +110,8 @@ public class AppSearch {
 
         if ("search".equalsIgnoreCase(searchMode)) {
             // get sort field
-            // System.out.print("Sort Field : ");
-            // searchSortField = s.nextLine();
+            System.out.print("Sort Field : ");
+            searchSortField = s.nextLine();
 
             if ("HASH".equalsIgnoreCase(recordType)) {
                 System.out.print("\nReturn Fields (field1,field2,field3...) : ");
@@ -207,16 +207,19 @@ public class AppSearch {
                 // FT.SEARCH QUERY
                 Query q = new Query(queryStrExec);
                 q.dialect(queryDialect);
-                q.limit(resultCursor, recordLimit);
+                q.limit(Integer.valueOf(resultCursor),Integer.valueOf(recordLimit));
+                
 
                 if (!"".equals(searchSortField)) {
                     q.setSortBy(searchSortField, true);
                 }
 
                 // EXECUTE QUERY
-                Response<SearchResult> res0 = jedisPipeline.ftSearch(indexName, q);
-                jedisPipeline.sync();
-                SearchResult searchResult = res0.get();
+                //Response<SearchResult> res0 = jedisPipeline.ftSearch(indexName, q);
+                //jedisPipeline.sync();
+                //SearchResult searchResult = res0.get();
+
+                SearchResult searchResult = jedisPooled.ftSearch(indexName, q);
 
                 // getTotalResults() not to be used for dialect 4 as it stops execution once the
                 // return row count is reached (for optimization)
@@ -226,8 +229,17 @@ public class AppSearch {
 
                 List<Document> docs = searchResult.getDocuments();
 
+                int resultNum = 0;
+
                 // loop through the results
                 for (Document doc : docs) {
+
+                    //FIX to address cumulative results returned with offset and limit
+                    if(resultNum < resultCursor) {
+                        resultNum++;
+                        continue;
+                    }
+
 
                     // print the keys for each result object
                     if ("key".equalsIgnoreCase(searchDisplay)) {
@@ -243,7 +255,7 @@ public class AppSearch {
 
                         for (Map.Entry<String, Object> entry : doc.getProperties()) {
                             if ("".equals(hashDisplayFields) || hashDisplayFields.indexOf(entry.getKey()) > -1) {
-                                System.out.print(" " + entry.getKey() + " : " + entry.getValue());
+                                System.out.print("| " + entry.getKey() + ": " + entry.getValue() + " ");
                                 count++;
                                 if (count >= numDisplayFields)
                                     break;
@@ -259,7 +271,10 @@ public class AppSearch {
                         if (queryDialect == 4) {
                             JSONArray arrObj = new JSONArray((String) doc.get("$"));
                             obj = arrObj.getJSONObject(0);
-                            obj.isEmpty();
+                            
+                            if(!obj.isEmpty()) {
+                                System.out.println(obj);
+                            }
 
                         } else {
                             obj = new JSONObject((String) doc.get("$"));
@@ -271,6 +286,8 @@ public class AppSearch {
                             obj.isEmpty();
                         }
                     }
+
+                    resultNum++;
 
                 }
 
