@@ -382,7 +382,7 @@ public class RedisDataLoader {
 
     public int deleteKeys(String keyPrefix) {
 
-        ScanParams scanParams = new ScanParams().count(10000).match(keyPrefix + "*"); // Set the chunk size
+        ScanParams scanParams = new ScanParams().count(20000).match(keyPrefix + "*"); // Set the chunk size
         String cursor = ScanParams.SCAN_POINTER_START;
 
         int keyCount = 0;
@@ -390,13 +390,11 @@ public class RedisDataLoader {
         while (true) {
             ScanResult<String> scanResult = jedisPooled.scan(cursor, scanParams);
 
-            for (String key : scanResult.getResult()) {
-                keyCount++;
-                jedisPipeline.del(key);
-                // jedisPipeline.unlink(key);
-            }
+            List<String> keyList = scanResult.getResult();
+ 
+            deleteKeyBatch(keyList);
+            keyCount = keyCount + keyList.size();
 
-            jedisPipeline.sync();
 
             cursor = scanResult.getCursor();
             if (cursor.equals("0")) {
@@ -405,6 +403,22 @@ public class RedisDataLoader {
         }
 
         return keyCount;
+    }
+
+    private void deleteKeyBatch(List<String> keyList) {
+        Pipeline pipeline = this.jedisPooled.pipelined();
+        Thread t = new Thread() {
+            public void run() {
+                for (String key : keyList) {
+                    pipeline.del(key);   
+                }
+
+                pipeline.sync();
+                pipeline.close();
+            }
+        };
+
+        t.start();
     }
 
     private void setValue(JSONObject jobj, String key, String stringValue) {
