@@ -382,6 +382,9 @@ public class RedisDataLoader {
 
     public int deleteKeys(String keyPrefix) {
 
+        String  async = config.getProperty("async.delete","true");
+        System.out.println("[RedisDataLoader] Deleting Keys Async: " + async);
+        
         ScanParams scanParams = new ScanParams().count(20000).match(keyPrefix + "*"); // Set the chunk size
         String cursor = ScanParams.SCAN_POINTER_START;
 
@@ -392,7 +395,7 @@ public class RedisDataLoader {
 
             List<String> keyList = scanResult.getResult();
  
-            deleteKeyBatch(keyList);
+            deleteKeyBatch(keyList, async);
             keyCount = keyCount + keyList.size();
 
 
@@ -405,20 +408,27 @@ public class RedisDataLoader {
         return keyCount;
     }
 
-    private void deleteKeyBatch(List<String> keyList) {
+    private void deleteKeyBatch(List<String> keyList, String  async) {
         Pipeline pipeline = this.jedisPooled.pipelined();
         Thread t = new Thread() {
             public void run() {
+                
                 for (String key : keyList) {
                     pipeline.del(key);   
                 }
 
                 pipeline.sync();
                 pipeline.close();
+
             }
         };
 
-        t.start();
+        if("true".equalsIgnoreCase(async)) {
+            t.start();
+        }
+        else {
+            t.run();
+        }    
     }
 
     private void setValue(JSONObject jobj, String key, String stringValue) {
