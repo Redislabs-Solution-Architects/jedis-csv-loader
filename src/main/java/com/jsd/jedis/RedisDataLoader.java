@@ -5,6 +5,7 @@ import com.jsd.utils.*;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Properties;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.List;
 
 import org.json.JSONObject;
@@ -380,12 +381,17 @@ public class RedisDataLoader {
 
     }
 
-    public int deleteKeys(String keyPrefix) {
+    public int deleteKeys(String keyPrefix) throws Exception {
+
+
+        AtomicInteger threadCount = new AtomicInteger(0);
+
+        int batchSize = Integer.parseInt(config.getProperty("delete.batch.size","10000"));
 
         String  async = config.getProperty("async.delete","true");
         System.out.println("[RedisDataLoader] Deleting Keys Async: " + async);
-        
-        ScanParams scanParams = new ScanParams().count(20000).match(keyPrefix + "*"); // Set the chunk size
+
+        ScanParams scanParams = new ScanParams().count(batchSize).match(keyPrefix + "*"); // Set the chunk size
         String cursor = ScanParams.SCAN_POINTER_START;
 
         int keyCount = 0;
@@ -394,8 +400,8 @@ public class RedisDataLoader {
             ScanResult<String> scanResult = jedisPooled.scan(cursor, scanParams);
 
             List<String> keyList = scanResult.getResult();
- 
-            deleteKeyBatch(keyList, async);
+            threadCount.incrementAndGet();
+            deleteKeyBatch(keyList, async, threadCount);
             keyCount = keyCount + keyList.size();
 
 
@@ -405,10 +411,14 @@ public class RedisDataLoader {
             }
         }
 
+        //long finalSize = initialSize - keyCount;
+
+        while(threadCount.get() > 0) {}
+
         return keyCount;
     }
 
-    private void deleteKeyBatch(List<String> keyList, String  async) {
+    private void deleteKeyBatch(List<String> keyList, String  async, AtomicInteger threadCount) {
         Pipeline pipeline = this.jedisPooled.pipelined();
         Thread t = new Thread() {
             public void run() {
@@ -420,6 +430,7 @@ public class RedisDataLoader {
                 pipeline.sync();
                 pipeline.close();
 
+                threadCount.decrementAndGet();
             }
         };
 
