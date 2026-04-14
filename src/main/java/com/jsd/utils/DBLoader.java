@@ -145,7 +145,7 @@ public class DBLoader {
         //KEYSPACE NOTIFICATIONS via PUB-SUB
         if("true".equalsIgnoreCase(config.getProperty("track.keys", "false"))) {
             AppPubSub keyTracker = new AppPubSub(this.configFile);
-            keyTracker.setPrefix(config.getProperty("key.prefix", ""));
+            keyTracker.listenKeySpace(config.getProperty("key.prefix", "") + "*");
             keyTracker.trackKeys(batchSize, Boolean.parseBoolean(config.getProperty("track.continuous", "false")));
         }
 
