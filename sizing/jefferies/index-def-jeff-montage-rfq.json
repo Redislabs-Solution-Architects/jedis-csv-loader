@@ -1,0 +1,360 @@
+{
+    "schema": [
+        {
+            "field": "hyprocessed",
+            "alias": "hyprocessed",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "key_id_dup",
+            "alias": "key_id_dup",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "key_id_rfq_group",
+            "alias": "key_id_rfq_group",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "timezone",
+            "alias": "timezone",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "source_id",
+            "alias": "source_id",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "actionstr",
+            "alias": "actionstr",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "anautoreply",
+            "alias": "anautoreply",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "counterpartytype",
+            "alias": "counterpartytype",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "cptier",
+            "alias": "cptier",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "currencystr",
+            "alias": "currencystr",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "custfirm",
+            "alias": "custfirm",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "custusername",
+            "alias": "custusername",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "custuserlogon",
+            "alias": "custuserlogon",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "dealertrader",
+            "alias": "dealertrader",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "productcode",
+            "alias": "productcode",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "compliance_productcode",
+            "alias": "compliance_productcode",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "marketoverride",
+            "alias": "marketoverride",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "clientname",
+            "alias": "clientname",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "idmonikerclient",
+            "alias": "idmonikerclient",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "productcodeclientmoniker",
+            "alias": "productcodeclientmoniker",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "desk",
+            "alias": "desk",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "dfacode",
+            "alias": "dfacode",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "id",
+            "alias": "id",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "iscover",
+            "alias": "iscover",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "midprice",
+            "alias": "midprice",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "mycustacronym",
+            "alias": "mycustacronym",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "mymarketid",
+            "alias": "mymarketid",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "mymarketidformatted",
+            "alias": "mymarketidformatted",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "onejefname",
+            "alias": "onejefname",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "partitiondate",
+            "alias": "partitiondate",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "rfqcreatedate",
+            "alias": "rfqcreatedate",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "rfqcreatetime",
+            "alias": "rfqcreatetime",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "transactioncreatedate_utc",
+            "alias": "transactioncreatedate_utc",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "transactioncreatetime_utc",
+            "alias": "transactioncreatetime_utc",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "transactioncreatedate_forsort",
+            "alias": "transactioncreatedate_forsort",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "transactioncreatetime_forsort",
+            "alias": "transactioncreatetime_forsort",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "transactioncreatedatetime_utc",
+            "alias": "transactioncreatedatetime_utc",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "rfqnlegs",
+            "alias": "rfqnlegs",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "multileg",
+            "alias": "multileg",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "rfqnumofdealers",
+            "alias": "rfqnumofdealers",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "salescode",
+            "alias": "salescode",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "salesperson",
+            "alias": "salesperson",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "statusstr",
+            "alias": "statusstr",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "timeupdex",
+            "alias": "timeupdex",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "issuer",
+            "alias": "issuer",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "noquote",
+            "alias": "noquote",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "rfqclosed",
+            "alias": "rfqclosed",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "legno",
+            "alias": "legno",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "bbgcustchatid",
+            "alias": "bbgcustchatid",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "creditaxedesk",
+            "alias": "creditaxedesk",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "buysell",
+            "alias": "buysell",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "clientbuysell",
+            "alias": "clientbuysell",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "cover",
+            "alias": "cover",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "rfqcoverprice",
+            "alias": "rfqcoverprice",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "rfqcoverspread",
+            "alias": "rfqcoverspread",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "rfqcoveryield",
+            "alias": "rfqcoveryield",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "description",
+            "alias": "description",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "instrumentsubgroup",
+            "alias": "instrumentsubgroup",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "size",
+            "alias": "size",
+            "sortable": true,
+            "type": "NUMERIC"
+        }
+    ],
+    "prefix": "fi:rfq:",
+    "type": "HASH"
+}

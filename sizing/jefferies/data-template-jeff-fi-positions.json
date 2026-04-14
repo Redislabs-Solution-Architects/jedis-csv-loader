@@ -1,0 +1,495 @@
+{"header": {"schema": [
+    {
+        "field": "POSITION_ID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AUDIT_INSERT_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AUDIT_INSERT_USER",
+        "prefix": "AUDIT_INSERT_USER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AUDIT_UPDATE_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AUDIT_UPDATE_USER",
+        "prefix": "AUDIT_UPDATE_USER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FEED_DATA_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "BUSINESS_FEED_DATA_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "BD_LEGACY_INCLUDE",
+        "prefix": "BD_LEGACY_INCLUDE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IS_MORTBB",
+        "prefix": "IS_MORTBB-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SEC_TYPE",
+        "prefix": "SEC_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SEC_SYMBOL",
+        "prefix": "SEC_SYMBOL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TICKER",
+        "prefix": "TICKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COUPON",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MATURITY",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "SERIES",
+        "prefix": "SERIES-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TRADER_NAME",
+        "prefix": "TRADER_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FULL_ORIGINAL_FACE_NET_POS",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NET_FULL_SETTLE_DATE_POSITION",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MARK_TO_MARKET_PRICE_OR_DISC",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AVERAGE_COST",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CUMULATIVE_AVERAGE_COST",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "REALIZED_PL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CURRENT_MARK_TO_MARKET_PRICE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MARK_TO_MARKET_PRICE_BGN",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FINANCING_RATE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "SECURITY_INCOME",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "SECURTY_AND_FX_TOT_PL_BOOKCCY",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MORTGAGE_FLAG",
+        "prefix": "MORTGAGE_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MORTGAGE_FACTOR",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "POOL_GROUP_OR_SERIES",
+        "prefix": "POOL_GROUP_OR_SERIES-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "VALUE_01_CRE_CNETEXP",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CURRENT_NET_POSITION_MIL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "UNREALIZED_PL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "VALUE_01_CHG_NET_EXP",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "TRADER_DESCRIPTION",
+        "prefix": "TRADER_DESCRIPTION-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NEXT_SETTLEMENT_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "VALUE_01_OPN_NET_EXP",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "PRIMARY_TRADER",
+        "prefix": "PRIMARY_TRADER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "GENERAL_LEDGER_ACCOUNT",
+        "prefix": "GENERAL_LEDGER_ACCOUNT-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MKT_VALUE_MTMXPOS_CURT_NET_POS",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "STRIKE_PRICE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "SWAP_PAR_COUPON",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "SECURTY_AND_FX_UNRL_PL_BOOKCCY",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "SECURTY_AND_FX_REL_PL_BOOKCCY",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MTGE_IS_AGENCY_BACKED",
+        "options": [
+            "true",
+            "false"
+        ],
+        "type": "TEXT"
+    },
+    {
+        "field": "CURRENCY",
+        "prefix": "CURRENCY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "VALUE_01_CNETEXP",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "TDS_CREDIT_EXPOSURE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ISIN",
+        "prefix": "ISIN-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BBG_GBL_ID",
+        "prefix": "BBG_GBL_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "UNIQUE_BBG_ID",
+        "prefix": "UNIQUE_BBG_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "YESTERDAY_TRADE_PL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "YESTERDAY_MARKET_PL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "YESTERDAY_TOTAL_PL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "PX_ACCRET",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MOODYS_RATING",
+        "prefix": "MOODYS_RATING-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SP_RATING",
+        "prefix": "SP_RATING-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AVERAGE_AGE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "QUOTED_CURRENCY",
+        "prefix": "QUOTED_CURRENCY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    }
+]}}

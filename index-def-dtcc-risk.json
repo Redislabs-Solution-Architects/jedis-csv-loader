@@ -1,0 +1,60 @@
+{
+    "schema": [
+        {
+            "field": "$.BusinessDate",
+            "alias": "BusinessDate",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.CusipCode",
+            "alias": "CusipCode",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ShareQuantity",
+            "alias": "ShareQuantity",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.SharePrice",
+            "alias": "SharePrice",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.ContractAmount",
+            "alias": "ContractAmount",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.BuyerCode",
+            "alias": "BuyerCode",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.SellerCode",
+            "alias": "SellerCode",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.SettlementDate",
+            "alias": "SettlementDate",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.MarketCode",
+            "alias": "MarketCode",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "dtcc:trades:",
+    "type": "JSON"
+}

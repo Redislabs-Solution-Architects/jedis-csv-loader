@@ -1,0 +1,66 @@
+{
+    "schema": [
+        {
+            "field": "$.CODE",
+            "alias": "CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CAN_SEND_CHARGE_CODE",
+            "alias": "CAN_SEND_CHARGE_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DTRIALGORITHMID",
+            "alias": "DTRIALGORITHMID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.GME_CLOUD_MIGRATION_FLAG",
+            "alias": "GME_CLOUD_MIGRATION_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.JOBFUNCTION",
+            "alias": "JOBFUNCTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.MONITORINGBUSINESSVERIFICATION",
+            "alias": "MONITORINGBUSINESSVERIFICATION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.USER_TITLE",
+            "alias": "USER_TITLE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.USR_MGMT_ROLE",
+            "alias": "USR_MGMT_ROLE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ALIAS_AGN",
+            "alias": "ALIAS_AGN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CAPT_SRC_CODE",
+            "alias": "CAPT_SRC_CODE",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "dnb:user:minor:",
+    "type": "JSON"
+}

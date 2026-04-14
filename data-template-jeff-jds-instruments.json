@@ -1,0 +1,1233 @@
+{
+    "header": {
+        "schema": [
+            {
+                "field": "COUNTRY",
+                "prefix": "COUNTRY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_FREE_FLOAT_PCT",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_FUND_CRNCY",
+                "prefix": "EQY_FUND_CRNCY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_FUND_TICKER",
+                "prefix": "EQY_FUND_TICKER-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PO_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_PRIM_SECURITY_COMP_EXCH",
+                "prefix": "EQY_PRIM_SECURITY_COMP_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PRIM_SECURITY_CRNCY",
+                "prefix": "EQY_PRIM_SECURITY_CRNCY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PRIM_SECURITY_PRIM_EXCH",
+                "prefix": "EQY_PRIM_SECURITY_PRIM_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PRIM_SECURITY_TICKER",
+                "prefix": "EQY_PRIM_SECURITY_TICKER-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_SIC_CODE",
+                "prefix": "EQY_SIC_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_SIC_NAME",
+                "prefix": "EQY_SIC_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_SPLIT_ADJ_INIT_PO_PX",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "FILE_REGION",
+                "prefix": "FILE_REGION-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "GLOSS_ID",
+                "prefix": "GLOSS_ID-",
+                "type": "UID"
+            },
+            {
+                "field": "ID_BB_GLOBAL_SHARE_CLASS_LVL",
+                "prefix": "ID_BB_GLOBAL_SHARE_CLASS_LVL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_PRIM_SECURITY",
+                "prefix": "ID_BB_PRIM_SECURITY-",
+                "type": "UID"
+            },
+            {
+                "field": "ID_BB_PRIM_SECURITY_FLAG",
+                "prefix": "ID_BB_PRIM_SECURITY_FLAG-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_CUSIP",
+                "prefix": "ID_CUSIP-",
+                "type": "UID"
+            },
+            {
+                "field": "ID_ISIN",
+                "prefix": "ID_ISIN-",
+                "type": "UID"
+            },
+            {
+                "field": "INDUSTRY_GROUP",
+                "prefix": "INDUSTRY_GROUP-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "INDUSTRY_GROUP_NUM",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "INDUSTRY_SECTOR",
+                "prefix": "INDUSTRY_SECTOR-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "INDUSTRY_SECTOR_NUM",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "INDUSTRY_SUBGROUP",
+                "prefix": "INDUSTRY_SUBGROUP-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "INDUSTRY_SUBGROUP_NUM",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "INSTID",
+                "prefix": "INSTID-",
+                "type": "UID"
+            },
+            {
+                "field": "INSTRUMENT_HK",
+                "prefix": "INSTRUMENT_HK-",
+                "type": "UID"
+            },
+            {
+                "field": "INSTRUMENT_ID",
+                "prefix": "INSTRUMENT_ID-",
+                "type": "UID"
+            },
+            {
+                "field": "INSTRUMENT_ID_BASE",
+                "prefix": "INSTRUMENT_ID_BASE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "INSTRUMENT_TYPE",
+                "prefix": "INSTRUMENT_TYPE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "INSTTYPE",
+                "prefix": "INSTTYPE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LOAD_DATETIME",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "LOCALCODE",
+                "prefix": "LOCALCODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LOCALCODETYPE",
+                "prefix": "LOCALCODETYPE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LONG_COMP_NAME",
+                "prefix": "LONG_COMP_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "MARKET_SECTOR_DES",
+                "prefix": "MARKET_SECTOR_DES-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "NAME",
+                "prefix": "NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "RECORD_SOURCE",
+                "prefix": "RECORD_SOURCE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "SECURITY_TYP",
+                "prefix": "SECURITY_TYP-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "SECURITY_TYP2",
+                "prefix": "SECURITY_TYP2-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "SEC_RESTRICT",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "SRC_UPDATE_DATE",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "TOTAL_NON_VOTING_SHARES_VALUE",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "TOTAL_VOTING_SHARES_VALUE",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "CNTRY_OF_DOMICILE",
+                "prefix": "CNTRY_OF_DOMICILE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CNTRY_OF_INCORPORATION",
+                "prefix": "CNTRY_OF_INCORPORATION-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CNTRY_OF_RISK",
+                "prefix": "CNTRY_OF_RISK-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_GLOBAL_COMPANY",
+                "prefix": "ID_BB_GLOBAL_COMPANY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_GLOBAL_COMPANY_NAME",
+                "prefix": "ID_BB_GLOBAL_COMPANY_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ISSUER_HK",
+                "prefix": "ISSUER_HK-",
+                "type": "UID"
+            },
+            {
+                "field": "ISSUER_ID",
+                "prefix": "ISSUER_ID-",
+                "type": "UID"
+            },
+            {
+                "field": "ISSUER_ID_BASE",
+                "prefix": "ISSUER_ID_BASE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ISSUER_NAME",
+                "prefix": "ISSUER_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LEGAL_ENTITY_IDENTIFIER",
+                "prefix": "LEGAL_ENTITY_IDENTIFIER-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LEI_NAME",
+                "prefix": "LEI_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ISSUER_LOAD_DATETIME",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "ISSUER_RECORD_SOURCE",
+                "prefix": "ISSUER_RECORD_SOURCE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ISSUER_SRC_UPDATE_DATE",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "FIS_CODE",
+                "prefix": "FIS_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "FIS_NAME",
+                "prefix": "FIS_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L1_CODE",
+                "prefix": "L1_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L1_NAME",
+                "prefix": "L1_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L2_CODE",
+                "prefix": "L2_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L2_NAME",
+                "prefix": "L2_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L3_CODE",
+                "prefix": "L3_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L3_NAME",
+                "prefix": "L3_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L4_CODE",
+                "prefix": "L4_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L4_NAME",
+                "prefix": "L4_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L5_CODE",
+                "prefix": "L5_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "L5_NAME",
+                "prefix": "L5_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LEAD_CODE",
+                "prefix": "LEAD_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LEAD_NAME",
+                "prefix": "LEAD_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "PRODUCT_HK",
+                "prefix": "PRODUCT_HK-",
+                "type": "UID"
+            },
+            {
+                "field": "PRODUCT_ID",
+                "prefix": "PRODUCT_ID-",
+                "type": "UID"
+            },
+            {
+                "field": "PRODUCT_ID_BASE",
+                "prefix": "PRODUCT_ID_BASE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TENK_CODE",
+                "prefix": "TENK_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TENK_NAME",
+                "prefix": "TENK_NAME-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TRANSACTION_TYPE",
+                "prefix": "TRANSACTION_TYPE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "USER",
+                "prefix": "USER-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "exchange",
+                "type": "ARR",
+                "obj": "exchange",
+                "range" : [1,10]
+               
+            },
+            {
+                "field": "market",
+                "type": "ARR",
+                "obj": "market",
+                "range" : [1,6]
+               
+            },
+            {
+                "field": "xref",
+                "type": "ARR",
+                "obj": "xref",
+                "range" : [1,2]
+               
+            }
+      
+        ]
+    },
+
+    "xref" : {
+        "schema": [
+            {
+                "field": "sedol",
+                "prefix": "C1,C2,C3,C4,C5,C7",
+                "type": "UID"
+            },
+            {
+                "field": "composite_id_bb_global",
+                "prefix": "CBBG1,CBBG2,CBBG3,CBBG4,CBBG5,CBBG6",
+                "type": "UID"
+            },
+            {
+                "field": "source_pk_id",
+                "prefix": "SPK1,SPK2,SPK3,SPK4,SPK5,SPK6",
+                "type": "UID"
+            },
+            {
+                "field": "instid",
+                "prefix": "INST1,INST2,INST3,INST4,INST5,INST6",
+                "type": "UID"
+            },
+            {
+                "field": "ticker_and_exch_code",
+                "prefix": "TEC1,TEC2,TEC3,TEC4,TEC5,TEC6",
+                "type": "UID"
+            },
+            {
+                "field": "id_bb_unique",
+                "prefix": "IDBBU1,IDBBU2,IDBBU3,IDBBU4,IDBBU5,IDBBU6",
+                "type": "UID"
+            },
+            {
+                "field": "adp_number",
+                "prefix": "ADPNUM1,ADPNUM2,ADPNUM3,ADPNUM4,ADPNUM5,ADPNUM6",
+                "type": "UID"
+            }         
+            
+
+        ]
+    },
+
+    "market": {
+        "schema": [
+            {
+                "field": "ADP_NUMBER",
+                "prefix": "ADP_NUMBER-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "COMPOSITE_ID_BB_GLOBAL",
+                "prefix": "COMPOSITE_ID_BB_GLOBAL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "FILE_REGION",
+                "prefix": "FILE_REGION-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "GLOSS_ID",
+                "prefix": "GLOSS_ID-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_PRIM_SECURITY_FLAG",
+                "prefix": "ID_BB_PRIM_SECURITY_FLAG-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_SEDOL1",
+                "prefix": "ID_SEDOL1-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "INSTID",
+                "prefix": "INSTID-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LOAD_DATETIME",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "MARKET_HK",
+                "prefix": "MARKET_HK-",
+                "type": "UID"
+            },
+            {
+                "field": "MARKET_ID",
+                "prefix": "MARKET_ID-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "MARKET_ID_BASE",
+                "prefix": "MARKET_ID_BASE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "RECORD_SOURCE",
+                "prefix": "RECORD_SOURCE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "SEDOL1_COUNTRY_ISO",
+                "prefix": "SEDOL1_COUNTRY_ISO-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "SRC_UPDATE_DATE",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            }
+        ]
+    },
+
+    "exchange": {
+        "schema": [
+            {
+                "field": "CDR_COUNTRY_CODE",
+                "prefix": "CDR_COUNTRY_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CDR_SETTLE_CODE",
+                "prefix": "CDR_SETTLE_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CFI_CODE",
+                "prefix": "CFI_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CNTRY_ISSUE_ISO",
+                "prefix": "CNTRY_ISSUE_ISO-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "COMPOSITE_ID_BB_GLOBAL",
+                "prefix": "COMPOSITE_ID_BB_GLOBAL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CRNCY",
+                "prefix": "CRNCY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "DVD_CRNCY",
+                "prefix": "DVD_CRNCY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "DVD_DECLARED_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_EX_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_PAY_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_RECORD_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_SH_12M",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_SH_LAST",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_TYP_LAST",
+                "prefix": "DVD_TYP_LAST-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_DVD_EX_FLAG",
+                "prefix": "EQY_DVD_EX_FLAG-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_DVD_FREQ",
+                "prefix": "EQY_DVD_FREQ-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_DVD_SH_12M_NET",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_OPT_AVAIL",
+                "prefix": "EQY_OPT_AVAIL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PRIM_EXCH",
+                "prefix": "EQY_PRIM_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PRIM_EXCH_SHRT",
+                "prefix": "EQY_PRIM_EXCH_SHRT-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_SH_OUT",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_SH_OUT_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_SH_OUT_REAL",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EXCHANGE_HK",
+                "prefix": "EXCHANGE_HK-",
+                "type": "UID"
+            },
+            {
+                "field": "EXCHANGE_ID",
+                "prefix": "EXCHANGE_ID-",
+                "type": "UID"
+            },
+            {
+                "field": "EXCHANGE_ID_BASE",
+                "prefix": "EXCHANGE_ID_BASE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EXCH_CODE",
+                "prefix": "EXCH_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "FILE_REGION",
+                "prefix": "FILE_REGION-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "FLAG_144A",
+                "prefix": "FLAG_144A-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_GLOBAL",
+                "prefix": "ID_BB_GLOBAL-",
+                "type": "UID"
+            },
+            {
+                "field": "ID_BB_PRIM_SECURITY_FLAG",
+                "prefix": "ID_BB_PRIM_SECURITY_FLAG-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_SECURITY",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "ID_BB_SEC_NUM_DES",
+                "prefix": "ID_BB_SEC_NUM_DES-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_UNIQUE",
+                "prefix": "ID_BB_UNIQUE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_EXCH_SYMBOL",
+                "prefix": "ID_EXCH_SYMBOL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_MIC_LOCAL_EXCH",
+                "prefix": "ID_MIC_LOCAL_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_MIC_PRIM_EXCH",
+                "prefix": "ID_MIC_PRIM_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LAST_DPS_GROSS",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "LOAD_DATETIME",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "MARKET_STATUS",
+                "prefix": "MARKET_STATUS-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "RECORD_SOURCE",
+                "prefix": "RECORD_SOURCE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "SRC_UPDATE_DATE",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "TICKER",
+                "prefix": "TICKER-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TICKER_AND_EXCH_CODE",
+                "prefix": "TICKER_AND_EXCH_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "WHEN_ISSUED",
+                "prefix": "WHEN_ISSUED-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            }
+        ]
+    }
+}

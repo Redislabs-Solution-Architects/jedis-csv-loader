@@ -1,0 +1,141 @@
+{
+	"header": {
+		"schema": [
+			{
+				"field": "ProductID",
+				"type": "UID",
+				"prefix": "T-"
+			},
+			{
+				"field": "PrimaryProductID",
+				"type": "UID",
+				"prefix": "T-"
+			},
+			{
+				"field": "Ticker",
+				"type": "TEXT",
+				"options" : ["Apple","Amazon","Walmart","Berkshire Hathaway","Exxon","General Motors","JPMorgan Chase", "Johnson & Johnson","Tesla Motors"]
+			},
+			{
+				"field": "JSecID",
+				"type": "TEXT",
+				"options" : ["Apple","Amazon","Walmart","Berkshire Hathaway","Exxon","General Motors","JPMorgan Chase", "Johnson & Johnson","Tesla Motors"]
+			},
+			{
+				"field": "CUSIP",
+				"type": "TEXT",
+				"options" : ["AAPL","Amazon","Walmart","Berkshire Hathaway","Exxon","General Motors","JPMorgan Chase", "Johnson & Johnson","Tesla Motors"]
+			},
+			{
+				"field": "Bloomberg",
+				"type": "TEXT",
+				"options" : ["AAPL","Amazon","Walmart","Berkshire Hathaway","Exxon","General Motors","JPMorgan Chase", "Johnson & Johnson","Tesla Motors"]
+			},
+			{
+				"field": "QuickCode",
+				"type": "TEXT",
+				"options" : ["AAPL","Amazon","Walmart","Berkshire Hathaway","Exxon","General Motors","JPMorgan Chase", "Johnson & Johnson","Tesla Motors"]
+			},
+			{
+				"field": "Sedol",
+				"type": "TEXT",
+				"options" : ["AAPL","Amazon","Walmart","Berkshire Hathaway","Exxon","General Motors","JPMorgan Chase", "Johnson & Johnson","Tesla Motors"]
+			},
+			{
+				"field": "Description",
+				"type": "TEXT",
+				"options" : ["This is a security 1","This is a security 2","This is a security 3","This is a security 4","This is a security 5"]
+			},
+			{
+				"field": "Action",
+				"type": "TEXT",
+				"options" : ["BUY","BUY","SELL","SELL","SELL"]
+			},
+			{
+				"field": "PriceCurency",
+				"type": "TEXT",
+				"options" : ["USD","INR","SGD","EUR"]
+			},
+			{
+				"field": "IssueCountry",
+				"type": "TEXT",
+				"options" : ["US","UK","IN"]
+			},
+			{
+				"field": "SettlementCountry",
+				"type": "TEXT",
+				"options" : ["US","UK","IN","SN"]
+			},
+			{
+			"field": "SettlementRegion",
+			"type": "TEXT",
+			"options" : ["US","EMEA","APAC"]
+			},
+			{
+				"field": "AssetType",
+				"type": "TEXT",
+				"options" : ["Stock","Bond","Option"]
+			},
+			{
+				"field": "AssetClass",
+				"type": "TEXT",
+				"options" : ["Initiated","Completed","Validation"]
+			},
+			{
+				"field": "AssetCategory",
+				"type": "TEXT",
+				"options" : ["Initiated","Completed","Validation"]
+			},
+			{
+				"field": "ExchangeCode",
+				"type": "TEXT",
+				"options" : ["NASDAQ","NYSE","EURO"]
+			},
+			{
+				"field": "Sector",
+				"type": "TEXT",
+				"options" : ["Retail","Technology","Energy","Healthcare"]
+			},
+			{
+				"field": "Status",
+				"type": "TEXT",
+				"options" : ["Initiated","Completed","Validation"]
+			},
+			{
+				"field": "IsPrimary",
+				"type": "TEXT",
+				"options" : ["Yes","Yes","No"]
+			},
+			{
+				"field": "IsIn",
+				"type": "TEXT",
+				"options" : ["Yes","Yes","No"]
+			},
+			{
+				"field": "BusinessDate",
+				"type": "TEXT",
+				"options" : ["20241001","20240927","20240221"]
+			},
+			{
+				"field": "UsedPrice",
+				"type": "NUM",
+				"options" : [50,150]
+			},	
+			{
+				"field": "LocalPrice",
+				"type": "NUM",
+				"options" : [150,500]
+			},
+			{
+				"field": "UsedPrice",
+				"type": "NUM",
+				"options" : [50,150]
+			},	
+			{
+				"field": "SharedOutstanding",
+				"type": "NUM",
+				"options" : [150,500]
+			}		
+		]	
+	}
+}

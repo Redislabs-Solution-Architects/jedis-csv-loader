@@ -1,0 +1,246 @@
+{"header": {"schema": [
+    {
+        "field": "IMPU",
+        "prefix": "sip:+17738897457@ims.comcast.net-",
+        "type": "UID"
+    },
+    {
+        "field": "ImsZxDynInfId",
+        "prefix": "ImsZxDynInfId-",
+        "type": "UID"
+    },
+    {
+        "field": "ImsZxDynInf",
+        "prefix": "ImsZxDynInf-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ImsAliasGroup",
+        "prefix": "ImsAliasGroup-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ImsServIndTDS",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsServIndTD",
+        "prefix": "PHN1Yjpid1RyYW5zcGFyZW50RGF0YSB4bWxuczpzdWI9Imh0dHA6Ly9zY2hlbWEuYnJvYWRzb2Z0LmNvbS9TdWJzY3JpYmVycyIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgc2NoZW1hVmVyc2lvbj0iMjMuMC45Ij4KPHN1YjpmdWxsVXNlckluZm9ybWF0aW9uIHhtbG5zOnN1Yj0iaHR0cDovL3NjaGVtYS5icm9hZHNvZnQuY29tL1N1YnNjcmliZXJzIj48aW5mbz48dXNlclVpZD42NDc0ODA2MjY8L3VzZXJVaWQ+PHVzZXJJZD4rMTg1MDQ4MTA5NjhAaW1zLmNvbWNhc3QubmV0PC91c2VySWQ+PGZpcnN0TmFtZT5YQVJDPC9maXJzdE5hbWU+PGxhc3ROYW1lPjI8L2xhc3ROYW1lPjxmaXJzdE5hbWVVbmljb2RlPlhBUkM8L2ZpcnN0TmFtZVVuaWNvZGU+PGxhc3ROYW1lVW5pY29kZT4yPC9sYXN0TmFtZVVuaWNvZGU+PHRpbWVab25lPlVUQzwvdGltZVpvbmU+PGxhbmd1YWdlS2V5PkVuZ2xpc2g8L2xhbmd1YWdlS2V5Pjx1c2VyVHlwZT5Vc2VyPC91c2VyVHlwZT48ZW1haWxBZGRyZXNzIHhzaTpuaWw9InRydWUiPjwvZW1haWxBZGRyZXNzPjxjbGlkIHhzaTpuaWw9InRydWUiPjwvY2xpZD48bmNvc0tleT4xNzk3Nzg5NDY8L25jb3NLZXk+PGdyb3VwS2V5Pjc2ODcwMTYzNzwvZ3JvdXBLZXk+PGRlcGFydG1lbnRLZXkgeHNpOm5pbD0idHJ1ZSI+PC9kZXBhcnRtZW50S2V5Pjx0aXRsZSB4c2k6bmlsPSJ0cnVlIj48L3RpdGxlPjxtb2JpbGVPRE4geHNpOm5pbD0idHJ1ZSI+PC9tb2JpbGVPRE4+PHBhZ2VyT0ROIHhzaTpuaWw9InRydWUiPjwvcGFnZXJPRE4+PGFsbG93VmlkZW8+dHJ1ZTwvYWxsb3dWaWRlbz48L2luZm8+PGlkZW50aXRpZXM+PGRuUHJvcGVydGllcz48ZW50cnk+PHR5cGU+TWFpbjwvdHlwZT48ZG4+KzE4NTA0ODEwOTY4PC9kbj48ZXh0ZW5zaW9uPjQ4MTA8L2V4dGVuc2lvbj48cmluZ1BhdHRlcm4+Tm9ybWFsPC9yaW5nUGF0dGVybj48L2VudHJ5PjwvZG5Qcm9wZXJ0aWVzPjxkZXZpY2VzPjxlbnRyeT48YWNjZXNzRGV2aWNlS2V5PjczNjg4NTE3NzwvYWNjZXNzRGV2aWNlS2V5PjxhZGRyZXNzT2ZSZWNvcmQ+KzE4NTA0ODEwOTY4QGltcy5jb21jYXN0Lm5ldDwvYWRkcmVzc09mUmVjb3JkPjx0eXBlPk1haW48L3R5cGU+PGFjdGl2ZT50cnVlPC9hY3RpdmU+PGFsbG93T3JpZ2luYXRpb24+dHJ1ZTwvYWxsb3dPcmlnaW5hdGlvbj48YWxsb3dUZXJtaW5hdGlvbj50cnVlPC9hbGxvd1Rlcm1pbmF0aW9uPjxzdGF0aWNMb2NhdGlvbiB4c2k6bmlsPSJ0cnVlIj48L3N0YXRpY0xvY2F0aW9uPjxwcml2YXRlSWRlbnRpdHkgeHNpOm5pbD0idHJ1ZSI+PC9wcml2YXRlSWRlbnRpdHk+PGFsbG93VmlkZW8+dHJ1ZTwvYWxsb3dWaWRlbz48L2VudHJ5PjwvZGV2aWNlcz48YWxpYXNlcz48L2FsaWFzZXM+PC9pZGVudGl0aWVzPjxwb2xpY2llcz48Y2FsbFByb2Nlc3NpbmdQb2xpY3k+PGNhbGxMaW1pdFBvbGljeT48dXNlT3duUG9saWN5PmZhbHNlPC91c2VPd25Qb2xpY3k+PG93blBvbGljeSB4c2k6bmlsPSJ0cnVlIj48L293blBvbGljeT48L2NhbGxMaW1pdFBvbGljeT48bWVkaWFQb2xpY3k+PHVzZU93blBvbGljeT5mYWxzZTwvdXNlT3duUG9saWN5Pjxvd25Qb2xpY3kgeHNpOm5pbD0idHJ1ZSI+PC9vd25Qb2xpY3k+PC9tZWRpYVBvbGljeT48Y2xpZFBvbGljeT48dXNlT3duUG9saWN5PmZhbHNlPC91c2VPd25Qb2xpY3k+PG93blBvbGljeSB4c2k6bmlsPSJ0cnVlIj48L293blBvbGljeT48L2NsaWRQb2xpY3k+PHJlZGlyZWN0ZWRDT0xQUHJpdmFjeT5Ob1ByaXZhY3k8L3JlZGlyZWN0ZWRDT0xQUHJpdmFjeT48c2VuZDE4MVJlc3BvbnNlT25SZWRpcmVjdGVkQ2FsbHM+TmV2ZXI8L3NlbmQxODFSZXNwb25zZU9uUmVkaXJlY3RlZENhbGxzPjwvY2FsbFByb2Nlc3NpbmdQb2xpY3k+PGRldmljZVBvbGljeT48Y2FsbERlY2xpbmU+ZmFsc2U8L2NhbGxEZWNsaW5lPjwvZGV2aWNlUG9saWN5Pjx0cmFuc2xhdGlvblJvdXRpbmdQb2xpY3k+PHVzZU93blBvbGljeT5mYWxzZTwvdXNlT3duUG9saWN5Pjxvd25Qb2xpY3kgeHNpOm5pbD0idHJ1ZSI+PC9vd25Qb2xpY3k+PC90cmFuc2xhdGlvblJvdXRpbmdQb2xpY3k+PC9wb2xpY2llcz48c2hhcmVkU2VydmljZURhdGE+PG5vQW5zd2VyVGltZXI+Mzwvbm9BbnN3ZXJUaW1lcj48dXNlUGVyc29uYWxpemVkTmFtZT5mYWxzZTwvdXNlUGVyc29uYWxpemVkTmFtZT48dm9pY2VQb3J0YWxBdXRvTG9naW4+ZmFsc2U8L3ZvaWNlUG9ydGFsQXV0b0xvZ2luPjxwZXJzb25hbGl6ZWROYW1lTWVkaWFUeXBlIHhzaTpuaWw9InRydWUiPjwvcGVyc29uYWxpemVkTmFtZU1lZGlhVHlwZT48bGFzdFBhc3Njb2RlTW9kaWZpZWQ+MTUzMTQxNDcwMDQ5NDwvbGFzdFBhc3Njb2RlTW9kaWZpZWQ+PHZvaWNlUG9ydGFsRmFpbE5vdGlmaWNhdGlvblNlbnQ+ZmFsc2U8L3ZvaWNlUG9ydGFsRmFpbE5vdGlmaWNhdGlvblNlbnQ+PGZhaWxlZFZvaWNlUG9ydGFsQXR0ZW1wdHM+MDwvZmFpbGVkVm9pY2VQb3J0YWxBdHRlbXB0cz48dm9pY2VQb3J0YWxQYXNzd29yZE5vdFNldD50cnVlPC92b2ljZVBvcnRhbFBhc3N3b3JkTm90U2V0Pjx2b2ljZVBvcnRhbFBhc3N3b3JkPjAwMDA8L3ZvaWNlUG9ydGFsUGFzc3dvcmQ+PGxvZ2luUGFzc3dvcmQ+MTUwOTU5NGUwYjM2MTQwNWY5YTczNmFlMzA0NTY3OTc4ZDM0MTVlZTwvbG9naW5QYXNzd29yZD48b2NpY0FwcHMgeHNpOm5pbD0idHJ1ZSI+PC9vY2ljQXBwcz48Y3VzdG9tTWVkaWFGaWxlUGF0aD5jdXN0b21NZWRpYUZpbGVzLzcvNjg3MC83Njg3MDE2MzcvNjQ3NDgwNjI2PC9jdXN0b21NZWRpYUZpbGVQYXRoPjxzY2hlZHVsZXM+PC9zY2hlZHVsZXM+PGNvbW11bmljYXRpb25CYXJyaW5nQXV0aG9yaXphdGlvbkNvZGVzPjwvY29tbXVuaWNhdGlvbkJhcnJpbmdBdXRob3JpemF0aW9uQ29kZXM+PHN1c3RhaW5lZEF1dGhvcml6YXRpb25Db2RlIHhzaTpuaWw9InRydWUiPjwvc3VzdGFpbmVkQXV0aG9yaXphdGlvbkNvZGU+PHZvaWNlUG9ydGFsUGFzc3dvcmRBbGlhcyB4c2k6bmlsPSJ0cnVlIj48L3ZvaWNlUG9ydGFsUGFzc3dvcmRBbGlhcz48dnBMb2dpbkRpc2FibGVkVGltZSB4c2k6bmlsPSJ0cnVlIj48L3ZwTG9naW5EaXNhYmxlZFRpbWU+PC9zaGFyZWRTZXJ2aWNlRGF0YT48L3N1YjpmdWxsVXNlckluZm9ybWF0aW9uPjwvc3ViOmJ3VHJhbnNwYXJlbnREYXRhPg==-",
+        "type": "UID"
+    },
+    {
+        "field": "ImsShGroupData",
+        "prefix": "ImsShGroupData-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ImsConfServProf",
+        "prefix": "ImsConfServProf-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ImsPrivacyInd",
+        "options": [
+            "true",
+            "false"
+        ],
+        "type": "TEXT"
+    },
+    {
+        "field": "ImsSessBarrInd",
+        "options": [
+            "true",
+            "false"
+        ],
+        "type": "TEXT"
+    },
+    {
+        "field": "ImsLooseRouteId",
+        "prefix": "ImsLooseRouteId-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ImsNum1",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum2",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum3",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum4",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum5",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum6",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum7",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum8",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum9",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum10",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum11",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum12",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum13",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum14",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum15",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum16",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum17",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum18",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum19",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ImsNum20",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    }
+]}}

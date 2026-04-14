@@ -1,0 +1,60 @@
+{
+    "schema": [
+        {
+            "field": "$.OrderID",
+            "alias": "OrderID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Store.StoreID",
+            "alias": "StoreID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Store.City",
+            "alias": "City",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Store.Location",
+            "alias": "Location",
+			"sortable": false,
+            "type": "GEO"
+        },
+        {
+            "field": "$.Customer",
+            "alias": "Customer",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Status",
+            "alias": "Status",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.OrderDate",
+            "alias": "OrderDate",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.LineItems[*].Product",
+            "alias": "Product",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.LineItems[*].Quantity",
+            "alias": "Quantity",
+            "sortable": true,
+            "type": "NUMERIC"
+        }
+    ],
+    "prefix": "comcast:orders:",
+    "type": "JSON"
+}

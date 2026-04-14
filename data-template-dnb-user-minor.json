@@ -1,0 +1,848 @@
+{"header": {"schema": [
+    {
+        "field": "UID",
+        "prefix": "UID-",
+        "type": "UID"
+    },
+    {
+        "field": "CODE",
+        "prefix": "CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CAN_SEND_CHARGE_CODE",
+        "prefix": "CAN_SEND_CHARGE_CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DTRIALGORITHMID",
+        "prefix": "DTRIALGORITHMID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "GME_CLOUD_MIGRATION_FLAG",
+        "prefix": "GME_CLOUD_MIGRATION_FLAG-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JOBFUNCTION",
+        "prefix": "JOBFUNCTION-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MONITORINGBUSINESSVERIFICATION",
+        "prefix": "MONITORINGBUSINESSVERIFICATION-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "USER_TITLE",
+        "prefix": "USER_TITLE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "USR_MGMT_ROLE",
+        "prefix": "USR_MGMT_ROLE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ALIAS_AGN",
+        "prefix": "ALIAS_AGN-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CAPT_SRC_CODE",
+        "prefix": "CAPT_SRC_CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CHAR_SET_PREF",
+        "prefix": "CHAR_SET_PREF-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COMPANY_URL",
+        "prefix": "COMPANY_URL-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CONTRACT_NUMBER",
+        "prefix": "CONTRACT_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COUNTRY",
+        "prefix": "COUNTRY-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_ADMINSTER_RULES",
+        "prefix": "DM_ADMINSTER_RULES-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_CACHE_USER",
+        "prefix": "DM_CACHE_USER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_ORDER_DECISION",
+        "prefix": "DM_ORDER_DECISION-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_TRADE_CREDIT_USER",
+        "prefix": "DM_TRADE_CREDIT_USER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_VIEW_RULES",
+        "prefix": "DM_VIEW_RULES-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_AEWS_PASS_SYNC",
+        "prefix": "DNB_AEWS_PASS_SYNC-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_ADDITIONAL_ATTRIBUTES",
+        "prefix": "DNB_ADDITIONAL_ATTRIBUTES-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_APPLICATIONNAME",
+        "prefix": "DNB_APPLICATIONNAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_COMPLIANCE_PRODUCT_PERMISSIONS",
+        "prefix": "DNB_COMPLIANCE_PRODUCT_PERMISSIONS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_COMPLIANCE_TYPE",
+        "prefix": "DNB_COMPLIANCE_TYPE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_COUNTRY_PERMISSIONS",
+        "prefix": "DNB_COUNTRY_PERMISSIONS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_CUSTOMER_ID",
+        "prefix": "DNB_CUSTOMER_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_DNB_DIRECT_ACTIVATIONKEY",
+        "prefix": "DNB_DNB_DIRECT_ACTIVATIONKEY-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_DNB_REQUESTER_NAME",
+        "prefix": "DNB_DNB_REQUESTER_NAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_MAIL_FLAG",
+        "prefix": "DNB_MAIL_FLAG-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_METER_RESET_FLAG",
+        "prefix": "DNB_METER_RESET_FLAG-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_NAME_PREFIX",
+        "prefix": "DNB_NAME_PREFIX-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_NAME_SUFFIX",
+        "prefix": "DNB_NAME_SUFFIX-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_PRINCIPAL_CONTACT",
+        "prefix": "DNB_PRINCIPAL_CONTACT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_PRODUCT_PERMISSIONS",
+        "prefix": "DNB_PRODUCT_PERMISSIONS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_RDC_FIRMID",
+        "prefix": "DNB_RDC_FIRMID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_RDC_PASSWORD",
+        "prefix": "DNB_RDC_PASSWORD-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_RDC_USERID",
+        "prefix": "DNB_RDC_USERID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_SECONDARY_SUBSCRIBERNUMBERS",
+        "prefix": "DNB_SECONDARY_SUBSCRIBERNUMBERS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_SUB_ORG",
+        "prefix": "DNB_SUB_ORG-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_SUBMITTING_OFFICE_CODE",
+        "prefix": "DNB_SUBMITTING_OFFICE_CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_USER_MODE",
+        "prefix": "DNB_USER_MODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_ZERO_FILL_TRD_EXP",
+        "prefix": "DNB_ZERO_FILL_TRD_EXP-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBCONCURRENCYLIMIT",
+        "prefix": "DNBCONCURRENCYLIMIT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBDEFAULTBILLINGREF1",
+        "prefix": "DNBDEFAULTBILLINGREF1-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBDEFAULTBILLINGREF2",
+        "prefix": "DNBDEFAULTBILLINGREF2-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBLANGUAGECODE",
+        "prefix": "DNBLANGUAGECODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBLOCKOUTTIME",
+        "prefix": "DNBLOCKOUTTIME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBLOGINTRYCOUNT",
+        "prefix": "DNBLOGINTRYCOUNT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBMAXLIMIT",
+        "prefix": "DNBMAXLIMIT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBMETERINGUSAGERESETDATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DNBPNPUSERSTATUS",
+        "prefix": "DNBPNPUSERSTATUS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBTHROTTLINGENDTIME",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DNBTHROTTLINGSTARTTIME",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DNBTKPASSWORD",
+        "prefix": "DNBTKPASSWORD-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBUSER_EXPIRYDATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DNBUSERBILLINGCOUNTRY",
+        "prefix": "DNBUSERBILLINGCOUNTRY-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBUSERLEVEL",
+        "prefix": "DNBUSERLEVEL-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DSCCOMPANYNAME",
+        "prefix": "DSCCOMPANYNAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EMPLOYEE_TYPE",
+        "prefix": "EMPLOYEE_TYPE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABL_EMT_CH_BASS",
+        "prefix": "ENABL_EMT_CH_BASS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABLE_SER_COMMENTARY",
+        "prefix": "ENABLE_SER_COMMENTARY-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABLE_SER_EM",
+        "prefix": "ENABLE_SER_EM-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABLE_VIABILITY_SCORE",
+        "prefix": "ENABLE_VIABILITY_SCORE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EXPIRED_FLAG",
+        "prefix": "EXPIRED_FLAG-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INITIALS",
+        "prefix": "INITIALS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IS_OBO_USER",
+        "prefix": "IS_OBO_USER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JOB_FUNCTION_CODE",
+        "prefix": "JOB_FUNCTION_CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "LANGUAGE",
+        "prefix": "LANGUAGE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "LEADER_EMAIL",
+        "prefix": "LEADER_EMAIL-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "LEADER_NAME",
+        "prefix": "LEADER_NAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "LOOKUP_BILLING_PREF",
+        "prefix": "LOOKUP_BILLING_PREF-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MARKET_INDICATOR",
+        "prefix": "MARKET_INDICATOR-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MIDDLE_NAME",
+        "prefix": "MIDDLE_NAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MONITORING_ALERT_EMAIL_PREFERENCE",
+        "prefix": "MONITORING_ALERT_EMAIL_PREFERENCE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MONITORING_SUBJ_STAT_NOTICES",
+        "prefix": "MONITORING_SUBJ_STAT_NOTICES-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MTCH_GRD11_CHARS",
+        "prefix": "MTCH_GRD11_CHARS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NAS_BILLING_PREF",
+        "prefix": "NAS_BILLING_PREF-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NORDICSUBSCRIBER_NUMBER",
+        "prefix": "NORDICSUBSCRIBER_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OU",
+        "prefix": "OU-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OVRDTRDUP_BUSINESS_VERIFICATION",
+        "prefix": "OVRDTRDUP_BUSINESS_VERIFICATION-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "POSTAL_ADDRESS",
+        "prefix": "POSTAL_ADDRESS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PRD_MIGRATED",
+        "prefix": "PRD_MIGRATED-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PREFERRED_DELIVERY_METHOD",
+        "prefix": "PREFERRED_DELIVERY_METHOD-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PRIMARY_ACCOUNT",
+        "prefix": "PRIMARY_ACCOUNT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PRIMARYAPPLN_ID",
+        "prefix": "PRIMARYAPPLN_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PRIMARYAPPLN_ROLE",
+        "prefix": "PRIMARYAPPLN_ROLE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PURGE_DURATION_PREF",
+        "prefix": "PURGE_DURATION_PREF-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PWD_ACCOUNT_LOCKED_TIME",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "REFRESH_TOKEN",
+        "prefix": "REFRESH_TOKEN-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SERVICE_ACCOUNT_ID",
+        "prefix": "SERVICE_ACCOUNT_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TEMPAPPLN_ID",
+        "prefix": "TEMPAPPLN_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TEMPPNP_ROLE",
+        "prefix": "TEMPPNP_ROLE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TITLE",
+        "prefix": "TITLE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TITLE_CODE",
+        "prefix": "TITLE_CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    }
+]}}

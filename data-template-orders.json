@@ -20,11 +20,12 @@
 				"field": "Amount",
 				"type": "NUM",
 				"options" : [2000,10000]
-			},	
+			},		
 			{
 				"field": "LineItems",
 				"type": "ARR",
-				"obj": "details"
+				"obj": "details",
+				"range" : [1,10]
 			}		
 		]	
 	},
@@ -33,8 +34,9 @@
 		"schema": [
 			{
 				"field": "Product",
-				"type": "TEXT",
-				"options": ["Prod1","Prod2","Prod3"]
+				"type": "AUTO-TEXT",
+				"prefix": "Prod ",
+				"options": [1,25]
 			},
 			{
 				"field": "Quantity",

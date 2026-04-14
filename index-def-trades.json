@@ -5,8 +5,8 @@
 		{
 			"field": "$.TradeID",
 			"alias": "TradeID",
-			"sortable": true,
-			"type": "TAG"
+			"type": "TAG",
+			"sortable": true
 		},
 		{
 			"field": "$.Security.industry",

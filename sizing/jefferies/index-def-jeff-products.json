@@ -1,0 +1,138 @@
+{
+	"type": "HASH",
+	"prefix": "aa1:trades:",
+	"schema": [
+		{
+			"field": "PrimaryProductID",
+			"alias": "PrimaryProductID",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "Ticker",
+			"alias": "Ticker",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "JSecID",
+			"alias": "JSecID",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "CUSIP",
+			"alias": "CUSIP",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "Bloomberg",
+			"alias": "Bloomberg",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "QuickCode",
+			"alias": "QuickCode",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "Sedol",
+			"alias": "Sedol",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "Description",
+			"alias": "Description",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "Action",
+			"alias": "Action",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "PriceCurency",
+			"alias": "PriceCurency",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "IssueCountry",
+			"alias": "IssueCountry",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "SettlementCountry",
+			"alias": "SettlementCountry",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "SettlementRegion",
+			"alias": "SettlementRegion",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "AssetType",
+			"alias": "AssetType",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "AssetClass",
+			"alias": "AssetClass",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "AssetCategory",
+			"alias": "AssetCategory",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "ExchangeCode",
+			"alias": "ExchangeCode",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "Sector",
+			"alias": "Sector",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "Status",
+			"alias": "Status",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "IsPrimary",
+			"alias": "IsPrimary",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "IsIn",
+			"alias": "IsIn",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "BusinessDate",
+			"alias": "BusinessDate",
+			"type": "TAG",
+			"sortable": true
+		}
+	]
+}

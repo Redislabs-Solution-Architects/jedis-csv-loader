@@ -1,0 +1,3900 @@
+{
+    "schema": [
+        {
+            "field": "T0_TRADE_ID",
+            "alias": "T0_TRADE_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AUDIT_INSERT_DATE",
+            "alias": "AUDIT_INSERT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AUDIT_INSERT_USER",
+            "alias": "AUDIT_INSERT_USER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "AUDIT_UPDATE_DATE",
+            "alias": "AUDIT_UPDATE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AUDIT_UPDATE_USER",
+            "alias": "AUDIT_UPDATE_USER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BBG_TIME_STAMP",
+            "alias": "BBG_TIME_STAMP",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BBG_TIME_STAMP_INT",
+            "alias": "BBG_TIME_STAMP_INT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FICTM_SECURITY_TYPE",
+            "alias": "FICTM_SECURITY_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SECURITY_ID_FLAG",
+            "alias": "SECURITY_ID_FLAG",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FIRM_IDENTIFIER",
+            "alias": "FIRM_IDENTIFIER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_STATUS",
+            "alias": "TRADE_STATUS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CANCEL_TIMESTAMP",
+            "alias": "CANCEL_TIMESTAMP",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CANCEL_DUE_TO_CORRECTION",
+            "alias": "CANCEL_DUE_TO_CORRECTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CANCEL_REF_T0_TRADE_ID",
+            "alias": "CANCEL_REF_T0_TRADE_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "IS_ACTIVE",
+            "alias": "IS_ACTIVE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "IS_MANUAL",
+            "alias": "IS_MANUAL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "IN_POSITION",
+            "alias": "IN_POSITION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRADE_QUANTITY_MULTIPLIER",
+            "alias": "TRADE_QUANTITY_MULTIPLIER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "IS_2ND_LEG_TICKET",
+            "alias": "IS_2ND_LEG_TICKET",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "T0_PARENT_TRADE_ID",
+            "alias": "T0_PARENT_TRADE_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "T0_TRADE_ID_FOR_ORIG_TICKET",
+            "alias": "T0_TRADE_ID_FOR_ORIG_TICKET",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LAST_TICKET_NUMBER",
+            "alias": "LAST_TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "T0_TRADE_ID_FOR_LAST_TCKT_NUM",
+            "alias": "T0_TRADE_ID_FOR_LAST_TCKT_NUM",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SEQUENCE_NUMBER_ACTIVE",
+            "alias": "SEQUENCE_NUMBER_ACTIVE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CURRENCY",
+            "alias": "CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MARKET_SECTOR_TWO",
+            "alias": "MARKET_SECTOR_TWO",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BLOOMBERG_IDENTIFIER",
+            "alias": "BLOOMBERG_IDENTIFIER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TICKER",
+            "alias": "TICKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COUPON_STRIKE_PRICE",
+            "alias": "COUPON_STRIKE_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MATURITY_DATE_EXPIRATION_DATE",
+            "alias": "MATURITY_DATE_EXPIRATION_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SERIES_EXCHNGE_CODE_CMO_TRNCH",
+            "alias": "SERIES_EXCHNGE_CODE_CMO_TRNCH",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MTGE_POOL_OVERLAY_FTMTY_FTCPN",
+            "alias": "MTGE_POOL_OVERLAY_FTMTY_FTCPN",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BUY_SELL",
+            "alias": "BUY_SELL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TICKET_TYPE",
+            "alias": "TICKET_TYPE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRADE_DATE",
+            "alias": "TRADE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AS_OF_DATE",
+            "alias": "AS_OF_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SETTLEMENT_DATE",
+            "alias": "SETTLEMENT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "YIELD",
+            "alias": "YIELD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "DISCOUNT_RATE",
+            "alias": "DISCOUNT_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRADE_FEED_TRADE_AMOUNT",
+            "alias": "TRADE_FEED_TRADE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_ACCOUNT",
+            "alias": "TRANSACTION_ACCOUNT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FIRM_ACCOUNT_SHORT_NAME",
+            "alias": "FIRM_ACCOUNT_SHORT_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PRINCIPAL_OR_AGENCY_ID",
+            "alias": "PRINCIPAL_OR_AGENCY_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SETTLEMENT_LOCATION",
+            "alias": "SETTLEMENT_LOCATION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "GEN_LEDGER_ACCT_TRANS_TRADER",
+            "alias": "GEN_LEDGER_ACCT_TRANS_TRADER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BLOOMBERG_SUBFLAG",
+            "alias": "BLOOMBERG_SUBFLAG",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PRINCIPAL",
+            "alias": "PRINCIPAL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ACCRUED_INTEREST",
+            "alias": "ACCRUED_INTEREST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "NUM_DAYS_ACCRUED_INTEREST",
+            "alias": "NUM_DAYS_ACCRUED_INTEREST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SEC_FEES",
+            "alias": "SEC_FEES",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SHORT_NOTE_1",
+            "alias": "SHORT_NOTE_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_2",
+            "alias": "SHORT_NOTE_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_3",
+            "alias": "SHORT_NOTE_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_4",
+            "alias": "SHORT_NOTE_4",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_1",
+            "alias": "LONG_NOTE_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_2",
+            "alias": "LONG_NOTE_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_3",
+            "alias": "LONG_NOTE_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_4",
+            "alias": "LONG_NOTE_4",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADER_NAME",
+            "alias": "TRADER_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SALESPERSON",
+            "alias": "SALESPERSON",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADER_LOGIN",
+            "alias": "TRADER_LOGIN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SALES_LOGIN",
+            "alias": "SALES_LOGIN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MTGE_FACTOR_GOVT_INDEX_FACTOR",
+            "alias": "MTGE_FACTOR_GOVT_INDEX_FACTOR",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "POOL_GOOD_MILLION_NUM_TBA_ONLY",
+            "alias": "POOL_GOOD_MILLION_NUM_TBA_ONLY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "POOL_LOT_NUMBER",
+            "alias": "POOL_LOT_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CONCESSION_STIP_VAR_REPO_RATE",
+            "alias": "CONCESSION_STIP_VAR_REPO_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PREPAY_SPEED_OR_CONTRACT_SIZE",
+            "alias": "PREPAY_SPEED_OR_CONTRACT_SIZE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "VIEW_IN_CURRENCY",
+            "alias": "VIEW_IN_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXCHANGE_RATE",
+            "alias": "EXCHANGE_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CANCEL_PORTION_OF_A_CORRECTION",
+            "alias": "CANCEL_PORTION_OF_A_CORRECTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "WHEN_ISSUED_MUNI_TRANSACTION",
+            "alias": "WHEN_ISSUED_MUNI_TRANSACTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SECURITY_IS_TRADING_FLAT",
+            "alias": "SECURITY_IS_TRADING_FLAT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INVERT_EXCHANGE_RATE",
+            "alias": "INVERT_EXCHANGE_RATE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "USER_INPUT_ACCRUED_INTEREST",
+            "alias": "USER_INPUT_ACCRUED_INTEREST",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "OFFLINE_TRANSACTION_RETAIL",
+            "alias": "OFFLINE_TRANSACTION_RETAIL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANSACTION_WORKOUT_DATE",
+            "alias": "TRANSACTION_WORKOUT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_WORKOUT_PRICE",
+            "alias": "TRANSACTION_WORKOUT_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AUTOEX_FLAG",
+            "alias": "AUTOEX_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "USER_WHO_RELEASED_TRADE",
+            "alias": "USER_WHO_RELEASED_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_PACKED_COST_1_TYPE_CRNCY",
+            "alias": "TRANS_PACKED_COST_1_TYPE_CRNCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_1_CURRENCY",
+            "alias": "TRANS_COST_1_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_1_CODE",
+            "alias": "TRANS_COST_1_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_1_AMOUNT",
+            "alias": "TRANS_COST_1_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_1_EFFECT_FINL_MONEY",
+            "alias": "TRANS_COST_1_EFFECT_FINL_MONEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_PACKED_COST_2_TYPE_CRNCY",
+            "alias": "TRANS_PACKED_COST_2_TYPE_CRNCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_2_CURRENCY",
+            "alias": "TRANS_COST_2_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_2_CODE",
+            "alias": "TRANS_COST_2_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_2_AMOUNT",
+            "alias": "TRANS_COST_2_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_2_EFFECT_FINL_MONEY",
+            "alias": "TRANS_COST_2_EFFECT_FINL_MONEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_PACKED_COST_3_TYPE_CRNCY",
+            "alias": "TRANS_PACKED_COST_3_TYPE_CRNCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_3_CURRENCY",
+            "alias": "TRANS_COST_3_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_3_CODE",
+            "alias": "TRANS_COST_3_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_3_AMOUNT",
+            "alias": "TRANS_COST_3_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_3_EFFECT_FINL_MONEY",
+            "alias": "TRANS_COST_3_EFFECT_FINL_MONEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_PACKED_COST_4_TYPE_CRNCY",
+            "alias": "TRANS_PACKED_COST_4_TYPE_CRNCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_4_CURRENCY",
+            "alias": "TRANS_COST_4_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_4_CODE",
+            "alias": "TRANS_COST_4_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_4_AMOUNT",
+            "alias": "TRANS_COST_4_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_4_EFFECT_FINL_MONEY",
+            "alias": "TRANS_COST_4_EFFECT_FINL_MONEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_PACKED_COST_5_TYPE_CRNCY",
+            "alias": "TRANS_PACKED_COST_5_TYPE_CRNCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_5_CURRENCY",
+            "alias": "TRANS_COST_5_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_5_CODE",
+            "alias": "TRANS_COST_5_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_5_AMOUNT",
+            "alias": "TRANS_COST_5_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_5_EFFECT_FINL_MONEY",
+            "alias": "TRANS_COST_5_EFFECT_FINL_MONEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_COST_1_RATE",
+            "alias": "TRANS_COST_1_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_2_RATE",
+            "alias": "TRANS_COST_2_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_3_RATE",
+            "alias": "TRANS_COST_3_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_4_RATE",
+            "alias": "TRANS_COST_4_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANS_COST_5_RATE",
+            "alias": "TRANS_COST_5_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOAD_WI_CONVERSION_FLAG_Y_N",
+            "alias": "LOAD_WI_CONVERSION_FLAG_Y_N",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STRIP_TICKET",
+            "alias": "STRIP_TICKET",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PUT_CALL_INDICATOR",
+            "alias": "PUT_CALL_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "USER_WHO_RELEASED_TRADE_2",
+            "alias": "USER_WHO_RELEASED_TRADE_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DATE_OF_AUTHORIZATION",
+            "alias": "DATE_OF_AUTHORIZATION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MTGE_TBA_CODE_NUMBER",
+            "alias": "MTGE_TBA_CODE_NUMBER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADER_TO_TRADER_TICKET_FLAG",
+            "alias": "TRADER_TO_TRADER_TICKET_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_CONTRACT_SIZE_R8",
+            "alias": "TRADE_CONTRACT_SIZE_R8",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MTGEPNL_CREATED_TRADE",
+            "alias": "MTGEPNL_CREATED_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PRICE_IS_PENCE_QUOTED",
+            "alias": "PRICE_IS_PENCE_QUOTED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "AUTO_EXECUTION_SEQUENCE_NUMBER",
+            "alias": "AUTO_EXECUTION_SEQUENCE_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FOUR_HOUR_TRADE_FLAG_Y_N",
+            "alias": "FOUR_HOUR_TRADE_FLAG_Y_N",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ONLINE_TRADEFEED_VER_NUM_RTFS",
+            "alias": "ONLINE_TRADEFEED_VER_NUM_RTFS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "UNIT_TRADED_INDICATOR",
+            "alias": "UNIT_TRADED_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "UNIQUE_BLOOMBERG_IDENTIFIER",
+            "alias": "UNIQUE_BLOOMBERG_IDENTIFIER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_PRICE",
+            "alias": "TRADE_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_SYSTEM_DATE",
+            "alias": "TRANSACTION_SYSTEM_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "RECFLAG11_WEB_RETAIL_FEEDTRADE",
+            "alias": "RECFLAG11_WEB_RETAIL_FEEDTRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CLEARING_BROKER",
+            "alias": "CLEARING_BROKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LATT_TKT_DOES_NOT_HIT_CASH",
+            "alias": "LATT_TKT_DOES_NOT_HIT_CASH",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JAPAN_NUMBER",
+            "alias": "JAPAN_NUMBER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SETTLEMENT_LOCATION_ABBREV",
+            "alias": "SETTLEMENT_LOCATION_ABBREV",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "IPO",
+            "alias": "IPO",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXTEND_TRANS_FXSTRATEGY_CODES",
+            "alias": "EXTEND_TRANS_FXSTRATEGY_CODES",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SBBT_BSBT_ALLOCATED",
+            "alias": "SBBT_BSBT_ALLOCATED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXTEND_TRANS_BUYSIDE_REASON",
+            "alias": "EXTEND_TRANS_BUYSIDE_REASON",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADER_NUMBER",
+            "alias": "TRADER_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_TYPE",
+            "alias": "TRANSACTION_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CORRECTION_AS_ORIGINAL",
+            "alias": "CORRECTION_AS_ORIGINAL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CUSTODY_SAFEKEEPING_NUMBER",
+            "alias": "CUSTODY_SAFEKEEPING_NUMBER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NUMBER_AT_MATURITY",
+            "alias": "NUMBER_AT_MATURITY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BUYSIDE_ORDER_TYPE",
+            "alias": "BUYSIDE_ORDER_TYPE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BUYSIDE_LIM_PRCE_YLD_DIST_RATE",
+            "alias": "BUYSIDE_LIM_PRCE_YLD_DIST_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TICKET_SLATE_WHO",
+            "alias": "TICKET_SLATE_WHO",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "USER_WHO_MATCHED_ALLOCATED_TKT",
+            "alias": "USER_WHO_MATCHED_ALLOCATED_TKT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "EQPL_SUB_FLAG",
+            "alias": "EQPL_SUB_FLAG",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ON_MFUND_MASK_COST_DEDUCTED",
+            "alias": "ON_MFUND_MASK_COST_DEDUCTED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ENTRY_OF_SHARES_BY_SELL_ALL",
+            "alias": "ENTRY_OF_SHARES_BY_SELL_ALL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NAV_IS_CORRECTED_ACTUAL_NAV",
+            "alias": "NAV_IS_CORRECTED_ACTUAL_NAV",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NAV_CUT_TRADE",
+            "alias": "NAV_CUT_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PARTIAL_ALLOC_EXISTS_OR_NOT",
+            "alias": "PARTIAL_ALLOC_EXISTS_OR_NOT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADING_SYSTEM_FUNCTION_1",
+            "alias": "TRADING_SYSTEM_FUNCTION_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADING_SYSTEM_FUNCTION_2",
+            "alias": "TRADING_SYSTEM_FUNCTION_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADING_SYSTEM_FUNCTION_3",
+            "alias": "TRADING_SYSTEM_FUNCTION_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADING_SYSTEM_FUNCTION_4",
+            "alias": "TRADING_SYSTEM_FUNCTION_4",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REASON",
+            "alias": "REASON",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_TIME_USED_ON_TRADE_FEED",
+            "alias": "TRADE_TIME_USED_ON_TRADE_FEED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_FEED_AS_OF_TIME",
+            "alias": "TRADE_FEED_AS_OF_TIME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TIME_OF_SLATE",
+            "alias": "TIME_OF_SLATE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TIME_OF_SALES_TICKET",
+            "alias": "TIME_OF_SALES_TICKET",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANSACTION_ENTERED_BY_YIELD",
+            "alias": "TRANSACTION_ENTERED_BY_YIELD",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANSACTION_CODE",
+            "alias": "TRANSACTION_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DELTA_BEST_PRICE",
+            "alias": "DELTA_BEST_PRICE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXTERNAL_SOURCE",
+            "alias": "EXTERNAL_SOURCE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ORDER_NUMBER",
+            "alias": "ORDER_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "EXTERNAL_SOURCE_CODE",
+            "alias": "EXTERNAL_SOURCE_CODE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CANCEL_DUE_TO_MATCH",
+            "alias": "CANCEL_DUE_TO_MATCH",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INT_EXT_TRADE_INDICATOR",
+            "alias": "INT_EXT_TRADE_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NO_CALC_CALC_TYP_INDICATOR",
+            "alias": "NO_CALC_CALC_TYP_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BENCHMARK",
+            "alias": "BENCHMARK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BENCHMARK_SPREAD",
+            "alias": "BENCHMARK_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SPREAD",
+            "alias": "SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ASSET_SWAP_SPREAD",
+            "alias": "ASSET_SWAP_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "I_SPREAD",
+            "alias": "I_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "Z_SPREAD",
+            "alias": "Z_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "D_SPREAD",
+            "alias": "D_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "OAS_SPREAD",
+            "alias": "OAS_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "DURATION",
+            "alias": "DURATION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PIMCO_FIELD_DURATION",
+            "alias": "PIMCO_FIELD_DURATION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "I_SPREAD_CURVE",
+            "alias": "I_SPREAD_CURVE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TICKET_NUMBER",
+            "alias": "TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ORIGINAL_TICKET_NUMBER",
+            "alias": "ORIGINAL_TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MASTER_TICKET_NUM",
+            "alias": "MASTER_TICKET_NUM",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TBA_CODE_TICKET",
+            "alias": "TBA_CODE_TICKET",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BOND_OR_FX_TRADE_TKT_NO",
+            "alias": "BOND_OR_FX_TRADE_TKT_NO",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FOUR_HOUR_TRADE_TICKET_NUMBER",
+            "alias": "FOUR_HOUR_TRADE_TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SECOND_RELATED_TICKET_NUMBER",
+            "alias": "SECOND_RELATED_TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "POST_TRDDATE_CANC_ORIG_TKT_RRN",
+            "alias": "POST_TRDDATE_CANC_ORIG_TKT_RRN",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AGY_TKT_NOLINK_NUMOFFSET_TRADE",
+            "alias": "AGY_TKT_NOLINK_NUMOFFSET_TRADE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_SWAP_TICKET_NUMBER",
+            "alias": "FX_SWAP_TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRADE_ENT_BY_MONEY_AMT_INDI",
+            "alias": "TRADE_ENT_BY_MONEY_AMT_INDI",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SLATE",
+            "alias": "SLATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TKT_NUM_SALESTKT_USED_MATCHTKT",
+            "alias": "TKT_NUM_SALESTKT_USED_MATCHTKT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TURN_POOL_TICKET_NUMBER_TBAS",
+            "alias": "TURN_POOL_TICKET_NUMBER_TBAS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FORWARD_TICKET_NUMBER",
+            "alias": "FORWARD_TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AFFILIATED_TICKET",
+            "alias": "AFFILIATED_TICKET",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TKT_NUM_OF_THE_OTHER_SWING_TKT",
+            "alias": "TKT_NUM_OF_THE_OTHER_SWING_TKT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRANSACTION_TYPE",
+            "alias": "REPO_TRANSACTION_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_BUYSIDE_ORDER_NAME_CHAR",
+            "alias": "TRANS_BUYSIDE_ORDER_NAME_CHAR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BUYSIDE_ORDER_PRIM_CNTG_PAIR",
+            "alias": "BUYSIDE_ORDER_PRIM_CNTG_PAIR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PRIMARY_MMKT_ID",
+            "alias": "PRIMARY_MMKT_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "QUOTE_TYPE_INDICATOR",
+            "alias": "QUOTE_TYPE_INDICATOR",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ML_ISSUER_CODE",
+            "alias": "ML_ISSUER_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ISSUE_DATE",
+            "alias": "ISSUE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "IS_JP_BROKER_TRADE",
+            "alias": "IS_JP_BROKER_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JAPAN_TRADE_DATE",
+            "alias": "JAPAN_TRADE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JAPAN_TRADE_AMOUNT",
+            "alias": "JAPAN_TRADE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JAPAN_BROKER_COMMISSION",
+            "alias": "JAPAN_BROKER_COMMISSION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JAPAN_TAX",
+            "alias": "JAPAN_TAX",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JAPAN_OTHER_MARKET_FEES",
+            "alias": "JAPAN_OTHER_MARKET_FEES",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JAPAN_NET_AMOUNT",
+            "alias": "JAPAN_NET_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BENCHMARK_PRICE",
+            "alias": "BENCHMARK_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "YIELD_CONVENTION",
+            "alias": "YIELD_CONVENTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DELAYED_DELIVERY_DATE",
+            "alias": "DELAYED_DELIVERY_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FIRM_DATE_YYYYMMDD",
+            "alias": "FIRM_DATE_YYYYMMDD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FIRM_TIME_HH_MM_SS",
+            "alias": "FIRM_TIME_HH_MM_SS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FIRM_AS_OF_DATE_YYYYMMDD",
+            "alias": "FIRM_AS_OF_DATE_YYYYMMDD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FIRM_AS_OF_TIME_HH_MM_SS",
+            "alias": "FIRM_AS_OF_TIME_HH_MM_SS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FIRM_TIME_OF_SLATE_HH_MM_SS",
+            "alias": "FIRM_TIME_OF_SLATE_HH_MM_SS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FIRM_TIME_OF_SALES2_HH_MM_SS",
+            "alias": "FIRM_TIME_OF_SALES2_HH_MM_SS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NASDAQ_ORDER_STEP_OUT",
+            "alias": "NASDAQ_ORDER_STEP_OUT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SECOND_COUNTERPARTY",
+            "alias": "SECOND_COUNTERPARTY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SOFT_DOLLAR",
+            "alias": "SOFT_DOLLAR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SOFT_DOLLAR_PERCENTAGE_OLD",
+            "alias": "SOFT_DOLLAR_PERCENTAGE_OLD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "DEALERS_IN_COMPETITION",
+            "alias": "DEALERS_IN_COMPETITION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ORDER_TYPE",
+            "alias": "ORDER_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CURRENT_FLOATER",
+            "alias": "CURRENT_FLOATER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "OMS_GOODTIL_DATE",
+            "alias": "OMS_GOODTIL_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "UNKNOWN",
+            "alias": "UNKNOWN",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BUYSIDE_TOM_ORDER_TYPE_2",
+            "alias": "BUYSIDE_TOM_ORDER_TYPE_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BUYSIDE_TOM_ORDER_TIME_INFORCE",
+            "alias": "BUYSIDE_TOM_ORDER_TIME_INFORCE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "OMS_STOP_PRICE",
+            "alias": "OMS_STOP_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ESTIMATED_TIPS_FACTOR_FLAG",
+            "alias": "ESTIMATED_TIPS_FACTOR_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_FEED_TRADE_AMOUNT_2",
+            "alias": "TRADE_FEED_TRADE_AMOUNT_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FIRM_ACCOUNT_SHORT_NAME_2",
+            "alias": "FIRM_ACCOUNT_SHORT_NAME_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MASTER_ACCOUNT",
+            "alias": "MASTER_ACCOUNT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MASTER_ACCOUNT_SHORT_NAME",
+            "alias": "MASTER_ACCOUNT_SHORT_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXERCISE_TYPE",
+            "alias": "EXERCISE_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CCY_2_SETTLEMENT_DATE",
+            "alias": "CCY_2_SETTLEMENT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "INVERT_RATE",
+            "alias": "INVERT_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PROGRAM_BASKET_TRADE",
+            "alias": "PROGRAM_BASKET_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ORDER_TYPE_2",
+            "alias": "ORDER_TYPE_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SOFT_DOLLAR_FLAG",
+            "alias": "SOFT_DOLLAR_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "OFFERING_TYPE",
+            "alias": "OFFERING_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COMMISSION_SHARE_ELIGIBLE",
+            "alias": "COMMISSION_SHARE_ELIGIBLE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PROFIT_SHARING_RATIO",
+            "alias": "PROFIT_SHARING_RATIO",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_CUSTODY_BANK_CODE",
+            "alias": "TRANSACTION_CUSTODY_BANK_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SALES_TICKET_DATE",
+            "alias": "SALES_TICKET_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SALES_TICKET_TIME",
+            "alias": "SALES_TICKET_TIME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BXT_LOGIN",
+            "alias": "BXT_LOGIN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DIRTY_PRICE_FLAG",
+            "alias": "DIRTY_PRICE_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ACCOUNT_SEGMENT",
+            "alias": "ACCOUNT_SEGMENT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TSAM_INDICATOR",
+            "alias": "TSAM_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "AUTOEX_STATUS",
+            "alias": "AUTOEX_STATUS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_1",
+            "alias": "LOT_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_1_PRICE_AMOUNT",
+            "alias": "LOT_1_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_1_AMOUNT",
+            "alias": "LOT_1_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_2",
+            "alias": "LOT_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_2_PRICE_AMOUNT",
+            "alias": "LOT_2_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_2_AMOUNT",
+            "alias": "LOT_2_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_3",
+            "alias": "LOT_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_3_PRICE_AMOUNT",
+            "alias": "LOT_3_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_3_AMOUNT",
+            "alias": "LOT_3_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_4",
+            "alias": "LOT_4",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_4_PRICE_AMOUNT",
+            "alias": "LOT_4_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_4_AMOUNT",
+            "alias": "LOT_4_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_5",
+            "alias": "LOT_5",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_5_PRICE_AMOUNT",
+            "alias": "LOT_5_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_5_AMOUNT",
+            "alias": "LOT_5_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_6",
+            "alias": "LOT_6",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_6_PRICE_AMOUNT",
+            "alias": "LOT_6_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_6_AMOUNT",
+            "alias": "LOT_6_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_7",
+            "alias": "LOT_7",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_7_PRICE_AMOUNT",
+            "alias": "LOT_7_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_7_AMOUNT",
+            "alias": "LOT_7_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_8",
+            "alias": "LOT_8",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_8_PRICE_AMOUNT",
+            "alias": "LOT_8_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_8_AMOUNT",
+            "alias": "LOT_8_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_9",
+            "alias": "LOT_9",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_9_PRICE_AMOUNT",
+            "alias": "LOT_9_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_9_AMOUNT",
+            "alias": "LOT_9_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_10",
+            "alias": "LOT_10",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LOT_10_PRICE_AMOUNT",
+            "alias": "LOT_10_PRICE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOT_10_AMOUNT",
+            "alias": "LOT_10_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRACE_REPORTABLE",
+            "alias": "TRACE_REPORTABLE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRACE_SPECIAL_PRICE",
+            "alias": "TRACE_SPECIAL_PRICE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_PRICE_MEMO",
+            "alias": "TRADE_PRICE_MEMO",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MSRB_PRICE_CODE",
+            "alias": "MSRB_PRICE_CODE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "COMMISSION_AMOUNT_1",
+            "alias": "COMMISSION_AMOUNT_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COMMISSION_AMOUNT_2",
+            "alias": "COMMISSION_AMOUNT_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COMMISSION_AMOUNT_3",
+            "alias": "COMMISSION_AMOUNT_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COMMISSION_AMOUNT_4",
+            "alias": "COMMISSION_AMOUNT_4",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COMMISSION_AMOUNT_5",
+            "alias": "COMMISSION_AMOUNT_5",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "AIM_POSITION_PRIME_BROKER",
+            "alias": "AIM_POSITION_PRIME_BROKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CFD_FLAG",
+            "alias": "CFD_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CTCM_STATUS",
+            "alias": "CTCM_STATUS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TAX_LOT_METHOD",
+            "alias": "TAX_LOT_METHOD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOCAL_EXCHANGE_SYMBOL",
+            "alias": "LOCAL_EXCHANGE_SYMBOL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SETTLE_TOTAL_IN_SETTLEMENT_CCY",
+            "alias": "SETTLE_TOTAL_IN_SETTLEMENT_CCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_COST_1_RATE_2",
+            "alias": "TRANSACTION_COST_1_RATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_COST_2_RATE_2",
+            "alias": "TRANSACTION_COST_2_RATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_COST_3_RATE_2",
+            "alias": "TRANSACTION_COST_3_RATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_COST_4_RATE_2",
+            "alias": "TRANSACTION_COST_4_RATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_COST_5_RATE_2",
+            "alias": "TRANSACTION_COST_5_RATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MONEY_MARKET_AVG_DAYS_TO_MAT",
+            "alias": "MONEY_MARKET_AVG_DAYS_TO_MAT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "COUNTERPARTY",
+            "alias": "COUNTERPARTY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_RESET_FREQUENCY",
+            "alias": "PAY_RESET_FREQUENCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRS_BENCHMARK",
+            "alias": "TRS_BENCHMARK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SPREAD_TO_BENCHMARK",
+            "alias": "SPREAD_TO_BENCHMARK",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRS_PAY_RECEIVE_INDICATOR",
+            "alias": "TRS_PAY_RECEIVE_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRS_DEALID_NUMBER_1",
+            "alias": "TRS_DEALID_NUMBER_1",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRS_DEALID_NUMBER_2",
+            "alias": "TRS_DEALID_NUMBER_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRS_FUNDING_CURRENCY",
+            "alias": "TRS_FUNDING_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRS_ORIGINAL_FX_RATE",
+            "alias": "TRS_ORIGINAL_FX_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JOURNAL_REASON",
+            "alias": "JOURNAL_REASON",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANSACTION_AUTO_EX_BROKER",
+            "alias": "TRANSACTION_AUTO_EX_BROKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "AUTOEX_APPLICATION_NAME",
+            "alias": "AUTOEX_APPLICATION_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DIRTY_PRICE",
+            "alias": "DIRTY_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LEVEL_1_TAG_ID",
+            "alias": "LEVEL_1_TAG_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LEVEL_1_TAG_NAME",
+            "alias": "LEVEL_1_TAG_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LEVEL_2_TAG_ID",
+            "alias": "LEVEL_2_TAG_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LEVEL_2_TAG_NAME",
+            "alias": "LEVEL_2_TAG_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LEVEL_3_TAG_ID",
+            "alias": "LEVEL_3_TAG_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LEVEL_3_TAG_NAME",
+            "alias": "LEVEL_3_TAG_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LEVEL_4_TAG_ID",
+            "alias": "LEVEL_4_TAG_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LEVEL_4_TAG_NAME",
+            "alias": "LEVEL_4_TAG_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LEVEL_5_TAG_ID",
+            "alias": "LEVEL_5_TAG_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LEVEL_5_TAG_NAME",
+            "alias": "LEVEL_5_TAG_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LEVEL_6_TAG_ID",
+            "alias": "LEVEL_6_TAG_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LEVEL_6_TAG_NAME",
+            "alias": "LEVEL_6_TAG_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_5",
+            "alias": "SHORT_NOTE_5",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_6",
+            "alias": "SHORT_NOTE_6",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_7",
+            "alias": "SHORT_NOTE_7",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_8",
+            "alias": "SHORT_NOTE_8",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_5",
+            "alias": "LONG_NOTE_5",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_6",
+            "alias": "LONG_NOTE_6",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_7",
+            "alias": "LONG_NOTE_7",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_8",
+            "alias": "LONG_NOTE_8",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BOOK_CURRENCY_PRINCIPAL_AMOUNT",
+            "alias": "BOOK_CURRENCY_PRINCIPAL_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BOOK_CCY_ACCRUED_INTEREST",
+            "alias": "BOOK_CCY_ACCRUED_INTEREST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BOOK_CCY_TRANSACTION_COSTS",
+            "alias": "BOOK_CCY_TRANSACTION_COSTS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REDEMPTION_CCY_PRINCIPAL_AMT",
+            "alias": "REDEMPTION_CCY_PRINCIPAL_AMT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REDEMPTION_CCY_ACCRUE_INTEREST",
+            "alias": "REDEMPTION_CCY_ACCRUE_INTEREST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REDEMPTION_CCY_TRANS_COSTS",
+            "alias": "REDEMPTION_CCY_TRANS_COSTS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SETTLE_PRINCIPAL_IN_SETTLE_CCY",
+            "alias": "SETTLE_PRINCIPAL_IN_SETTLE_CCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SETTLE_ACCRUED_IN_SETTLE_CCY",
+            "alias": "SETTLE_ACCRUED_IN_SETTLE_CCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SETTLE_COSTS_IN_SETTLE_CCY",
+            "alias": "SETTLE_COSTS_IN_SETTLE_CCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPORT_LINKED_ID_COMPLEX_TRADE",
+            "alias": "REPORT_LINKED_ID_COMPLEX_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXECUTION_VENUE_MIC_CODE",
+            "alias": "EXECUTION_VENUE_MIC_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPORT_LEI_CODE",
+            "alias": "REPORT_LEI_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_UNIQUE_LIFECYCLE_ID",
+            "alias": "TRADE_UNIQUE_LIFECYCLE_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MIFID2_REPORT_POST_TRADE_IND",
+            "alias": "MIFID2_REPORT_POST_TRADE_IND",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXECUTION_VENUE_TRANSACTION_ID",
+            "alias": "EXECUTION_VENUE_TRANSACTION_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MIFID2_TRADING_CAPACITY",
+            "alias": "MIFID2_TRADING_CAPACITY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MIFID2_DECISION_MAKER_IN_FIRM",
+            "alias": "MIFID2_DECISION_MAKER_IN_FIRM",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MIFID2_EXECUTION_IN_FIRM",
+            "alias": "MIFID2_EXECUTION_IN_FIRM",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MIFID2_REPORT_SHORT_SELL_IND",
+            "alias": "MIFID2_REPORT_SHORT_SELL_IND",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADE_AS_OF_DATETIME_IN_UTC",
+            "alias": "TRADE_AS_OF_DATETIME_IN_UTC",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MIFID2_REPORT_WAIVER_IND_TRADE",
+            "alias": "MIFID2_REPORT_WAIVER_IND_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXECUTION_IN_FIRM_ALGO_IND",
+            "alias": "EXECUTION_IN_FIRM_ALGO_IND",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DECISION_MAKER_ALGORITHM_IND",
+            "alias": "DECISION_MAKER_ALGORITHM_IND",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MIFID2_TRANSMISSION_ORDER_IND",
+            "alias": "MIFID2_TRANSMISSION_ORDER_IND",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MKT_ORD_TO_CLIENT_ORD_LINK_ID",
+            "alias": "MKT_ORD_TO_CLIENT_ORD_LINK_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LAST_LIQUIDITY_INDICATOR",
+            "alias": "LAST_LIQUIDITY_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CANCEL_PARTY_TO_THE_TRADE",
+            "alias": "CANCEL_PARTY_TO_THE_TRADE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BLOCK_MIFID2_REPORT",
+            "alias": "BLOCK_MIFID2_REPORT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COUNTERPARTY_LEGAL_ENTITY_ID",
+            "alias": "COUNTERPARTY_LEGAL_ENTITY_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DEALER_LEGAL_ENTITY_ID",
+            "alias": "DEALER_LEGAL_ENTITY_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COUNTER_PARTY_LEI_COUNTRY_CODE",
+            "alias": "COUNTER_PARTY_LEI_COUNTRY_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DEALER_LEI_COUNTRY_CODE",
+            "alias": "DEALER_LEI_COUNTRY_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TOTAL_TRADES_IN_PACKAGE_TRANS",
+            "alias": "TOTAL_TRADES_IN_PACKAGE_TRANS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PACKAGE_TRADE_LEG_ID",
+            "alias": "PACKAGE_TRADE_LEG_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SHORT_NOTE_9",
+            "alias": "SHORT_NOTE_9",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_10",
+            "alias": "SHORT_NOTE_10",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_11",
+            "alias": "SHORT_NOTE_11",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NOTE_12",
+            "alias": "SHORT_NOTE_12",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_9",
+            "alias": "LONG_NOTE_9",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_10",
+            "alias": "LONG_NOTE_10",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_11",
+            "alias": "LONG_NOTE_11",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "LONG_NOTE_12",
+            "alias": "LONG_NOTE_12",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPORTING_LINKAGE_TRADE_MARKER",
+            "alias": "REPORTING_LINKAGE_TRADE_MARKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MATCH_DATE",
+            "alias": "MATCH_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_SWAP_FLAG",
+            "alias": "FX_SWAP_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_INVERTED_RATE_FLAG",
+            "alias": "FX_INVERTED_RATE_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_USE_STANDARD_INSTRUCT_FLAG",
+            "alias": "FX_USE_STANDARD_INSTRUCT_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_DEAL_TYPE",
+            "alias": "FX_DEAL_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_MARKET_SPOT_DATE",
+            "alias": "FX_MARKET_SPOT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_MARKET_SPOT_SOURCE",
+            "alias": "FX_MARKET_SPOT_SOURCE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_MARKET_RATE_SOURCE",
+            "alias": "FX_MARKET_RATE_SOURCE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_FIRST_CURRENCY_ISO_CODE",
+            "alias": "FX_FIRST_CURRENCY_ISO_CODE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_SECOND_CURRENCY_ISO_CODE",
+            "alias": "FX_SECOND_CURRENCY_ISO_CODE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_OUTRIGHT_SPOT_RATE",
+            "alias": "FX_OUTRIGHT_SPOT_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_POINTS",
+            "alias": "FX_POINTS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_FIRST_CROSS_POINTS",
+            "alias": "FX_FIRST_CROSS_POINTS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_SECOND_CROSS_POINTS",
+            "alias": "FX_SECOND_CROSS_POINTS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_FIRST_CROSS_RATE",
+            "alias": "FX_FIRST_CROSS_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_SECOND_CROSS_RATE",
+            "alias": "FX_SECOND_CROSS_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_MARKET_RATE",
+            "alias": "FX_MARKET_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_FIRST_CROSS_SOURCE",
+            "alias": "FX_FIRST_CROSS_SOURCE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_SECOND_CROSS_SOURCE",
+            "alias": "FX_SECOND_CROSS_SOURCE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "IS_NDF",
+            "alias": "IS_NDF",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_NDF_SETTLEMENT_CURRENCY",
+            "alias": "FX_NDF_SETTLEMENT_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_NDF_MARKET_TYPE",
+            "alias": "FX_NDF_MARKET_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_NDF_FIXING_DATE",
+            "alias": "FX_NDF_FIXING_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_NDF_FIXING_TIME",
+            "alias": "FX_NDF_FIXING_TIME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_NDF_FIXING_GMT_OFFSET",
+            "alias": "FX_NDF_FIXING_GMT_OFFSET",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_NDF_FIXING_RATE",
+            "alias": "FX_NDF_FIXING_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "NDF_GMT_OFFSET_SIGN",
+            "alias": "NDF_GMT_OFFSET_SIGN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TOTAL_COMMISSION",
+            "alias": "TOTAL_COMMISSION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CUT_OFF_TIME_EXPRESSED_AS_UCT",
+            "alias": "CUT_OFF_TIME_EXPRESSED_AS_UCT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXPIRATION_CITY_AND_TIME",
+            "alias": "EXPIRATION_CITY_AND_TIME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EXPIRATION_TIME_ZONE",
+            "alias": "EXPIRATION_TIME_ZONE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CUT_OFF_TIME",
+            "alias": "CUT_OFF_TIME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TX_PREMIUM_FX_RATE",
+            "alias": "TX_PREMIUM_FX_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "OPTION_PRICE_CURRENCY",
+            "alias": "OPTION_PRICE_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TX_PREMIUM",
+            "alias": "TX_PREMIUM",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_DELTA",
+            "alias": "TX_FX_OPTION_DELTA",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_SPOT_HEDGE",
+            "alias": "TX_FX_OPTION_SPOT_HEDGE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_GAMMA",
+            "alias": "TX_FX_OPTION_GAMMA",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_VEGA",
+            "alias": "TX_FX_OPTION_VEGA",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_THETA",
+            "alias": "TX_FX_OPTION_THETA",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_RHO",
+            "alias": "TX_FX_OPTION_RHO",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_VOMMA",
+            "alias": "TX_FX_OPTION_VOMMA",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TX_FX_OPTION_VANNA",
+            "alias": "TX_FX_OPTION_VANNA",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CALL_PUT_CURRENCY",
+            "alias": "CALL_PUT_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CALL_PUT",
+            "alias": "CALL_PUT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STRIKE_PRICE",
+            "alias": "STRIKE_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "NOTIONAL_CURRENCY",
+            "alias": "NOTIONAL_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NOTIONAL_AMOUNT",
+            "alias": "NOTIONAL_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "OPTION_STATUS",
+            "alias": "OPTION_STATUS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BARRIER_START_DATE",
+            "alias": "BARRIER_START_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BARRIER_END_DATE",
+            "alias": "BARRIER_END_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "DIRECTION",
+            "alias": "DIRECTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "UPPER_BARRIER_LEVEL",
+            "alias": "UPPER_BARRIER_LEVEL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOWER_BARRIER_LEVEL",
+            "alias": "LOWER_BARRIER_LEVEL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "UPPER_REBATE",
+            "alias": "UPPER_REBATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LOWER_REBATE",
+            "alias": "LOWER_REBATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "DELIVERY_DATE",
+            "alias": "DELIVERY_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "UPPER_BARRIER_LEVEL_2",
+            "alias": "UPPER_BARRIER_LEVEL_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COMMODITY_CURRENCY",
+            "alias": "COMMODITY_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "Z_SPREAD_2",
+            "alias": "Z_SPREAD_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_ADJUSTED_RATE",
+            "alias": "FX_ADJUSTED_RATE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COST_ADJUSTED_RATE_EFFECT_1",
+            "alias": "COST_ADJUSTED_RATE_EFFECT_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COST_ADJUSTED_RATE_EFFECT_2",
+            "alias": "COST_ADJUSTED_RATE_EFFECT_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COST_ADJUSTED_RATE_EFFECT_3",
+            "alias": "COST_ADJUSTED_RATE_EFFECT_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COST_ADJUSTED_RATE_EFFECT_4",
+            "alias": "COST_ADJUSTED_RATE_EFFECT_4",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COST_ADJUSTED_RATE_EFFECT_5",
+            "alias": "COST_ADJUSTED_RATE_EFFECT_5",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ADJUSTED_RATE",
+            "alias": "ADJUSTED_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "OPTION_TYPE",
+            "alias": "OPTION_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_CCY1_AMT",
+            "alias": "FX_INTERDESK_DEALER_CCY1_AMT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_CCY2_AMT",
+            "alias": "FX_INTERDESK_DEALER_CCY2_AMT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_BUY_SELL",
+            "alias": "FX_INTERDESK_DEALER_BUY_SELL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_SPOT_RATE",
+            "alias": "FX_INTERDESK_DEALER_SPOT_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_POINTS",
+            "alias": "FX_INTERDESK_DEALER_POINTS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_RATE",
+            "alias": "FX_INTERDESK_DEALER_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_BOOK",
+            "alias": "FX_INTERDESK_DEALER_BOOK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FX_INTERDESK_SALES_SPOT_SPRD",
+            "alias": "FX_INTERDESK_SALES_SPOT_SPRD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_SALES_POINTS_SPRD",
+            "alias": "FX_INTERDESK_SALES_POINTS_SPRD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_SALES_DEAL_SPRD",
+            "alias": "FX_INTERDESK_SALES_DEAL_SPRD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_SALES_CCY1_P_L",
+            "alias": "FX_INTERDESK_SALES_CCY1_P_L",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_SALES_CCY2_P_L",
+            "alias": "FX_INTERDESK_SALES_CCY2_P_L",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_INTERDESK_DEALER_TICKET",
+            "alias": "FX_INTERDESK_DEALER_TICKET",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FX_TAKE_UP_INITIAL_DEAL_AMOUNT",
+            "alias": "FX_TAKE_UP_INITIAL_DEAL_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TAKE_UP_CURRENCY",
+            "alias": "TAKE_UP_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_RECEIVE_CURRENCY",
+            "alias": "PAY_RECEIVE_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_RECEIVE_AMOUNT",
+            "alias": "PAY_RECEIVE_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STRATEGY_TICKET_NUMBER",
+            "alias": "STRATEGY_TICKET_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STRATEGY_LEG_NUMBER",
+            "alias": "STRATEGY_LEG_NUMBER",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "NAME",
+            "alias": "NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NUMBER_OF_LEGS",
+            "alias": "NUMBER_OF_LEGS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STRATEGY_MODEL",
+            "alias": "STRATEGY_MODEL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STRATEGY_ID",
+            "alias": "STRATEGY_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_TRANS_PENS_LIVREE_SPRD",
+            "alias": "REPO_TRANS_PENS_LIVREE_SPRD",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SB_BS_REPO_RATE",
+            "alias": "SB_BS_REPO_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SB_BS_REPO_INTEREST",
+            "alias": "SB_BS_REPO_INTEREST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRANS_PENS_LIVREE_SPRD_2",
+            "alias": "REPO_TRANS_PENS_LIVREE_SPRD_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRANS_JAPANESE_BOND_TYPE",
+            "alias": "REPO_TRANS_JAPANESE_BOND_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TERMINATION_MONEY",
+            "alias": "TERMINATION_MONEY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_CROSSES_COUPON_PAYMENT",
+            "alias": "REPO_CROSSES_COUPON_PAYMENT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ORIGINAL_REPO_TRADE_REFERENCE",
+            "alias": "ORIGINAL_REPO_TRADE_REFERENCE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRANS_NEW_HAIR_CUTS",
+            "alias": "REPO_TRANS_NEW_HAIR_CUTS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "EFFECTIVE_DATE_FOR_FUTURE_REPO",
+            "alias": "EFFECTIVE_DATE_FOR_FUTURE_REPO",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TERM_IN_DAYS",
+            "alias": "REPO_TERM_IN_DAYS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRANSACTION_TYPE_2",
+            "alias": "TRANSACTION_TYPE_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "DELIVERY_TYPE",
+            "alias": "DELIVERY_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_DAY_COUNT",
+            "alias": "REPO_DAY_COUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRADER_ASSIGNMENT",
+            "alias": "REPO_TRADER_ASSIGNMENT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SUBSTITUTE_FLAG",
+            "alias": "SUBSTITUTE_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_OPEN_TICKET",
+            "alias": "REPO_OPEN_TICKET",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EARLYDELIV_SELL_COLLAT_HAS_BUY",
+            "alias": "EARLYDELIV_SELL_COLLAT_HAS_BUY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_ROUNDING_OF_PRICE",
+            "alias": "REPO_ROUNDING_OF_PRICE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_ROUND_PRICE_TO_NEAREST",
+            "alias": "REPO_ROUND_PRICE_TO_NEAREST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ALL_IN_PRICE",
+            "alias": "ALL_IN_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRANS_FORWARD_PRICE",
+            "alias": "REPO_TRANS_FORWARD_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_MARGIN",
+            "alias": "REPO_MARGIN",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CUMULATIVE_ACCRUED_INTEREST",
+            "alias": "CUMULATIVE_ACCRUED_INTEREST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_OPEN_TICKET_2",
+            "alias": "REPO_OPEN_TICKET_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TERMINATION_DATE",
+            "alias": "TERMINATION_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TERMINATION_MONEY_2",
+            "alias": "TERMINATION_MONEY_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_STATUS_INDICATOR",
+            "alias": "REPO_STATUS_INDICATOR",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_COUPON_TO_BE_REINVESTED",
+            "alias": "REPO_COUPON_TO_BE_REINVESTED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COUPON_REINVESTMENT_DATE_1",
+            "alias": "COUPON_REINVESTMENT_DATE_1",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "COUPON_REINVESTMENT_DATE_2",
+            "alias": "COUPON_REINVESTMENT_DATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "COUPON_REINVESTMENT_DATE_3",
+            "alias": "COUPON_REINVESTMENT_DATE_3",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_CPN_REINVESTMENT_RATE_1",
+            "alias": "REPO_CPN_REINVESTMENT_RATE_1",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_CPN_REINVESTMENT_RATE_2",
+            "alias": "REPO_CPN_REINVESTMENT_RATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_CPN_REINVESTMENT_RATE_3",
+            "alias": "REPO_CPN_REINVESTMENT_RATE_3",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "COUPON_REINVESTMENT_AMOUNT_1",
+            "alias": "COUPON_REINVESTMENT_AMOUNT_1",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "COUPON_REINVESTMENT_AMOUNT_2",
+            "alias": "COUPON_REINVESTMENT_AMOUNT_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "COUPON_REINVESTMENT_AMOUNT_3",
+            "alias": "COUPON_REINVESTMENT_AMOUNT_3",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRANS_BOND_BORROW_RATE",
+            "alias": "REPO_TRANS_BOND_BORROW_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BORROW_FEE",
+            "alias": "BORROW_FEE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_NUMBER_OF_SUBSTITUTION",
+            "alias": "REPO_NUMBER_OF_SUBSTITUTION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_NUMBER_SUBSTITUTED",
+            "alias": "REPO_NUMBER_SUBSTITUTED",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "EURO_DISCREPANCY",
+            "alias": "EURO_DISCREPANCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MASTER_OR_SWING_TICKET",
+            "alias": "MASTER_OR_SWING_TICKET",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FIRMBK_OR_MATCHBK_TRADER",
+            "alias": "FIRMBK_OR_MATCHBK_TRADER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FIRMBK_OR_MATCHBK_SWING_TRADER",
+            "alias": "FIRMBK_OR_MATCHBK_SWING_TRADER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_HISTORICAL_RE_RATE_DATE",
+            "alias": "REPO_HISTORICAL_RE_RATE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_PROD_CLASS_GENERAL_COLLAT",
+            "alias": "REPO_PROD_CLASS_GENERAL_COLLAT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TERM_PRICE",
+            "alias": "TERM_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "START_PRICE",
+            "alias": "START_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TERM_DAY_ACCRUED",
+            "alias": "TERM_DAY_ACCRUED",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PRICING_METHOD",
+            "alias": "PRICING_METHOD",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BESA_CONVENTION",
+            "alias": "BESA_CONVENTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_ROLLOVER",
+            "alias": "REPO_ROLLOVER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JOINT_REPO_BUY_SIDE",
+            "alias": "JOINT_REPO_BUY_SIDE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "HAIRCUT_OPTION",
+            "alias": "HAIRCUT_OPTION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "VAR_PENS_LIVREE_FLTRAT_REPSPRD",
+            "alias": "VAR_PENS_LIVREE_FLTRAT_REPSPRD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_OPEN_TICKET_3",
+            "alias": "REPO_OPEN_TICKET_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FORWARD_RERATED_TICKET",
+            "alias": "FORWARD_RERATED_TICKET",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REPO_HISTORICAL_RE_RATE_DATE_2",
+            "alias": "REPO_HISTORICAL_RE_RATE_DATE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_RERATE_RATE_BUYSIDE",
+            "alias": "REPO_RERATE_RATE_BUYSIDE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SWAP_SPREAD",
+            "alias": "SWAP_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "OPEN_REPO_CLOSE_OUT_FLAG",
+            "alias": "OPEN_REPO_CLOSE_OUT_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRANS_SWAP_INIT_EXCHANGE_PAY",
+            "alias": "TRANS_SWAP_INIT_EXCHANGE_PAY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SWAP_INITIAL_EXCHANGE_RECEIVE",
+            "alias": "SWAP_INITIAL_EXCHANGE_RECEIVE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PAY_FINAL_AMOUNT",
+            "alias": "PAY_FINAL_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REC_FINAL_AMOUNT",
+            "alias": "REC_FINAL_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BDS_ISINS",
+            "alias": "BDS_ISINS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_FLOATING_RATE_INDEX",
+            "alias": "REC_FLOATING_RATE_INDEX",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_FLOATING_RATE_INDEX",
+            "alias": "PAY_FLOATING_RATE_INDEX",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_SETTLEMENT_CALENDAR_1",
+            "alias": "PAY_SIDE_SETTLEMENT_CALENDAR_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_SETTLEMENT_CALENDAR_2",
+            "alias": "PAY_SIDE_SETTLEMENT_CALENDAR_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_SIDE_SETTLEMENT_CALENDAR_1",
+            "alias": "REC_SIDE_SETTLEMENT_CALENDAR_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_SIDE_SETTLEMENT_CALENDAR_2",
+            "alias": "REC_SIDE_SETTLEMENT_CALENDAR_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_FIXING_CALENDAR_1",
+            "alias": "PAY_SIDE_FIXING_CALENDAR_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_FIXING_CALENDAR_2",
+            "alias": "PAY_SIDE_FIXING_CALENDAR_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_SIDE_FIXING_CALENDAR_1",
+            "alias": "REC_SIDE_FIXING_CALENDAR_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_SIDE_FIXING_CALENDAR_2",
+            "alias": "REC_SIDE_FIXING_CALENDAR_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_CALC_CALENDAR_1",
+            "alias": "PAY_SIDE_CALC_CALENDAR_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_CALC_CALENDAR_2",
+            "alias": "PAY_SIDE_CALC_CALENDAR_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_SIDE_CALC_CALENDAR_1",
+            "alias": "REC_SIDE_CALC_CALENDAR_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_SIDE_CALC_CALENDAR_2",
+            "alias": "REC_SIDE_CALC_CALENDAR_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_COUNTERPARTY",
+            "alias": "SWAP_COUNTERPARTY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_RESET_FREQUENCY_2",
+            "alias": "PAY_RESET_FREQUENCY_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_RESET_FREQUENCY",
+            "alias": "REC_RESET_FREQUENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_CURRENCY",
+            "alias": "PAY_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_CURRENCY",
+            "alias": "REC_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_NOTIONAL_AMOUNT",
+            "alias": "PAY_NOTIONAL_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REC_NOTIONAL_AMOUNT",
+            "alias": "REC_NOTIONAL_AMOUNT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FLOAT_LAG_TERM",
+            "alias": "FLOAT_LAG_TERM",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAPTION_EXPIRATION_DATE",
+            "alias": "SWAPTION_EXPIRATION_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PAY_REC_FIXED",
+            "alias": "PAY_REC_FIXED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_TYPE",
+            "alias": "SWAP_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_SPREAD_2",
+            "alias": "SWAP_SPREAD_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "EFFECTIVE_DATE",
+            "alias": "EFFECTIVE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "DATE_ROLL_CONVENTION",
+            "alias": "DATE_ROLL_CONVENTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_DAY_COUNT",
+            "alias": "PAY_SIDE_DAY_COUNT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_SIDE_DAY_COUNT",
+            "alias": "REC_SIDE_DAY_COUNT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_FREQUENCY",
+            "alias": "PAY_FREQUENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_FREQUENCY",
+            "alias": "REC_FREQUENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FIRST_COUPON_PAYMENT_DATE",
+            "alias": "FIRST_COUPON_PAYMENT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PRIMARY_RO_ISIN",
+            "alias": "PRIMARY_RO_ISIN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REFERENCE_BOND_ID",
+            "alias": "REFERENCE_BOND_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ISSUER",
+            "alias": "ISSUER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SENIORITY_DEBT_TYPE_OBLIGATION",
+            "alias": "SENIORITY_DEBT_TYPE_OBLIGATION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "RESTRUCTURING_TYPE",
+            "alias": "RESTRUCTURING_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CDS_CURVE_RECOVERY_RATE",
+            "alias": "CDS_CURVE_RECOVERY_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "UNDERLYING_CUSIP",
+            "alias": "UNDERLYING_CUSIP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PAY_SIDE_DATE_ROLL_CONVENTION",
+            "alias": "PAY_SIDE_DATE_ROLL_CONVENTION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REC_SIDE_DATE_ROLL_CONVENTION",
+            "alias": "REC_SIDE_DATE_ROLL_CONVENTION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PAY_SIDE_BUSINESS_DAY_ADJUST",
+            "alias": "PAY_SIDE_BUSINESS_DAY_ADJUST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REC_SIDE_BUSINESS_DAY_ADJUST",
+            "alias": "REC_SIDE_BUSINESS_DAY_ADJUST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SWAP_PAY_LEG_FIRST_COUPON_DATE",
+            "alias": "SWAP_PAY_LEG_FIRST_COUPON_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SWAP_REC_LEG_FIRST_COUPON_DATE",
+            "alias": "SWAP_REC_LEG_FIRST_COUPON_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "LAST_RESET_DATE",
+            "alias": "LAST_RESET_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "NEXT_RESET_DATE",
+            "alias": "NEXT_RESET_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REC_STUB_RESET",
+            "alias": "REC_STUB_RESET",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PAY_STUB_RESET",
+            "alias": "PAY_STUB_RESET",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "OPTION_CALL_FREQUENCY",
+            "alias": "OPTION_CALL_FREQUENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_PAR_SPREAD",
+            "alias": "SWAP_PAR_SPREAD",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PAY_NEXT_PAYMENT_DATE",
+            "alias": "PAY_NEXT_PAYMENT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "UPFRONT_SETTLE_DATE",
+            "alias": "UPFRONT_SETTLE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ACCRUED_NUMBER_OF_DAYS",
+            "alias": "ACCRUED_NUMBER_OF_DAYS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PREVIOUS_COUPON_SETTLE_DATE",
+            "alias": "PREVIOUS_COUPON_SETTLE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PAY_FLOATRATE_INDEX_YELLOW_KEY",
+            "alias": "PAY_FLOATRATE_INDEX_YELLOW_KEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REC_FLOATRATE_INDEX_YELLOW_KEY",
+            "alias": "REC_FLOATRATE_INDEX_YELLOW_KEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CDS_IS_NOT_STANDARD_CONTRACT",
+            "alias": "CDS_IS_NOT_STANDARD_CONTRACT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COMPANY_ID",
+            "alias": "COMPANY_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_ANALYST_INITIAL",
+            "alias": "SWAP_ANALYST_INITIAL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_PAIR_TRADE_TICKER",
+            "alias": "SWAP_PAIR_TRADE_TICKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ALERT_ID",
+            "alias": "ALERT_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CDS_REF_ENTITY_DATA_PAIR_CODE",
+            "alias": "CDS_REF_ENTITY_DATA_PAIR_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CDS_REF_ENTITY_DATA_LEGAL_NAME",
+            "alias": "CDS_REF_ENTITY_DATA_LEGAL_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CDS_DATE_GENERATION_METHOD",
+            "alias": "CDS_DATE_GENERATION_METHOD",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "REFERENCE_INDEX_IDENTIFIER",
+            "alias": "REFERENCE_INDEX_IDENTIFIER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_TR_ASSET_INDEX_NAME",
+            "alias": "SWAP_TR_ASSET_INDEX_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SWAP_TR_ASSET_INIT_NUMBER_UNIT",
+            "alias": "SWAP_TR_ASSET_INIT_NUMBER_UNIT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SWAP_TR_DIVIDEND_PAY_FACTOR",
+            "alias": "SWAP_TR_DIVIDEND_PAY_FACTOR",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TBA_RESEND_DUE_TO_CHANGE",
+            "alias": "TBA_RESEND_DUE_TO_CHANGE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_TBAS",
+            "alias": "STIP_CODE_TBAS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "EFFECTIVE_DURATION",
+            "alias": "EFFECTIVE_DURATION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AVERAGE_LIFE",
+            "alias": "AVERAGE_LIFE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MTGE_GENERIC_WAC",
+            "alias": "MTGE_GENERIC_WAC",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MTGE_ORIGINAL_WAM",
+            "alias": "MTGE_ORIGINAL_WAM",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REPO_TRANS_EXTRA_COMM_RATE2",
+            "alias": "REPO_TRANS_EXTRA_COMM_RATE2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "NET_WIRE_TBAS",
+            "alias": "NET_WIRE_TBAS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_CODE_1",
+            "alias": "STIP_CODE_1",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_1",
+            "alias": "STIP_OPERAND_1",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_1",
+            "alias": "STIP_VALUE_1",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_2",
+            "alias": "STIP_CODE_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND",
+            "alias": "STIP_OPERAND",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_2",
+            "alias": "STIP_VALUE_2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_3",
+            "alias": "STIP_CODE_3",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_2",
+            "alias": "STIP_OPERAND_2",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_3",
+            "alias": "STIP_VALUE_3",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_4",
+            "alias": "STIP_CODE_4",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_3",
+            "alias": "STIP_OPERAND_3",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_4",
+            "alias": "STIP_VALUE_4",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_5",
+            "alias": "STIP_CODE_5",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_4",
+            "alias": "STIP_OPERAND_4",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_5",
+            "alias": "STIP_VALUE_5",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_6",
+            "alias": "STIP_CODE_6",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_5",
+            "alias": "STIP_OPERAND_5",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_6",
+            "alias": "STIP_VALUE_6",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_7",
+            "alias": "STIP_CODE_7",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_6",
+            "alias": "STIP_OPERAND_6",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_7",
+            "alias": "STIP_VALUE_7",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "WALA",
+            "alias": "WALA",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TBA_TRANSACTION_TYPE",
+            "alias": "TBA_TRANSACTION_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_8",
+            "alias": "STIP_CODE_8",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_8",
+            "alias": "STIP_OPERAND_8",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_8",
+            "alias": "STIP_VALUE_8",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_9",
+            "alias": "STIP_CODE_9",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_9",
+            "alias": "STIP_OPERAND_9",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_9",
+            "alias": "STIP_VALUE_9",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "STIP_CODE_10",
+            "alias": "STIP_CODE_10",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_OPERAND_10",
+            "alias": "STIP_OPERAND_10",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STIP_VALUE_10",
+            "alias": "STIP_VALUE_10",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "fi:trades:",
+    "type": "HASH"
+}

@@ -1,0 +1,30 @@
+{
+    "schema": [
+        {
+            "field": "$.AccountNumber",
+            "alias": "AccountNumber",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Moniker",
+            "alias": "Moniker",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.AccessCode",
+            "alias": "AccessCode",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.StandardSettlementInstructions[*].Reference",
+            "alias": "Reference",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "jpath:accountmaster:",
+    "type": "JSON"
+}

@@ -1,0 +1,252 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3600), pid=54680, tid=49336
+#
+# JRE version:  (21.0.2+13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (21.0.2+13-LTS-58, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages com.jsd.jedis.AppSearch
+
+Host: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+Time: Sun Nov 30 21:25:53 2025 Eastern Standard Time elapsed time: 0.027686 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000025c42b85bc0):  JavaThread "Unknown thread" [_thread_in_vm, id=49336, stack(0x000000f6e0200000,0x000000f6e0300000) (1024K)]
+
+Stack: [0x000000f6e0200000,0x000000f6e0300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6cade9]
+V  [jvm.dll+0x8569c1]
+V  [jvm.dll+0x858d2e]
+V  [jvm.dll+0x859413]
+V  [jvm.dll+0x280e56]
+V  [jvm.dll+0x6c74d5]
+V  [jvm.dll+0x6bbeca]
+V  [jvm.dll+0x355bca]
+V  [jvm.dll+0x35d816]
+V  [jvm.dll+0x3ae67e]
+V  [jvm.dll+0x3ae928]
+V  [jvm.dll+0x3295dc]
+V  [jvm.dll+0x32a16b]
+V  [jvm.dll+0x81efa9]
+V  [jvm.dll+0x3bba01]
+V  [jvm.dll+0x807928]
+V  [jvm.dll+0x44f50e]
+V  [jvm.dll+0x450e11]
+C  [jli.dll+0x52a3]
+C  [ucrtbase.dll+0x29333]
+C  [KERNEL32.DLL+0x1259d]
+C  [ntdll.dll+0x5af78]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff9c081bb88, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x0000025c44617170 WorkerThread "GC Thread#0"                     [id=57788, stack(0x000000f6e0300000,0x000000f6e0400000) (1024K)]
+  0x0000025c44627ce0 ConcurrentGCThread "G1 Main Marker"            [id=51828, stack(0x000000f6e0400000,0x000000f6e0500000) (1024K)]
+  0x0000025c44629130 WorkerThread "G1 Conc#0"                       [id=23520, stack(0x000000f6e0500000,0x000000f6e0600000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9bff8c6a7]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ff9c088ce68] Heap_lock - owner thread: 0x0000025c42b85bc0
+
+Heap address: 0x0000000704600000, size: 4026 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000704600000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9c03739f9]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.019 Loaded shared library C:\Programs\java\jdk-21.0.2\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6b0c90000 - 0x00007ff6b0ca0000 	C:\Programs\java\jdk-21.0.2\bin\java.exe
+0x00007ffa99710000 - 0x00007ffa99928000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa98cd0000 - 0x00007ffa98d94000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa968a0000 - 0x00007ffa96c73000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa96f40000 - 0x00007ffa97051000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa82df0000 - 0x00007ffa82e09000 	C:\Programs\java\jdk-21.0.2\bin\jli.dll
+0x00007ffa81b70000 - 0x00007ffa81b8b000 	C:\Programs\java\jdk-21.0.2\bin\VCRUNTIME140.dll
+0x00007ffa99610000 - 0x00007ffa996c1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa97ff0000 - 0x00007ffa98097000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa99450000 - 0x00007ffa994f8000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa96c80000 - 0x00007ffa96ca8000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffa98aa0000 - 0x00007ffa98bb8000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa980a0000 - 0x00007ffa98252000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa96dd0000 - 0x00007ffa96df6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa73cb0000 - 0x00007ffa73f4c000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.6060_none_2712eda17382d24b\COMCTL32.dll
+0x00007ffa97ee0000 - 0x00007ffa97f09000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa96cb0000 - 0x00007ffa96dcb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa97060000 - 0x00007ffa970fa000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa8c770000 - 0x00007ffa8c77a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa97e90000 - 0x00007ffa97ec1000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000025c42d30000 - 0x0000025c42d46000 	C:\WINDOWS\System32\umppc20308.dll
+0x0000025c44530000 - 0x0000025c44544000 	C:\WINDOWS\System32\CsXumd64_20308.dll
+0x00007ffa82de0000 - 0x00007ffa82dec000 	C:\Programs\java\jdk-21.0.2\bin\vcruntime140_1.dll
+0x00007ffa577b0000 - 0x00007ffa5783e000 	C:\Programs\java\jdk-21.0.2\bin\msvcp140.dll
+0x00007ff9bfc50000 - 0x00007ff9c0967000 	C:\Programs\java\jdk-21.0.2\bin\server\jvm.dll
+0x00007ffa98c50000 - 0x00007ffa98cc1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa95cd0000 - 0x00007ffa95d1d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffa90c90000 - 0x00007ffa90cc4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa95cb0000 - 0x00007ffa95cc3000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffa95750000 - 0x00007ffa95768000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa790b0000 - 0x00007ffa790ba000 	C:\Programs\java\jdk-21.0.2\bin\jimage.dll
+0x00007ffa93b70000 - 0x00007ffa93da3000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa983e0000 - 0x00007ffa98771000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa982d0000 - 0x00007ffa983a8000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffa83dd0000 - 0x00007ffa83e02000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa96820000 - 0x00007ffa9689b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa65ee0000 - 0x00007ffa65eff000 	C:\Programs\java\jdk-21.0.2\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Programs\java\jdk-21.0.2\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.6060_none_2712eda17382d24b;C:\Programs\java\jdk-21.0.2\bin\server
+
+VM Arguments:
+jvm_args: -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: com.jsd.jedis.AppSearch
+java_class_path (initial): C:\Users\Jay Datsur\OneDrive\Tech\Redis\Jedis\JedisClient\client\target\classes;C:\Users\Jay Datsur\.m2\repository\redis\clients\jedis\5.2.0\jedis-5.2.0.jar;C:\Users\Jay Datsur\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Jay Datsur\.m2\repository\org\apache\commons\commons-pool2\2.12.0\commons-pool2-2.12.0.jar;C:\Users\Jay Datsur\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\Jay Datsur\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\Jay Datsur\.m2\repository\com\redis\redis-streams-java\0.3.5\redis-streams-java-0.3.5.jar;C:\Users\Jay Datsur\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Jay Datsur\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Jay Datsur\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\Jay Datsur\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\Jay Datsur\.m2\repository\org\redisson\redisson\3.52.0\redisson-3.52.0.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-common\4.1.127.Final\netty-common-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-codec\4.1.127.Final\netty-codec-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-buffer\4.1.127.Final\netty-buffer-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-transport\4.1.127.Final\netty-transport-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-resolver\4.1.127.Final\netty-resolver-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-resolver-dns\4.1.127.Final\netty-resolver-dns-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-codec-dns\4.1.127.Final\netty-codec-dns-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-handler\4.1.127.Final\netty-handler-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.127.Final\netty-transport-native-unix-common-4.1.127.Final.jar;C:\Users\Jay Datsur\.m2\repository\javax\cache\cache-api\1.1.1\cache-api-1.1.1.jar;C:\Users\Jay Datsur\.m2\repository\io\projectreactor\reactor-core\3.6.2\reactor-core-3.6.2.jar;C:\Users\Jay Datsur\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\Jay Datsur\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.8\rxjava-3.1.8.jar;C:\Users\Jay Datsur\.m2\repository\com\esotericsoftware\kryo\5.6.2\kryo-5.6.2.jar;C:\Users\Jay Datsur\.m2\repository\com\esotericsoftware\reflectasm\1.11.9\reflectasm-1.11.9.jar;C:\Users\Jay Datsur\.m2\repository\org\objenesis\objenesis\3.4\objenesis-3.4.jar;C:\Users\Jay Datsur\.m2\repository\com\esotericsoftware\minlog\1.3.1\minlog-1.3.1.jar;C:\Users\Jay Datsur\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.20.0\jackson-dataformat-yaml-2.20.0.jar;C:\Users\Jay Datsur\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\Jay Datsur\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.20.0\jackson-core-2.20.0.jar;C:\Users\Jay Datsur\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.20.0\jackson-datatype-jsr310-2.20.0.jar;C:\Users\Jay Datsur\.m2\repository\net\bytebuddy\byte-buddy\1.17.7\byte-buddy-1.17.7.jar;C:\Users\Jay Datsur\.m2\repository\org\jodd\jodd-util\6.3.0\jodd-util-6.3.0.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-all\1.7.1\resilience4j-all-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\io\vavr\vavr\0.10.2\vavr-0.10.2.jar;C:\Users\Jay Datsur\.m2\repository\io\vavr\vavr-match\0.10.2\vavr-match-0.10.2.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-ratelimiter\1.7.1\resilience4j-ratelimiter-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-bulkhead\1.7.1\resilience4j-bulkhead-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-cache\1.7.1\resilience4j-cache-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-timelimiter\1.7.1\resilience4j-timelimiter-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-circuitbreaker\1.7.1\resilience4j-circuitbreaker-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-core\1.7.1\resilience4j-core-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\io\github\resilience4j\resilience4j-retry\1.7.1\resilience4j-retry-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\org\json\json\20231013\json-20231013.jar;C:\Users\Jay Datsur\.m2\repository\org\glassfish\javax.json\1.1.4\javax.json-1.1.4.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.4.0.24.05\ojdbc11-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\jdbc\ucp11\23.4.0.24.05\ucp11-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\jdbc\rsi\23.4.0.24.05\rsi-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\security\oraclepki\23.4.0.24.05\oraclepki-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\ha\simplefan\23.4.0.24.05\simplefan-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\ha\ons\23.4.0.24.05\ons-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\nls\orai18n\23.4.0.24.05\orai18n-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\xml\xdb\23.4.0.24.05\xdb-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\com\oracle\database\xml\xmlparserv2\23.4.0.24.05\xmlparserv2-23.4.0.24.05.jar;C:\Users\Jay Datsur\.m2\repository\org\apache\kafka\kafka-clients\2.8.0\kafka-clients-2.8.0.jar;C:\Users\Jay Datsur\.m2\repository\com\github\luben\zstd-jni\1.4.9-1\zstd-jni-1.4.9-1.jar;C:\Users\Jay Datsur\.m2\repository\org\lz4\lz4-java\1.7.1\lz4-java-1.7.1.jar;C:\Users\Jay Datsur\.m2\repository\org\xerial\snappy\snappy-java\1.1.8.1\snappy-java-1.1.8.1.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4221566976                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 4221566976                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=C:\Programs\java\jdk-21.0.2
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Programs\apache-maven-3.9.6\bin;C:\Programs\java\jdk-21.0.2\bin;C:\Program Files\dotnet\;C:\Users\Jay Datsur\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Jay Datsur\AppData\Local\Programs\Python\Python312\;C:\Users\Jay Datsur\AppData\Local\Microsoft\WindowsApps;C:\Programs\VS Code\bin;c:\Users\Jay Datsur\.vscode\extensions\vscjava.vscode-java-debug-0.58.3\bundled\scripts\noConfigScripts;c:\Users\Jay Datsur\.vscode\extensions\ms-python.debugpy-2025.8.0-win32-x64\bundled\scripts\noConfigScripts
+USERNAME=JayDastur
+LANG=en_US.UTF-8
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+TMP=C:\Users\JAYDAT~1\AppData\Local\Temp
+TEMP=C:\Users\JAYDAT~1\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+OS uptime: 19 days 0:36 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1 microcode 0x86, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi, hv, rdtscp, rdpid, fsrm, gfni, avx512_bitalg, f16c, cet_ibt, cet_ss, avx512_ifma
+Processor Information for processor 0
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 1177
+Processor Information for processor 1
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 1177
+Processor Information for processor 2
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 1177
+Processor Information for processor 3
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 1177
+Processor Information for processor 4
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 1177
+Processor Information for processor 5
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 1177
+Processor Information for processor 6
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 1177
+Processor Information for processor 7
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 1177
+
+Memory: 4k page, system-wide physical 16103M (356M free)
+TotalPageFile size 65251M (AvailPageFile size 67M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 60M, peak: 312M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (21.0.2+13-LTS-58) for windows-amd64 JRE (21.0.2+13-LTS-58), built on 2024-01-05T18:32:24Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.

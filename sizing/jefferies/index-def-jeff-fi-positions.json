@@ -1,0 +1,360 @@
+{
+    "schema": [
+        {
+            "field": "POSITION_ID",
+            "alias": "POSITION_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AUDIT_INSERT_DATE",
+            "alias": "AUDIT_INSERT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AUDIT_INSERT_USER",
+            "alias": "AUDIT_INSERT_USER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "AUDIT_UPDATE_DATE",
+            "alias": "AUDIT_UPDATE_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AUDIT_UPDATE_USER",
+            "alias": "AUDIT_UPDATE_USER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FEED_DATA_DATE",
+            "alias": "FEED_DATA_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BUSINESS_FEED_DATA_DATE",
+            "alias": "BUSINESS_FEED_DATA_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "BD_LEGACY_INCLUDE",
+            "alias": "BD_LEGACY_INCLUDE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "IS_MORTBB",
+            "alias": "IS_MORTBB",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SEC_TYPE",
+            "alias": "SEC_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SEC_SYMBOL",
+            "alias": "SEC_SYMBOL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TICKER",
+            "alias": "TICKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COUPON",
+            "alias": "COUPON",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MATURITY",
+            "alias": "MATURITY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SERIES",
+            "alias": "SERIES",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TRADER_NAME",
+            "alias": "TRADER_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "FULL_ORIGINAL_FACE_NET_POS",
+            "alias": "FULL_ORIGINAL_FACE_NET_POS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "NET_FULL_SETTLE_DATE_POSITION",
+            "alias": "NET_FULL_SETTLE_DATE_POSITION",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MARK_TO_MARKET_PRICE_OR_DISC",
+            "alias": "MARK_TO_MARKET_PRICE_OR_DISC",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "AVERAGE_COST",
+            "alias": "AVERAGE_COST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CUMULATIVE_AVERAGE_COST",
+            "alias": "CUMULATIVE_AVERAGE_COST",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "REALIZED_PL",
+            "alias": "REALIZED_PL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CURRENT_MARK_TO_MARKET_PRICE",
+            "alias": "CURRENT_MARK_TO_MARKET_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MARK_TO_MARKET_PRICE_BGN",
+            "alias": "MARK_TO_MARKET_PRICE_BGN",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "FINANCING_RATE",
+            "alias": "FINANCING_RATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SECURITY_INCOME",
+            "alias": "SECURITY_INCOME",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SECURTY_AND_FX_TOT_PL_BOOKCCY",
+            "alias": "SECURTY_AND_FX_TOT_PL_BOOKCCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MORTGAGE_FLAG",
+            "alias": "MORTGAGE_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MORTGAGE_FACTOR",
+            "alias": "MORTGAGE_FACTOR",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "POOL_GROUP_OR_SERIES",
+            "alias": "POOL_GROUP_OR_SERIES",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "VALUE_01_CRE_CNETEXP",
+            "alias": "VALUE_01_CRE_CNETEXP",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "CURRENT_NET_POSITION_MIL",
+            "alias": "CURRENT_NET_POSITION_MIL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "UNREALIZED_PL",
+            "alias": "UNREALIZED_PL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "VALUE_01_CHG_NET_EXP",
+            "alias": "VALUE_01_CHG_NET_EXP",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TRADER_DESCRIPTION",
+            "alias": "TRADER_DESCRIPTION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "NEXT_SETTLEMENT_DATE",
+            "alias": "NEXT_SETTLEMENT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "VALUE_01_OPN_NET_EXP",
+            "alias": "VALUE_01_OPN_NET_EXP",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PRIMARY_TRADER",
+            "alias": "PRIMARY_TRADER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "GENERAL_LEDGER_ACCOUNT",
+            "alias": "GENERAL_LEDGER_ACCOUNT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MKT_VALUE_MTMXPOS_CURT_NET_POS",
+            "alias": "MKT_VALUE_MTMXPOS_CURT_NET_POS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "STRIKE_PRICE",
+            "alias": "STRIKE_PRICE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SWAP_PAR_COUPON",
+            "alias": "SWAP_PAR_COUPON",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SECURTY_AND_FX_UNRL_PL_BOOKCCY",
+            "alias": "SECURTY_AND_FX_UNRL_PL_BOOKCCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "SECURTY_AND_FX_REL_PL_BOOKCCY",
+            "alias": "SECURTY_AND_FX_REL_PL_BOOKCCY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MTGE_IS_AGENCY_BACKED",
+            "alias": "MTGE_IS_AGENCY_BACKED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CURRENCY",
+            "alias": "CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "VALUE_01_CNETEXP",
+            "alias": "VALUE_01_CNETEXP",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "TDS_CREDIT_EXPOSURE",
+            "alias": "TDS_CREDIT_EXPOSURE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "ISIN",
+            "alias": "ISIN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BBG_GBL_ID",
+            "alias": "BBG_GBL_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "UNIQUE_BBG_ID",
+            "alias": "UNIQUE_BBG_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "YESTERDAY_TRADE_PL",
+            "alias": "YESTERDAY_TRADE_PL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "YESTERDAY_MARKET_PL",
+            "alias": "YESTERDAY_MARKET_PL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "YESTERDAY_TOTAL_PL",
+            "alias": "YESTERDAY_TOTAL_PL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "PX_ACCRET",
+            "alias": "PX_ACCRET",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MOODYS_RATING",
+            "alias": "MOODYS_RATING",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SP_RATING",
+            "alias": "SP_RATING",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "AVERAGE_AGE",
+            "alias": "AVERAGE_AGE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "QUOTED_CURRENCY",
+            "alias": "QUOTED_CURRENCY",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "fi:positions:",
+    "type": "HASH"
+}

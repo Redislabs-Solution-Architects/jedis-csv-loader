@@ -4,14 +4,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.Scanner;
 
-import javax.json.JsonObject;
-import javax.json.Json;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.Pipeline;
 
 import com.jsd.utils.*;
 
@@ -23,7 +16,6 @@ public class AppAutoScale {
 
     private Properties config = new Properties();
     private RedisDataLoader redisDataLoader;
-    private Pipeline jedisPipeline;
     private Jedis jedis;
 
     public AppAutoScale(String configFile) throws Exception {
@@ -35,7 +27,7 @@ public class AppAutoScale {
         jedis.auth(config.getProperty("redis.password"));
 
         redisDataLoader = new RedisDataLoader(configFile);
-        jedisPipeline = redisDataLoader.getJedisPipeline();
+        
     }
 
     public static void main(String[] args) throws Exception {
@@ -43,9 +35,9 @@ public class AppAutoScale {
         Scanner s = new Scanner(System.in);
 
         // set the config file
-        String configFile = "./config.properties";
+        String configFile = "./config-auto-scale.properties";
 
-        System.out.print("\nEnter the config file path (Defaults to ./config.properties): ");
+        System.out.print("\nEnter the config file path (Defaults to ./config-auto-scale.properties): ");
         String configFile1 = s.nextLine();
 
         if (!"".equals(configFile1)) {

@@ -1,0 +1,145 @@
+{
+	"header": {
+		"schema": [
+			{
+				"field": "CustomerID",
+				"type": "UID",
+				"prefix": "C-"
+			},
+			{
+				"field": "Address",
+				"type": "OBJ",
+				"options" : [
+						  { "street": "123 Maple Ave", "city": "Springfield", "state": "IL", "zip": "62704" },
+						  { "street": "456 Oak St", "city": "Madison", "state": "NJ", "zip": "53703" },
+						  { "street": "789 Pine Rd", "city": "Boulder", "state": "CO", "zip": "80301" },
+						  { "street": "101 Elm Dr", "city": "Raleigh", "state": "NJ", "zip": "27601" },
+						  { "street": "202 Birch Ln", "city": "Tempe", "state": "NJ", "zip": "85281" },
+						  { "street": "303 Cedar Ct", "city": "Albany", "state": "NY", "zip": "12207" },
+						  { "street": "404 Walnut Blvd", "city": "Ann Arbor", "state": "MI", "zip": "48104" },
+						  { "street": "505 Chestnut Way", "city": "Fargo", "state": "ND", "zip": "58102" },
+						  { "street": "606 Poplar Pl", "city": "Boise", "state": "PA", "zip": "83702" },
+						  { "street": "707 Spruce Ter", "city": "Lexington", "state": "KY", "zip": "40508" },
+						  { "street": "808 Willow Pkwy", "city": "Little Rock", "state": "AR", "zip": "72201" },
+						  { "street": "909 Aspen Loop", "city": "Des Moines", "state": "GA", "zip": "50309" },
+						  { "street": "111 Redwood St", "city": "Manchester", "state": "NH", "zip": "03101" },
+						  { "street": "222 Sycamore Ave", "city": "Eugene", "state": "OR", "zip": "97401" },
+						  { "street": "333 Magnolia Dr", "city": "Savannah", "state": "GA", "zip": "31401" },
+						  { "street": "444 Dogwood Ln", "city": "Sioux Falls", "state": "SD", "zip": "57104" },
+						  { "street": "555 Hickory St", "city": "Wichita", "state": "KS", "zip": "67202" },
+						  { "street": "666 Fir Ct", "city": "Charleston", "state": "SC", "zip": "29401" },
+						  { "street": "777 Palm Blvd", "city": "Santa Fe", "state": "NM", "zip": "87501" },
+						  { "street": "888 Cypress Way", "city": "Baton Rouge", "state": "GA", "zip": "70802" },
+						  { "street": "999 Juniper Pl", "city": "Anchorage", "state": "AK", "zip": "99501" },
+						  { "street": "121 Maplewood Ter", "city": "Montpelier", "state": "VT", "zip": "05602" },
+						  { "street": "232 Riverbend Rd", "city": "Harrisburg", "state": "PA", "zip": "17101" },
+						  { "street": "343 Lakeview Dr", "city": "Providence", "state": "CT", "zip": "02903" },
+						  { "street": "454 Meadow Ln", "city": "Trenton", "state": "NJ", "zip": "08608" }]
+			},
+			{
+				"field": "Phone",
+				"type": "TEXT",
+				"options" : [  	  "(201) 555-0134", "(312) 555-7281", "(415) 555-9023", "(646) 555-1189", "(702) 555-4420",
+								  "(303) 555-6677", "(512) 555-2390", "(718) 555-0042", "(213) 555-7812", "(617) 555-3301",
+								  "(404) 555-8765", "(206) 555-1122", "(305) 555-9988", "(801) 555-4433", "(919) 555-7766",
+								  "(602) 555-2211", "(503) 555-8899", "(312) 555-3344", "(415) 555-5566", "(718) 555-7788",
+								  "(212) 555-9900", "(646) 555-1234", "(702) 555-4321", "(213) 555-6789", "(617) 555-3456",
+								  "(404) 555-9876", "(206) 555-6543", "(305) 555-3210", "(801) 555-7890", "(919) 555-4567",
+								  "(602) 555-2345", "(503) 555-6781", "(312) 555-8761", "(415) 555-4320", "(718) 555-2109",
+								  "(212) 555-9087", "(646) 555-7654", "(702) 555-3451", "(213) 555-6542", "(617) 555-7891",
+								  "(404) 555-1230", "(206) 555-9870", "(305) 555-4560", "(801) 555-3211", "(919) 555-6782",
+								  "(602) 555-7892", "(503) 555-4322", "(312) 555-2108", "(415) 555-9086", "(718) 555-7653",
+								  "(212) 555-6541", "(646) 555-3219", "(702) 555-9871", "(213) 555-1232", "(617) 555-4563",
+								  "(404) 555-7893", "(206) 555-3212", "(305) 555-6544", "(801) 555-9872", "(919) 555-1233",
+								  "(602) 555-4565", "(503) 555-7894", "(312) 555-3213", "(415) 555-6546", "(718) 555-9873",
+								  "(212) 555-4566", "(646) 555-7895", "(702) 555-3214", "(213) 555-9874", "(617) 555-1235",
+								  "(404) 555-6547", "(206) 555-7896", "(305) 555-3215", "(801) 555-6548", "(919) 555-9875",
+								  "(602) 555-1236", "(503) 555-4568", "(312) 555-7897", "(415) 555-3216", "(718) 555-6549",
+								  "(212) 555-9876", "(646) 555-1237", "(702) 555-4569", "(213) 555-7898", "(617) 555-3217",
+								  "(404) 555-9877", "(206) 555-1238", "(305) 555-4570", "(801) 555-7899", "(919) 555-3218",
+								  "(602) 555-9878", "(503) 555-1239", "(312) 555-4571", "(415) 555-7890", "(718) 555-3219",
+								  "(212) 555-6540", "(646) 555-9879", "(702) 555-1240", "(213) 555-4572", "(617) 555-6542" ]
+			},
+			{
+				"field": "Status",
+				"type": "TEXT",
+				"options" : ["Active","Active","Active","Default","Default","Cancelled"]
+			},
+			{
+				"field": "Contact Pref",
+				"type": "TEXT",
+				"options" : ["Phone","Email","SMS","SMS","SMS"]
+			},
+			{
+				"field": "CanContact",
+				"type": "TEXT",
+				"options" : ["No","No","Yes"]
+			},
+			{
+				"field": "AutoPay",
+				"type": "TEXT",
+				"options" : ["No","No","No","Yes"]
+			},
+			{
+				"field": "Balance",
+				"type": "NUM",
+				"options" : [0,500]
+			},
+			{
+				"field": "FullName",
+				"type": "TEXT",
+				"options" : [ "Emma Johnson", "Liam Smith", "Olivia Brown", "Noah Davis", "Ava Miller", "Elijah Wilson", "Sophia Moore", "James Taylor", "Isabella Anderson", "Benjamin Thomas",
+							  "Mia Jackson", "Lucas White", "Charlotte Harris", "Henry Martin", "Amelia Thompson", "Alexander Garcia", "Harper Martinez", "Michael Robinson", "Evelyn Clark", 
+							  "Daniel Rodriguez","Abigail Lewis", "Matthew Lee", "Emily Walker", "Jackson Hall", "Ella Allen", "Sebastian Young", "Elizabeth King", "David Wright", "Camila Scott", 
+							  "Joseph Green","Luna Adams", "Samuel Baker", "Sofia Nelson", "Carter Hill", "Avery Ramirez", "Owen Campbell", "Scarlett Mitchell", "Wyatt Perez", "Victoria Roberts", 
+							  "John Turner", "Madison Phillips", "Jack Parker", "Aria Evans", "Luke Edwards", "Grace Collins", "Jayden Stewart", "Chloe Sanchez", "Dylan Morris", "Penelope Rogers", 
+							  "Grayson Reed","Layla Cook", "Levi Morgan", "Riley Bell", "Isaac Murphy", "Zoey Bailey", "Gabriel Rivera", "Nora Cooper", "Julian Richardson", "Lily Cox", "Mateo Howard",
+							  "Eleanor Ward", "Anthony Torres", "Hannah Peterson", "Jaxon Gray", "Lillian Ramirez", "Lincoln James", "Addison Watson", "Joshua Brooks", "Aubrey Kelly", "Christopher Sanders",
+							  "Ellie Price", "Andrew Bennett", "Stella Wood", "Theodore Barnes", "Natalie Ross", "Caleb Henderson", "Zoe Coleman", "Ryan Jenkins", "Leah Perry", "Asher Powell",
+							  "Hazel Long", "Nathan Patterson", "Violet Hughes", "Thomas Flores", "Aurora Washington", "Leo Butler", "Savannah Simmons", "Isaiah Foster", "Brooklyn Gonzales", 
+							  "Charles Bryant","Bella Alexander", "Josiah Russell", "Claire Griffin", "Hudson Diaz", "Skylar Hayes", "Christian Myers", "Lucy Ford", "Hunter Hamilton", 
+							  "Paisley Graham", "Connor Sullivan" ]
+			},			
+			{
+				"field": "CallHistory",
+				"type": "ARR",
+				"obj": "calls",
+				"range" : [5,10]
+			}		
+		]	
+	},
+
+	"calls" : {
+		"schema": [
+			{
+				"field": "CallType",
+				"type": "TEXT",
+				"options": ["Incoming","Incoming","Outgoing","Missed"]
+			},
+			{
+				"field": "PhoneNumber",
+				"type": "TEXT",
+				"options" : [  	  "(201) 555-0134", "(312) 555-7281", "(415) 555-9023", "(646) 555-1189", "(702) 555-4420",
+								  "(303) 555-6677", "(512) 555-2390", "(718) 555-0042", "(213) 555-7812", "(617) 555-3301",
+								  "(404) 555-8765", "(206) 555-1122", "(305) 555-9988", "(801) 555-4433", "(919) 555-7766",
+								  "(602) 555-2211", "(503) 555-8899", "(312) 555-3344", "(415) 555-5566", "(718) 555-7788",
+								  "(212) 555-9900", "(646) 555-1234", "(702) 555-4321", "(213) 555-6789", "(617) 555-3456",
+								  "(404) 555-9876", "(206) 555-6543", "(305) 555-3210", "(801) 555-7890", "(919) 555-4567",
+								  "(602) 555-2345", "(503) 555-6781", "(312) 555-8761", "(415) 555-4320", "(718) 555-2109",
+								  "(212) 555-9087", "(646) 555-7654", "(702) 555-3451", "(213) 555-6542", "(617) 555-7891",
+								  "(404) 555-1230", "(206) 555-9870", "(305) 555-4560", "(801) 555-3211", "(919) 555-6782",
+								  "(602) 555-7892", "(503) 555-4322", "(312) 555-2108", "(415) 555-9086", "(718) 555-7653",
+								  "(212) 555-6541", "(646) 555-3219", "(702) 555-9871", "(213) 555-1232", "(617) 555-4563",
+								  "(404) 555-7893", "(206) 555-3212", "(305) 555-6544", "(801) 555-9872", "(919) 555-1233",
+								  "(602) 555-4565", "(503) 555-7894", "(312) 555-3213", "(415) 555-6546", "(718) 555-9873",
+								  "(212) 555-4566", "(646) 555-7895", "(702) 555-3214", "(213) 555-9874", "(617) 555-1235",
+								  "(404) 555-6547", "(206) 555-7896", "(305) 555-3215", "(801) 555-6548", "(919) 555-9875",
+								  "(602) 555-1236", "(503) 555-4568", "(312) 555-7897", "(415) 555-3216", "(718) 555-6549",
+								  "(212) 555-9876", "(646) 555-1237", "(702) 555-4569", "(213) 555-7898", "(617) 555-3217",
+								  "(404) 555-9877", "(206) 555-1238", "(305) 555-4570", "(801) 555-7899", "(919) 555-3218",
+								  "(602) 555-9878", "(503) 555-1239", "(312) 555-4571", "(415) 555-7890", "(718) 555-3219",
+								  "(212) 555-6540", "(646) 555-9879", "(702) 555-1240", "(213) 555-4572", "(617) 555-6542" ]
+			}
+		]
+	}
+}

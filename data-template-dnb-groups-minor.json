@@ -1,0 +1,408 @@
+{"header": {"schema": [
+    {
+        "field": "GROUPID",
+        "prefix": "GROUPID-",
+        "type": "UID"
+    },
+    {
+        "field": "DTRIALGORITHMID",
+        "prefix": "DTRIALGORITHMID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "GME_CLOUD_MIGRATION_FLAG",
+        "prefix": "GME_CLOUD_MIGRATION_FLAG-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ADDRESS_ATTENTION_NAME",
+        "prefix": "ADDRESS_ATTENTION_NAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CANCEL_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CHANGE_EVENT_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CONTRACT_SIGNER_SUBSCRIBER_NUMBER",
+        "prefix": "CONTRACT_SIGNER_SUBSCRIBER_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COUNTRY_CODE",
+        "prefix": "COUNTRY_CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOMER_BACK_OFFICE",
+        "prefix": "CUSTOMER_BACK_OFFICE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_ADMINSTER_RULES",
+        "prefix": "DM_ADMINSTER_RULES-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_CACHE_DURATION_DAYS",
+        "prefix": "DM_CACHE_DURATION_DAYS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_CACHE_USER",
+        "prefix": "DM_CACHE_USER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DM_TRADE_CREDIT_USER",
+        "prefix": "DM_TRADE_CREDIT_USER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_BATCH_PRIORITY",
+        "prefix": "DNB_BATCH_PRIORITY-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_COUNTRY_PERMISSIONS",
+        "prefix": "DNB_COUNTRY_PERMISSIONS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_DELIVERY_CONTACT_NUMBER",
+        "prefix": "DNB_DELIVERY_CONTACT_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_MAINTENANCE_INDICATOR",
+        "prefix": "DNB_MAINTENANCE_INDICATOR-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_METER_LIMIT",
+        "prefix": "DNB_METER_LIMIT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_PRODUCT_PERMISSIONS",
+        "prefix": "DNB_PRODUCT_PERMISSIONS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_THRID_PARTY_TYPE",
+        "prefix": "DNB_THRID_PARTY_TYPE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBCONTRACTEXPDATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DNBCONTRACTSTATUS",
+        "prefix": "DNBCONTRACTSTATUS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBPRODUCTLAYER",
+        "prefix": "DNBPRODUCTLAYER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNBSUBSCRIBERSTATUS",
+        "prefix": "DNBSUBSCRIBERSTATUS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABL_EMT_CH_BASS",
+        "prefix": "ENABL_EMT_CH_BASS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABLE_SER_COMMENTARY",
+        "prefix": "ENABLE_SER_COMMENTARY-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABLE_SER_EM",
+        "prefix": "ENABLE_SER_EM-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENABLE_VIABILITY_SCORE",
+        "prefix": "ENABLE_VIABILITY_SCORE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENTITLE_ENQ_COUNTRY_ID",
+        "prefix": "ENTITLE_ENQ_COUNTRY_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENVIRONMENT",
+        "prefix": "ENVIRONMENT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FACSIMILE_TELEPHONE_NUMBER",
+        "prefix": "FACSIMILE_TELEPHONE_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FREEZE_METER_LIMIT",
+        "prefix": "FREEZE_METER_LIMIT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FREEZE_QPS_LIMIT",
+        "prefix": "FREEZE_QPS_LIMIT-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "GOVERNMENT_ENTITY_INDICATOR",
+        "prefix": "GOVERNMENT_ENTITY_INDICATOR-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INTERNATIONAL_USAGE_INDICATOR",
+        "prefix": "INTERNATIONAL_USAGE_INDICATOR-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IS_GROUP",
+        "prefix": "IS_GROUP-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IS_OBO_AUTHENTICATION",
+        "prefix": "IS_OBO_AUTHENTICATION-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IS_OBO_AUTHORIZATION",
+        "prefix": "IS_OBO_AUTHORIZATION-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IS_OBO_PORTFOLIO",
+        "prefix": "IS_OBO_PORTFOLIO-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NAS_BILLING_PREF",
+        "prefix": "NAS_BILLING_PREF-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NORDICSUBSCRIBER_NUMBER",
+        "prefix": "NORDICSUBSCRIBER_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OVRDTRDUP_BUSINESS_VERIFICATION",
+        "prefix": "OVRDTRDUP_BUSINESS_VERIFICATION-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SUBSCRIBER_NATIONAL_ACCOUNT_NUMBER",
+        "prefix": "SUBSCRIBER_NATIONAL_ACCOUNT_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TEMPPNP_ROLE",
+        "prefix": "TEMPPNP_ROLE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "VALIDATION_TIME",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "WWN_PARTNER",
+        "prefix": "WWN_PARTNER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    }
+]}}

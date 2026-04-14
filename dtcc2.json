@@ -1,0 +1,14 @@
+{"productId":"CDSC0006",
+"activityStatusId":1600,
+"activityStatusMessage":"Ground to cloud transfer request received from: DIST",
+"recievedFileName":"PerfTest#134995899.txt",
+"fileSize":0,
+"trackingId":"Q720401250059905",
+"optionalRecordText":"{\"registrationId\":\"CDSC0006\",\"sourceName\":\"PerfTest#134995899.txt\",\"numberOfSources\":0,\"s3Filename\":null,\"originatingSystem\":\"DIST\",\"app_sysid_token\":\"2e8be555-f471-44fd-a0d4-60548a4d5ae8\",\"s3Prefix\":null}",
+"srcFileExpiryDate":"09-04-0170",
+"srcJobLogId":"/logs/apps/cdspush01",
+"srcJobLogName":"cdspush01",
+"notifyStatus":"COMPLETED",
+"actualActivityTs":"2025-04-01 23:43:24.000056",
+"activityRecordTs":"2025-04-01 15:43:24.581885"}
+"This is an otional record text, it is a large seriealize JSON object, we will generate uniques JSONs for each record, idential key names and values are stored by pointers and refrence, so we have to make sure they are unique, hopefully this text is long enough, cant wait to go on vacation-1093"

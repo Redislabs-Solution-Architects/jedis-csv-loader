@@ -1,0 +1,54 @@
+{
+    "schema": [
+        {
+            "field": "$.TransactionId",
+            "alias": "TransactionId",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.TransactionEntity",
+            "alias": "TransactionEntity",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TransactionOrigin",
+            "alias": "TransactionOrigin",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TransactionOriginatingEvent",
+            "alias": "TransactionOriginatingEvent",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TransactionAccountIdentifierValue",
+            "alias": "TransactionAccountIdentifierValue",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TransactionAccountIdentifierType",
+            "alias": "TransactionAccountIdentifierType",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TransactionEventType",
+            "alias": "TransactionEventType",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TransactionEventExecutionType",
+            "alias": "TransactionEventExecutionType",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "jpath:transactions:",
+    "type": "JSON"
+}

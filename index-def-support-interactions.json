@@ -1,0 +1,54 @@
+{
+	"type": "JSON",
+	"prefix": "support:tickets:",
+	"schema": [
+		{
+			"field": "$.Customer.company",
+			"alias": "Customer",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.Description",
+			"alias": "Description",
+			"type": "TEXT",
+			"sortable": true
+		},
+		{
+			"field": "$.Agent.Name",
+			"alias": "Agent",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.Agent.location",
+			"alias": "Location",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.Mode",
+			"alias": "Mode",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.Status",
+			"alias": "Status",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.WaitTime",
+			"alias": "WaitTime",
+			"type": "NUMERIC",
+			"sortable": true
+		},
+		{
+			"field": "$.CallTime",
+			"alias": "CallTime",
+			"type": "NUMERIC",
+			"sortable": true
+		}
+	]
+}

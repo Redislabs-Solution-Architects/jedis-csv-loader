@@ -1,0 +1,24 @@
+{
+    "schema": [
+        {
+            "field": "$.Moniker",
+            "alias": "Moniker",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ContractingEntity",
+            "alias": "ContractingEntity",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.FeesCommissions[*].ExecMethod",
+            "alias": "ExecMethod",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "jpath:moniker:",
+    "type": "JSON"
+}

@@ -1,0 +1,56 @@
+{
+	"header": {
+		"schema": [
+			{
+				"field": "event_id",
+				"type": "UID",
+				"prefix": "E"
+			},
+			{
+				"field": "subscriber_name",
+				"type": "TEXT",
+				"options" : ["Apple", "Walmart", "Amazon", "United Health", "Apple", "Berkshire Hathaway", 
+							"CVS Health", "Apple", "Exxon", "Alphabet", "Apple", "Costco", "Apple", 
+							"Cigna", "Apple", "Verizon", "Comcast", "Cardinal Health", "Chevron", "Chevron", 
+							"Home Depot", "Verizon", "Walgreens Boots Alliance", "Verizon", "Marathon Petroleum", 
+							"Kroger", "Ford Motor", "General Motors", "General Motors", "Verizon", 
+							"JPMorgan Chase", "General Motors", "Microsoft", "General Motors", "Anthem", 
+							"Johnson & Johnson", "Meta Platforms", "Procter & Gamble", "UPS"] 
+			},
+			{
+				"field": "price",
+				"type": "NUM",
+				"options" : [100,500]
+			},
+			{
+				"field": "product",
+				"type": "TEXT",
+				"options" : ["Hoovers","Risk Manager","Credit Intelligence","Connect","Fraud Network"]
+			},
+			{
+				"field": "location",
+				"type": "OBJ",
+				"options" : [
+						{"region_name" : "America", "case_country": "USA"},{"region_name" : "America", "case_country": "USA"},
+						{"region_name" : "EMEA", "case_country": "Germany"},{"region_name" : "EMEA", "case_country": "Poland"},
+						{"region_name" : "America", "case_country": "USA"},{"region_name" : "EMEA", "case_country": "UK"},
+						{"region_name" : "America", "case_country": "USA"},{"region_name" : "EMEA", "case_country": "UK"},
+						{"region_name" : "APAC", "case_country": "India"},{"region_name" : "APAC", "case_country": "Singapore"},
+						{"region_name" : "APAC", "case_country": "India"},{"region_name" : "APAC", "case_country": "Japan"},
+						{"region_name" : "APAC", "case_country": "Japan"},{"region_name" : "APAC", "case_country": "Japan"}	
+					]
+			},
+			{
+				"field": "usage_date",
+				"type": "NUM",
+				"options" : [20240101,20241231]
+			},	
+			{
+				"field": "subject_duns_entity_id",
+				"prefix": "duns-",
+				"options": [100,999],
+				"type": "AUTO-TEXT"
+			}
+		]	
+	}
+}

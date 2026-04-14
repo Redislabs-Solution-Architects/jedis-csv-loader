@@ -1,0 +1,57 @@
+{
+	"type": "JSON",
+	"prefix": "usage:",
+	"schema": [
+		{
+			"field": "$.event_id",
+			"alias": "EventID",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.subscriber_name",
+			"alias": "Subscriber",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.product",
+			"alias": "Product",
+			"type": "TEXT",
+			"sortable": true
+		},
+		{
+			"field": "$.subject_duns_entity_id",
+			"alias": "DunsID",
+			"type": "TAG",
+			"sortable": true
+		},
+		
+		{
+			"field": "$.location.region_name",
+			"alias": "Region",
+			"type": "TAG",
+			"sortable": true,
+			"nostem": false
+		},
+		{
+			"field": "$.location.case_country",
+			"alias": "Country",
+			"type": "TAG",
+			"sortable": true,
+			"nostem": false
+		},
+		{
+			"field": "$.price",
+			"alias": "Price",
+			"type": "NUMERIC",
+			"sortable": true
+		},
+		{
+			"field": "$.usage_date",
+			"alias": "UsageDate",
+			"type": "NUMERIC",
+			"sortable": true
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+    "schema": [
+        {
+            "field": "$.IMPU",
+            "alias": "IMPU",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ImsAliasGroup",
+            "alias": "ImsAliasGroup",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ImsServIndTDS",
+            "alias": "ImsServIndTDS",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.ImsShGroupData",
+            "alias": "ImsShGroupData",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ImsConfServProf",
+            "alias": "ImsConfServProf",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ImsPrivacyInd",
+            "alias": "ImsPrivacyInd",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "comcast:ims:",
+    "type": "JSON"
+}

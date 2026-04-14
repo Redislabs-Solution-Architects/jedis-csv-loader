@@ -1,0 +1,72 @@
+{
+    "schema": [
+        {
+            "field": "$.APPLICATION_ID",
+            "alias": "APPLICATION_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DNB_DUNS_LINK_PWD",
+            "alias": "DNB_DUNS_LINK_PWD",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DUNS_LINK_USER_ID",
+            "alias": "DUNS_LINK_USER_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DNB_CUSTOM_ONELOGIN_ROLE",
+            "alias": "DNB_CUSTOM_ONELOGIN_ROLE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ACCESS",
+            "alias": "ACCESS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.STATUS",
+            "alias": "STATUS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.SUBSCRIBER_NUMBER",
+            "alias": "SUBSCRIBER_NUMBER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.SEE_ALSO",
+            "alias": "SEE_ALSO",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.COUNTRY_CODE",
+            "alias": "COUNTRY_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.COMPANY_NAME",
+            "alias": "COMPANY_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DNB_CONTRACT_STATUS",
+            "alias": "DNB_CONTRACT_STATUS",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "dnb:products:",
+    "type": "JSON"
+}

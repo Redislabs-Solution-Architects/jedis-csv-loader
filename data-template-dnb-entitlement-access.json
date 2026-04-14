@@ -1,0 +1,163 @@
+{"header": {"schema": [
+    {
+        "field": "ENTITLEMENT_REFERENCE_ID",
+        "prefix": "ENTITLEMENT_REFERENCE_ID-",
+        "type": "UID"
+    },
+    {
+        "field": "ENTITLEMENT_NAME",
+        "prefix": "ENTITLEMENT_NAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PRINCIPAL_ID",
+        "prefix": "PRINCIPAL_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENTITLEMENT_LEVEL",
+        "prefix": "ENTITLEMENT_LEVEL-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENTITLEMENT_TYPE",
+        "prefix": "ENTITLEMENT_TYPE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ENTITLEMENT_VALUE",
+        "prefix": "ENTITLEMENT_VALUE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "GRANTOR_ID",
+        "prefix": "GRANTOR_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "APPLICATION_ID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "TRIAL_INDICATOR",
+        "prefix": "TRIAL_INDICATOR-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_RDC_FIRM_ID",
+        "prefix": "DNB_RDC_FIRM_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_RDC_USER_ID",
+        "prefix": "DNB_RDC_USER_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_RDC_PASSWORD",
+        "prefix": "DNB_RDC_PASSWORD-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EFFECTIVE_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "EXPIRATION_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DNB_METER_TYPE",
+        "prefix": "DNB_METER_TYPE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_METER_LIMIT",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DNB_RDC_USER",
+        "prefix": "DNB_RDC_USER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CREATION_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "LAST_UPDATE_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    }
+]}}

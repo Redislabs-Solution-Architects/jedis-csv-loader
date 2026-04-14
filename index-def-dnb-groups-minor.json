@@ -1,0 +1,60 @@
+{
+    "schema": [
+        {
+            "field": "$.DTRIALGORITHMID",
+            "alias": "DTRIALGORITHMID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.GME_CLOUD_MIGRATION_FLAG",
+            "alias": "GME_CLOUD_MIGRATION_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ADDRESS_ATTENTION_NAME",
+            "alias": "ADDRESS_ATTENTION_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CANCEL_DATE",
+            "alias": "CANCEL_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.CHANGE_EVENT_DATE",
+            "alias": "CHANGE_EVENT_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.CONTRACT_SIGNER_SUBSCRIBER_NUMBER",
+            "alias": "CONTRACT_SIGNER_SUBSCRIBER_NUMBER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.COUNTRY_CODE",
+            "alias": "COUNTRY_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CUSTOMER_BACK_OFFICE",
+            "alias": "CUSTOMER_BACK_OFFICE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DM_ADMINSTER_RULES",
+            "alias": "DM_ADMINSTER_RULES",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "dnb:groups:minor",
+    "type": "JSON"
+}

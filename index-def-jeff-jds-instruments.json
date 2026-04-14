@@ -1,0 +1,141 @@
+{
+    "schema": [
+        {
+            "field": "$.EQY_FUND_TICKER",
+            "alias": "EQY_FUND_TICKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+
+        {
+            "field": "$.EQY_PRIM_SECURITY_TICKER",
+            "alias": "EQY_PRIM_SECURITY_TICKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.SECURITY_TYP",
+            "alias": "SECURITY_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+
+        {
+            "field": "$.INSTRUMENT_HK",
+            "alias": "INSTRUMENT_HK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.INSTID",
+            "alias": "INSTID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ISSUER_ID",
+            "alias": "ISSUER_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.L1_CODE",
+            "alias": "L1_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.L2_CODE",
+            "alias": "L2_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.L3_CODE",
+            "alias": "L3_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.L4_CODE",
+            "alias": "L4_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.L5_CODE",
+            "alias": "L5_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.exchange[*].EXCHANGE_ID",
+            "alias": "EXCHANGE_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.exchange[*].EXCHANGE_HK",
+            "alias": "EXCHANGE_HK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.market[*].MARKET_ID",
+            "alias": "MARKET_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.market[*].MARKET_HK",
+            "alias": "MARKET_HK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.xref[*].adp_number",
+            "alias": "adp_number",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.xref[*].instid",
+            "alias": "instid",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.xref[*].id_bb_unique",
+            "alias": "id_bb_unique",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.xref[*].composite_id_bb_global",
+            "alias": "composite_id_bb_global",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.xref[*].source_pk_id",
+            "alias": "source_pk_id",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.xref[*].sedol",
+            "alias": "sedol",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.xref[*].ticker_and_exch_code",
+            "alias": "ticker_and_exch_code",
+            "sortable": true,
+            "type": "TAG"
+        }
+        
+    ],
+    "prefix": "jds:instruments:",
+    "type": "JSON"
+}

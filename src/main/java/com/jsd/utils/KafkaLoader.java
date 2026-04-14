@@ -56,10 +56,12 @@ public class KafkaLoader {
 
             }
 
-            Thread.sleep(1000l);
+            Thread.sleep(500l);
         }
 
         System.out.println("[KafkaLoader] Streamed " + (batchSize * numBatches) + " Records");
+
+        //Thread.sleep(5000l);
 
         producer.close();
     }

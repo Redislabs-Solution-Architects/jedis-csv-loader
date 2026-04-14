@@ -1,0 +1,828 @@
+{
+
+
+	"header": {
+		"schema": [
+			{
+				"field": "TransactionId",
+				"type": "NUM",
+				"options" : [1000000,5000000]
+			},
+            {
+				"field": "TransactionEntity",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionEntity-",
+				"options" : [1,20]
+			},            {
+				"field": "TransactionOrigin",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionOrigin-",
+				"options" : [1,20]
+			},            {
+				"field": "TransactionOriginatingEvent",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionOriginatingEvent-",
+				"options" : [1,20]
+			},            {
+				"field": "TransactionAccountIdentifierValue",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionAccountIdentifierValue-",
+				"options" : [1,20]
+			},            {
+				"field": "TransactionAccountIdentifierType",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionAccountIdentifierType-",
+				"options" : [1,20]
+			}, 
+			
+				{
+					"field": "TransactionEventType",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionEventType-",
+					"options" : [1,20]
+				},
+				{
+					"field": "TransactionEventExecutionType",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionEventExecutionType-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionCategory",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionCategory-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionType",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionType-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionSubtype",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionSubtype-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionStatus",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionStatus-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionDirection",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionDirection-",
+					"options" : [1,20]
+				},  
+				{
+					"field": "TransactionPrimaryAssetClass",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionPrimaryAssetClass-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionOptionType",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionOptionType-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionOptionExerciseStyle",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionOptionExerciseStyle-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionCountry",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionCountry-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionUniqueMessageId",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionUniqueMessageId-",
+					"options" : [1,400000]
+				},	
+				{
+					"field": "TransactionEnteredBy",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionEnteredBy-",
+					"options" : [1,20]
+				},			{
+					"field": "TransactionApprovedBy",
+					"type": "AUTO-TEXT",
+					"prefix": "TransactionApprovedBy-",
+					"options" : [1,20]
+				},    
+
+			{
+				"field": "TransactionId",
+				"type": "NUM",
+				"options" : [100000,520000]
+			},
+			{
+				"field": "TransactionMatchingAge",
+				"type": "NUM",
+				"options" : [0,365]
+			},
+			{
+				"field": "TransactionVersion",
+				"type": "NUM",
+				"options" : [0,365]
+			},	
+			{
+				"field": "TransactionUPI",
+				"type": "NUM",
+				"options" : [0,365]
+			},	
+            {
+				"field": "TransactionClientIdentifier",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionClientIdentifier-",
+				"options" : [1,20]
+			},
+
+			{
+				"field": "TransactionAmount",
+				"type": "ARR",
+				"obj": "TransactionAmount"
+			},
+			{
+				"field": "TransactionClassification",
+				"type": "ARR",
+				"obj": "TransactionClassification"
+			},
+			{
+				"field": "TransactionFee",
+				"type": "ARR",
+				"obj": "TransactionFee"
+			},
+			{
+				"field": "TransactionSettlement",
+				"type": "ARR",
+				"obj": "TransactionSettlement"
+			},	
+			{
+				"field": "TransactionDetail1",
+				"type": "ARR",
+				"obj": "TransactionDetail1"
+			},
+			{
+				"field": "TransactionDetail2",
+				"type": "ARR",
+				"obj": "TransactionDetail2"
+			},
+			{
+				"field": "TransactionDetail3",
+				"type": "ARR",
+				"obj": "TransactionDetail3"
+			},
+			{
+				"field": "TransactionDetail4",
+				"type": "ARR",
+				"obj": "TransactionDetail4"
+			},
+			{
+				"field": "TransactionDetail5",
+				"type": "ARR",
+				"obj": "TransactionDetail5"
+			},
+			{
+				"field": "TransactionDetail6",
+				"type": "ARR",
+				"obj": "TransactionDetail6"
+			},
+			{
+				"field": "TransactionDetail7",
+				"type": "ARR",
+				"obj": "TransactionDetail7"
+			},
+			{
+				"field": "TransactionDetail8",
+				"type": "ARR",
+				"obj": "TransactionDetail8"
+			},	
+			{
+				"field": "TransactionDetail9",
+				"type": "ARR",
+				"obj": "TransactionDetail9"
+			},
+			{
+				"field": "TransactionDetail10",
+				"type": "ARR",
+				"obj": "TransactionDetail10"
+			},
+			{
+				"field": "TransactionDetail11",
+				"type": "ARR",
+				"obj": "TransactionDetail11"
+			},
+			{
+				"field": "TransactionDetail12",
+				"type": "ARR",
+				"obj": "TransactionDetail12"
+			}			
+		]	
+	},
+
+	"TransactionDetail1" : {
+		"schema": [
+			{
+				"field": "TransactionDetail1_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail1_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail1_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail1_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail1_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail1_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail1_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail1_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+
+	"TransactionDetail2" : {
+		"schema": [
+			{
+				"field": "TransactionDetail2_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail2_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail2_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail2_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail2_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail2_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail2_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail2_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail3" : {
+		"schema": [
+			{
+				"field": "TransactionDetail3_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail3_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail3_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail3_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail3_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail3_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail3_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail3_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail4" : {
+		"schema": [
+			{
+				"field": "TransactionDetail4_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail4_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail4_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail4_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail4_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail4_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail4_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail4_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail5" : {
+		"schema": [
+			{
+				"field": "TransactionDetail5_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail5_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail5_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail5_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail5_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail5_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail5_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail5_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail6" : {
+		"schema": [
+			{
+				"field": "TransactionDetail6_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail6_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail6_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail6_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail6_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail6_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail6_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail6_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail7" : {
+		"schema": [
+			{
+				"field": "TransactionDetail7_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail7_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail7_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail7_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail7_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail7_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail7_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail7_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail8" : {
+		"schema": [
+			{
+				"field": "TransactionDetail8_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail8_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail8_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail8_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail8_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail8_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail8_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail8_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail9" : {
+		"schema": [
+			{
+				"field": "TransactionDetail9_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail9_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail9_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail9_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail9_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail9_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail9_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail9_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail10" : {
+		"schema": [
+			{
+				"field": "TransactionDetail10_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail10_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail10_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail10_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail10_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail10_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail10_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail10_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail11" : {
+		"schema": [
+			{
+				"field": "TransactionDetail11_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail11_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail11_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail11_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail11_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail11_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail11_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail11_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionDetail12" : {
+		"schema": [
+			{
+				"field": "TransactionDetail12_Field1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail12_Field1-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionDetail12_Field2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail12_Field2-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail12_Field3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionDetail12_Field3-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionDetail12_Field4",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionDetail12_Field5",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+
+	"TransactionFee" : {
+		"schema": [
+			{
+				"field": "TransactionFeeType",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionFeeType-",
+				"options" : [1,20]
+			},			{
+				"field": "TransactionFeeCurrency",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionFeeCurrency-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionFeeDirection",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionFeeDirection-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionFeeIsInclusive",
+				"type": "TEXT",
+				"options" : ["true","false"]
+			},
+			{
+				"field": "TransactionFeeValue",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionFeeRate",
+				"type": "NUM",
+				"options" : [1,100]
+			}
+		]
+	},
+
+	"TransactionAmount" : {
+		"schema": [
+			{
+				"field": "TransactionAmountType",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionAmountType-",
+				"options" : [1,20]
+			},			{
+				"field": "TransactionAmountCurrency",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionAmountCurrency-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionAmountValue",
+				"type": "NUM",
+				"options" : [100,100000]
+			}
+		]
+	},
+	"TransactionClassification" : {
+		"schema": [
+			{
+				"field": "TransactionClassificationType",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionClassificationType-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionClassificationValue",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionClassificationValue-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionClassificationSourceValue",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionClassificationSourceValue-",
+				"options" : [1,20]
+			}
+		]
+	},
+	"TransactionSettlement" : {
+		"schema": [
+			{
+				"field": "TransactionSettlement1",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement1-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement2",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement2-",
+				"options" : [1,20]
+			},			
+			{
+				"field": "TransactionSettlement3",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement3-",
+				"options" : [1,20]
+			},	
+			{
+				"field": "TransactionSettlement4",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement4-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement5",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement5-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement6",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement6-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement7",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement7-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement8",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement8-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement9",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement9-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement10",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement10-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement11",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement11-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement12",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement12-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement13",
+				"type": "AUTO-TEXT",
+                "prefix": "TransactionSettlement13-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TransactionSettlement14",
+				"type": "NUM",
+				"options" : [100,100000]
+			},	
+			{
+				"field": "TransactionSettlement15",
+				"type": "NUM",
+				"options" : [100,100000]
+			},
+			{
+				"field": "TransactionSettlement16",
+				"type": "NUM",
+				"options" : [100,100000]
+			},	
+			{
+				"field": "TransactionSettlement17",
+				"type": "NUM",
+				"options" : [100,100000]
+			},			{
+				"field": "TransactionSettlement18",
+				"type": "NUM",
+				"options" : [100,100000]
+			},	
+			{
+				"field": "TransactionSettlement19",
+				"type": "NUM",
+				"options" : [100,100000]
+			},			{
+				"field": "TransactionSettlement20",
+				"type": "NUM",
+				"options" : [100,100000]
+			},	
+			{
+				"field": "TransactionSettlement21",
+				"type": "NUM",
+				"options" : [100,100000]
+			},			{
+				"field": "TransactionSettlement22",
+				"type": "NUM",
+				"options" : [100,100000]
+			},	
+			{
+				"field": "TransactionSettlement23",
+				"type": "NUM",
+				"options" : [100,100000]
+			},			{
+				"field": "TransactionSettlement24",
+				"type": "NUM",
+				"options" : [100,100000]
+			},	
+			{
+				"field": "TransactionSettlement25",
+				"type": "NUM",
+				"options" : [100,100000]
+			}		
+		
+		]
+	}
+
+}

@@ -1,0 +1,54 @@
+{
+    "schema": [
+        {
+            "field": "$.SUBSCRIBERNUMBER",
+            "alias": "SUBSCRIBERNUMBER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.GROUPID",
+            "alias": "GROUPID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.SAP_MDM_DOWNLOAD",
+            "alias": "SAP_MDM_DOWNLOAD",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ADMIN_EMAIL_ID",
+            "alias": "ADMIN_EMAIL_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ADMIN_FIRST_NAME",
+            "alias": "ADMIN_FIRST_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ADMIN_LAST_NAME",
+            "alias": "ADMIN_LAST_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ADMIN_TELEPHONE_NUMBER",
+            "alias": "ADMIN_TELEPHONE_NUMBER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.GroupDetails[*].KEY_VAL",
+            "alias": "KEY_VAL",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "dnb:groups:",
+    "type": "JSON"
+}

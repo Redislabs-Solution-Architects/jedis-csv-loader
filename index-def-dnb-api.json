@@ -1,0 +1,54 @@
+{
+    "schema": [
+        {
+            "field": "$.PRIMARY_EMAIL",
+            "alias": "PRIMARY_EMAIL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.SECONDARY_EMAIL",
+            "alias": "SECONDARY_EMAIL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CLIENT_LOB",
+            "alias": "CLIENT_LOB",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CREATED_DATE",
+            "alias": "CREATED_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.ISSUED_BY",
+            "alias": "ISSUED_BY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TOKEN",
+            "alias": "TOKEN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.APIDetails[*].FIELD_VALUE",
+            "alias": "FIELD_VALUE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.TOKEN_ISSUED_TIME",
+            "alias": "TOKEN_ISSUED_TIME",
+            "sortable": true,
+            "type": "NUMERIC"
+        }
+    ],
+    "prefix": "dnb:api:",
+    "type": "JSON"
+}

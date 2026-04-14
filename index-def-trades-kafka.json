@@ -1,0 +1,62 @@
+{
+	"type": "JSON",
+	"prefix": "trades:",
+	"schema": [
+		{
+			"field": "$.TradeID",
+			"alias": "TradeID",
+			"sortable": true,
+			"type": "TAG"
+		},
+		{
+			"field": "$.AccountID",
+			"alias": "AccountID",
+			"sortable": true,
+			"type": "TAG"
+		},
+		{
+			"field": "$.Security.industry",
+			"alias": "Industry",
+			"type": "TEXT",
+			"sortable": true,
+			"nostem": false
+		},
+		{
+			"field": "$.Security.company",
+			"alias": "Company",
+			"type": "TEXT",
+			"sortable": true,
+			"nostem": false
+		},
+		{
+			"field": "$.Security.symbol",
+			"alias": "CUSIP",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.Action",
+			"alias": "Action",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.Status",
+			"alias": "Status",
+			"type": "TAG",
+			"sortable": true
+		},
+		{
+			"field": "$.Price",
+			"alias": "Price",
+			"type": "NUMERIC",
+			"sortable": true
+		},
+		{
+			"field": "$.Quantity",
+			"alias": "Quantity",
+			"type": "NUMERIC",
+			"sortable": true
+		}
+	]
+}

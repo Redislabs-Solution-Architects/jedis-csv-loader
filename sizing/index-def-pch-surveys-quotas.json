@@ -1,0 +1,35 @@
+{
+	"type": "JSON",
+	"prefix": "pch:quotas:",
+	"schema": [
+		{
+			"field": "$.survey_id",
+			"alias": "SurveyID",
+			"type": "TAG",
+			"sortable": true,
+			"nostem": true
+		},
+		{
+			"field": "$.survey_quota_type",
+			"alias": "QuotaType",
+			"type": "TAG",
+			"sortable": true,
+			"nostem": true
+		},
+		{
+			"field": "$.questions[*].precodes[*]",
+			"alias": "QuotaQuestionPrecode",
+			"type": "TAG",
+			"sortable": true,
+			"caseSensitive": false,
+			"separator": ","
+		},
+		{
+			"field": "$.number_of_respondents",
+			"alias": "QuotaNumRespondents",
+			"type": "NUMERIC",
+			"sortable": true
+		}
+
+	]
+}

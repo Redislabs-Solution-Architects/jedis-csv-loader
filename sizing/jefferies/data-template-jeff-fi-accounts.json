@@ -1,0 +1,1602 @@
+{"header": {"schema": [
+    {
+        "field": "ACCOUNT_ID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FIRM_ACCOUNT",
+        "prefix": "FIRM_ACCOUNT-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCOUNT_SHORT_NAME",
+        "prefix": "FIRM_ACCOUNT_SHORT_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCOUNT_LONG_NAME",
+        "prefix": "FIRM_ACCOUNT_LONG_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCOUNT_NUMBER",
+        "prefix": "MASTER_ACCOUNT_NUMBER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCOUNT_SHORT_NAME",
+        "prefix": "MASTER_ACCOUNT_SHORT_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCOUNT_LONG_NAME",
+        "prefix": "MASTER_ACCOUNT_LONG_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_1_TRACE",
+        "prefix": "DELIVERY_INST_1_TRACE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_2",
+        "prefix": "DELIVERY_INST_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_3",
+        "prefix": "DELIVERY_INST_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ADDRESS_1",
+        "prefix": "ADDRESS_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ADDRESS_2",
+        "prefix": "ADDRESS_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ADDRESS_3",
+        "prefix": "ADDRESS_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ADDRESS_4",
+        "prefix": "ADDRESS_4-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ADDRESS_5",
+        "prefix": "ADDRESS_5-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ADDRESS_6",
+        "prefix": "ADDRESS_6-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PRIMARY_SALES_NAME",
+        "prefix": "PRIMARY_SALES_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_SALESMAN_NUM_1",
+        "prefix": "SECONDARY_SALESMAN_NUM_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_SALESMAN_NUM_2",
+        "prefix": "SECONDARY_SALESMAN_NUM_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_SALESMAN_NUM_3",
+        "prefix": "SECONDARY_SALESMAN_NUM_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_SALESMAN_NUM_4",
+        "prefix": "SECONDARY_SALESMAN_NUM_4-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_SALESMAN_NUM_5",
+        "prefix": "SECONDARY_SALESMAN_NUM_5-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOMER_TYPE",
+        "prefix": "CUSTOMER_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_ACCOUNT_1",
+        "prefix": "SECONDARY_ACCOUNT_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_ACCOUNT_2",
+        "prefix": "SECONDARY_ACCOUNT_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_ACCOUNT_3",
+        "prefix": "SECONDARY_ACCOUNT_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_ACCOUNT_4",
+        "prefix": "SECONDARY_ACCOUNT_4-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECONDARY_ACCOUNT_5",
+        "prefix": "SECONDARY_ACCOUNT_5-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_FOR_SEC_ACCT_1",
+        "prefix": "DELIVERY_INST_FOR_SEC_ACCT_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_FOR_SEC_ACCT_2",
+        "prefix": "DELIVERY_INST_FOR_SEC_ACCT_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_FOR_SEC_ACCT_3",
+        "prefix": "DELIVERY_INST_FOR_SEC_ACCT_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_FOR_SEC_ACCT_4",
+        "prefix": "DELIVERY_INST_FOR_SEC_ACCT_4-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DELIVERY_INST_FOR_SEC_ACCT_5",
+        "prefix": "DELIVERY_INST_FOR_SEC_ACCT_5-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "STATE_COUNTRY_CODE",
+        "prefix": "STATE_COUNTRY_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ACCOUNT_OPEN_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "LAST_ACTIVITY_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NOTES_1",
+        "prefix": "NOTES_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NOTES_2",
+        "prefix": "NOTES_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NOTES_3",
+        "prefix": "NOTES_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CLEARING_BANK",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "RELEASE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ISSUER_ID",
+        "prefix": "ISSUER_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PROGRAM_ID",
+        "prefix": "PROGRAM_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MONEY_MARKET_FLAG",
+        "prefix": "MONEY_MARKET_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ACCOUNT_STATUS",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "PRICING_LEVEL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CLIENT_KEY_PORTFOLIO_ID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CLIENT_KEY_PORTFOLIO_UUID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ALERT_ID",
+        "prefix": "ALERT_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OASYS_ACRONYM",
+        "prefix": "OASYS_ACRONYM-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCT_SALESPRIV_TYPE_1",
+        "prefix": "FIRM_ACCT_SALESPRIV_TYPE_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCT_SALESPRIV_ACTNUM_1",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FIRM_ACCT_SALESPRIV_TYPE_2",
+        "prefix": "FIRM_ACCT_SALESPRIV_TYPE_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCT_SALESPRIV_ACTNUM_2",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FIRM_ACCT_SALESPRIV_TYPE_3",
+        "prefix": "FIRM_ACCT_SALESPRIV_TYPE_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCT_SALESPRIV_ACTNUM_3",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MASTER_ACCT_SALESPRIV_TYPE_1",
+        "prefix": "MASTER_ACCT_SALESPRIV_TYPE_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCT_SALESPRIV_ACTNUM_1",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MASTER_ACCT_SALESPRIV_TYPE_2",
+        "prefix": "MASTER_ACCT_SALESPRIV_TYPE_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCT_SALESPRIV_ACTNUM_2",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MASTER_ACCT_SALESPRIV_TYPE_3",
+        "prefix": "MASTER_ACCT_SALESPRIV_TYPE_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCT_SALESPRIV_ACTNUM_3",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "INACTIVE",
+        "prefix": "INACTIVE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_1",
+        "prefix": "SETTLEMENT_LOC_NAME_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_1",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_2",
+        "prefix": "SETTLEMENT_LOC_NAME_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_2",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_3",
+        "prefix": "SETTLEMENT_LOC_NAME_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_3",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_4",
+        "prefix": "SETTLEMENT_LOC_NAME_4-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_4",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_4-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_5",
+        "prefix": "SETTLEMENT_LOC_NAME_5-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_5",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_5-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_6",
+        "prefix": "SETTLEMENT_LOC_NAME_6-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_6",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_6-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_7",
+        "prefix": "SETTLEMENT_LOC_NAME_7-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_7",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_7-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_8",
+        "prefix": "SETTLEMENT_LOC_NAME_8-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_8",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_8-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_9",
+        "prefix": "SETTLEMENT_LOC_NAME_9-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_9",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_9-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_10",
+        "prefix": "SETTLEMENT_LOC_NAME_10-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_10",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_10-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_11",
+        "prefix": "SETTLEMENT_LOC_NAME_11-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_11",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_11-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_12",
+        "prefix": "SETTLEMENT_LOC_NAME_12-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_12",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_12-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_13",
+        "prefix": "SETTLEMENT_LOC_NAME_13-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_13",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_13-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_14",
+        "prefix": "SETTLEMENT_LOC_NAME_14-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_14",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_14-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_15",
+        "prefix": "SETTLEMENT_LOC_NAME_15-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_15",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_15-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_16",
+        "prefix": "SETTLEMENT_LOC_NAME_16-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_16",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_16-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_17",
+        "prefix": "SETTLEMENT_LOC_NAME_17-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_17",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_17-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_18",
+        "prefix": "SETTLEMENT_LOC_NAME_18-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_18",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_18-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_19",
+        "prefix": "SETTLEMENT_LOC_NAME_19-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_19",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_19-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_NAME_20",
+        "prefix": "SETTLEMENT_LOC_NAME_20-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SETTLEMENT_LOC_YELLOW_KEY_20",
+        "prefix": "SETTLEMENT_LOC_YELLOW_KEY_20-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BIC_CODE",
+        "prefix": "BIC_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TRAX_CODE",
+        "prefix": "TRAX_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FSA_CODE",
+        "prefix": "FSA_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ROOT_CODE",
+        "prefix": "ROOT_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCOUNT_QUALIFIED_QIB",
+        "prefix": "MASTER_ACCOUNT_QUALIFIED_QIB-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCOUNT_QUALIFIED_QIB",
+        "prefix": "FIRM_ACCOUNT_QUALIFIED_QIB-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AUTO_EX_BROKER",
+        "prefix": "AUTO_EX_BROKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FUTURE_AUTO_EX_BROKER",
+        "prefix": "FUTURE_AUTO_EX_BROKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OPTION_AUTO_EX_BROKER",
+        "prefix": "OPTION_AUTO_EX_BROKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCOUNT_NUM",
+        "prefix": "FIRM_ACCOUNT_NUM-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCOUNT_NAME",
+        "prefix": "FIRM_ACCOUNT_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_OASYS_ID",
+        "prefix": "FIRM_OASYS_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MBSD_BROKER_ID",
+        "prefix": "MBSD_BROKER_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IN_ACTIVE_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "TRACE_ATTRIB",
+        "prefix": "TRACE_ATTRIB-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TRACE_GIVE_UP",
+        "prefix": "TRACE_GIVE_UP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EXTRA_FLAGS",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FIET_BROKER",
+        "prefix": "FIET_BROKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "STAGING",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "PRIORITY",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AGU_FLAG",
+        "prefix": "AGU_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DTC_NUMBER",
+        "prefix": "DTC_NUMBER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BLOOMBERG_ID",
+        "prefix": "BLOOMBERG_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_ID",
+        "prefix": "CUSTOM_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "LSE_FLAG",
+        "prefix": "LSE_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PERSHING_APPROVE_ACCOUNT",
+        "prefix": "PERSHING_APPROVE_ACCOUNT-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "LSE_FR_FLAG",
+        "prefix": "LSE_FR_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PERSHING_BACKOFFICE_FLAG",
+        "prefix": "PERSHING_BACKOFFICE_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_1",
+        "prefix": "CUSTOM_NOTES_1-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_2",
+        "prefix": "CUSTOM_NOTES_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_3",
+        "prefix": "CUSTOM_NOTES_3-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_4",
+        "prefix": "CUSTOM_NOTES_4-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_5",
+        "prefix": "CUSTOM_NOTES_5-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_6",
+        "prefix": "CUSTOM_NOTES_6-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_7",
+        "prefix": "CUSTOM_NOTES_7-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_8",
+        "prefix": "CUSTOM_NOTES_8-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_9",
+        "prefix": "CUSTOM_NOTES_9-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOM_NOTES_10",
+        "prefix": "CUSTOM_NOTES_10-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "QUALIFIED_PURCHASER",
+        "prefix": "QUALIFIED_PURCHASER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_BROKER_ACTIVE_INACTIVE",
+        "prefix": "MASTER_BROKER_ACTIVE_INACTIVE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CUSTOMER_TYPE_2",
+        "prefix": "CUSTOMER_TYPE_2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "LIMIT_TYPE",
+        "prefix": "LIMIT_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TICKET_BLOCK",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "LIMIT_UTILIZED",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "LIMIT_VALUE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "REGISTERED_REPRESENTATIVE",
+        "prefix": "REGISTERED_REPRESENTATIVE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OD_ID",
+        "prefix": "OD_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OASYS_GLOBAL_ID",
+        "prefix": "OASYS_GLOBAL_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OASYS_GLOBAL_TYPE",
+        "prefix": "OASYS_GLOBAL_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OASYS_GLOBAL_INSTRUCT_METHOD",
+        "prefix": "OASYS_GLOBAL_INSTRUCT_METHOD-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IOI_ACRONYM",
+        "prefix": "IOI_ACRONYM-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_TRACE",
+        "prefix": "MASTER_TRACE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_TRACE_GIVE_UP",
+        "prefix": "MASTER_TRACE_GIVE_UP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_TRACE_GIVE_UP_FLAG",
+        "prefix": "MASTER_TRACE_GIVE_UP_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OASYS_GLOBAL_SECURITY_ID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ENTITY_NAME",
+        "prefix": "ENTITY_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_QUALIFIED_PURCHASER",
+        "prefix": "MASTER_QUALIFIED_PURCHASER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_NOTES",
+        "prefix": "MASTER_NOTES-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_RULE_2111_SUITABILITY",
+        "prefix": "MASTER_RULE_2111_SUITABILITY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCT_LEGAL_ENTITY_ID",
+        "prefix": "FIRM_ACCT_LEGAL_ENTITY_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_ACCT_PLAYER_TYPE",
+        "prefix": "FIRM_ACCT_PLAYER_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCT_LEGAL_ENTITY_ID",
+        "prefix": "MASTER_ACCT_LEGAL_ENTITY_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_ACCT_PLAYER_TYPE",
+        "prefix": "MASTER_ACCT_PLAYER_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_LOCALIZED_LONG_NAME",
+        "prefix": "FIRM_LOCALIZED_LONG_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_LOCALIZED_LONG_NAME",
+        "prefix": "MASTER_LOCALIZED_LONG_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CMT_ACTIVE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CMT_TYPE",
+        "prefix": "CMT_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CMT_BIC",
+        "prefix": "CMT_BIC-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BROKER_CMT_BIC",
+        "prefix": "BROKER_CMT_BIC-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FRIM_CNPJ",
+        "prefix": "FRIM_CNPJ-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FIRM_REUNE_ANBIMA_ID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MASTER_CNPJ",
+        "prefix": "MASTER_CNPJ-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MASTER_REUNE_ANBIMA_ID",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FEED_DATA_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AUDIT_INSERT_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AUDIT_INSERT_USER",
+        "prefix": "AUDIT_INSERT_USER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AUDIT_UPDATE_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AUDIT_UPDATE_USER",
+        "prefix": "AUDIT_UPDATE_USER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    }
+]}}

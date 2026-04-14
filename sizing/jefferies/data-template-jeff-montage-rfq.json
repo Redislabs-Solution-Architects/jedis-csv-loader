@@ -1,0 +1,723 @@
+{
+      
+	"header": {
+		"schema": [
+					{
+					  "field": "key_id",
+						"type": "UID",
+						"prefix": "KEY-"
+					},
+					{
+					  "field": "hyprocessed",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "key_id_dup",
+					  "prefix": "key_id_dup-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "key_id_rfq_group",
+					  "prefix": "key_id_rfq_group-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "timezone",
+					  "prefix": "timezone-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "source_id",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "actionstr",
+					  "prefix": "actionstr-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "anautoreply",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "counterpartytype",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "cptier",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "currencystr",
+					  "prefix": "currencystr-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "custfirm",
+					  "prefix": "custfirm-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "custusername",
+					  "prefix": "custusername-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "custuserlogon",
+					  "prefix": "custuserlogon-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "dealertrader",
+					  "prefix": "dealertrader-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "productcode",
+					  "prefix": "productcode-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "compliance_productcode",
+					  "prefix": "compliance_productcode-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "marketoverride",
+					  "prefix": "marketoverride-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "clientname",
+					  "prefix": "clientname-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "idmonikerclient",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "productcodeclientmoniker",
+					  "prefix": "productcodeclientmoniker-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "desk",
+					  "prefix": "desk-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "dfacode",
+					  "prefix": "dfacode-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "id",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "iscover",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "midprice",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "mycustacronym",
+					  "prefix": "mycustacronym-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "mymarketid",
+					  "prefix": "mymarketid-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "mymarketidformatted",
+					  "prefix": "mymarketidformatted-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "onejefname",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "partitiondate",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "rfqcreatedate",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "rfqcreatetime",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "transactioncreatedate_utc",
+					  "type": "NUM",
+					 "options": [1563753600,1698883200]
+					},
+					{
+					  "field": "transactioncreatetime_utc",
+					  "type": "NUM",
+					  "options": [1563753600,1698883200]
+					},
+					{
+					  "field": "transactioncreatedate_forsort",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "transactioncreatetime_forsort",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "transactioncreatedatetime_utc",
+					  "type": "NUM",
+					  "options": [1563753600,1698883200]
+					},
+					{
+					  "field": "rfqnlegs",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "multileg",
+					  "prefix": "multileg-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "rfqnumofdealers",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "salescode",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "salesperson",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "statusstr",
+					  "prefix": "statusstr-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "timeupdex",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "issuer",
+					  "prefix": "issuer-",
+					  "type": "AUTO-TEXT",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "noquote",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "rfqclosed",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+					{
+					  "field": "legno",
+					  "type": "NUM",
+					  "options": [1, 20]
+					},
+						{
+							"field": "bbgcustchatid",
+							"prefix": "bbgcustchatid-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "creditaxedesk",
+							"prefix": "creditaxedesk-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "buysell",
+							"prefix": "buysell-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "clientbuysell",
+							"prefix": "clientbuysell-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "cover",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqcoverprice",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqcoverspread",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqcoveryield",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "description",
+							"prefix": "description-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "instrumentsubgroup",
+							"prefix": "instrumentsubgroup-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "size",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqbbgask",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqbbgbid",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqdayssettl",
+							"prefix": "rfqdayssettl-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqdealspread",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqdealvalue",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "adjustedrfqdealvalue",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqaxed",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "histaxeside",
+							"prefix": "histaxeside-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "liveaxecode",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "axebidsize",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "axeasksize",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "axematch",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "valuetypestr",
+							"prefix": "valuetypestr-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqvmoask",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqvmobid",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "traxaxessall_lastprice",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqdatesettl",
+							"prefix": "rfqdatesettl-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqcompstr",
+							"prefix": "rfqcompstr-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "ticker",
+							"prefix": "ticker-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "coupon",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "maturitydate",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "industry_sector",
+							"prefix": "industry_sector-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "flag_144",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "nextcalldate",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "floater",
+							"prefix": "floater-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "ratingmoody",
+							"prefix": "ratingmoody-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rating_s_and_p",
+							"prefix": "rating_s_and_p-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "ratingmoody_clean",
+							"prefix": "ratingmoody_clean-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rating_s_and_p_clean",
+							"prefix": "rating_s_and_p_clean-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rtg_composite_rank",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rtg_composite_normalized",
+							"prefix": "rtg_composite_normalized-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rtg_composite_bucket",
+							"prefix": "rtg_composite_bucket-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rtg_composite_market",
+							"prefix": "rtg_composite_market-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "code",
+							"prefix": "code-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "isin",
+							"prefix": "isin-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "cusip",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "cprank",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqclosedtimeint",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqclosedtime",
+							"prefix": "rfqclosedtime-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqinfo",
+							"prefix": "rfqinfo-",
+							"type": "AUTO-TEXT",
+							"options": [1, 20]
+						},
+						{
+							"field": "cptype",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "statusenh",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "tradeprice",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "tradespread",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+						{
+							"field": "rfqquotestatus",
+							"type": "NUM",
+							"options": [1, 20]
+						},
+							{
+							  "field": "rfqquoted4sales",
+							  "prefix": "rfqquoted4sales-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "tradesrc",
+							  "prefix": "tradesrc-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "tradesrc_yn",
+							  "prefix": "tradesrc_yn-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "deskptenabled",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "rfqordertypestr",
+							  "prefix": "rfqordertypestr-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "issensitive",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "cneresponseindicator",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "rfqquoted",
+							  "prefix": "rfqquoted-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "aqquoteowner",
+							  "prefix": "aqquoteowner-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "marketgtwayaeoverride",
+							  "prefix": "marketgtwayaeoverride-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "benchmark_spread",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "rejectinfo",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "cntry_of_risk",
+							  "prefix": "cntry_of_risk-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "series",
+							  "prefix": "series-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "industry_subgroup",
+							  "prefix": "industry_subgroup-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "industry_group",
+							  "prefix": "industry_group-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "issuer_industry",
+							  "prefix": "issuer_industry-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "autoresponse",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "feedsource",
+							  "prefix": "feedsource-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "countdown",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "recordtypesortint",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "rfqclosed_delay",
+							  "type": "NUM",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "salesnotes",
+							  "prefix": "salesnotes-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "deskoriginal",
+							  "prefix": "deskoriginal-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							},
+							{
+							  "field": "recordtype",
+							  "prefix": "recordtype-",
+							  "type": "AUTO-TEXT",
+							  "options": [1, 20]
+							}
+						
+
+		]
+
+	}
+}

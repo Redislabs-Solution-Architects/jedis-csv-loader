@@ -1,0 +1,60 @@
+{
+    "schema": [
+        {
+            "field": "$.ENTITLEMENT_NAME",
+            "alias": "ENTITLEMENT_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.PRINCIPAL_ID",
+            "alias": "PRINCIPAL_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ENTITLEMENT_LEVEL",
+            "alias": "ENTITLEMENT_LEVEL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ENTITLEMENT_TYPE",
+            "alias": "ENTITLEMENT_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ENTITLEMENT_VALUE",
+            "alias": "ENTITLEMENT_VALUE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.GRANTOR_ID",
+            "alias": "GRANTOR_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.APPLICATION_ID",
+            "alias": "APPLICATION_ID",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "$.TRIAL_INDICATOR",
+            "alias": "TRIAL_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DNB_RDC_FIRM_ID",
+            "alias": "DNB_RDC_FIRM_ID",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "dnb:entitlement:access:",
+    "type": "JSON"
+}

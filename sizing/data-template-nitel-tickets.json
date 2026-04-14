@@ -1,0 +1,46 @@
+{
+	"header": {
+		"schema": [
+			{
+				"field": "OrderID",
+				"type": "UID",
+				"prefix": "INV-"
+			},
+			{
+				"field": "AccountExec",
+				"type": "OBJ",
+				"options" : [{"name" : "Rep1", "team": "east"},{"name" : "Rep2", "team": "west"},{"name" : "Rep3", "team": "south"}]
+			},
+			{
+				"field": "Customer",
+				"type": "TEXT",
+				"options" : ["Customer1","Customer2","Customer3"]
+			},
+			{
+				"field": "Amount",
+				"type": "NUM",
+				"options" : [2000,10000]
+			},	
+			{
+				"field": "LineItems",
+				"type": "ARR",
+				"obj": "details"
+			}		
+		]	
+	},
+
+	"details" : {
+		"schema": [
+			{
+				"field": "Product",
+				"type": "TEXT",
+				"options": ["Prod1","Prod2","Prod3"]
+			},
+			{
+				"field": "Quantity",
+				"type": "NUM",
+				"options" : [1,10]
+			}
+		]
+	}
+}

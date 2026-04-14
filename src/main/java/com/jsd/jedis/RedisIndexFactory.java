@@ -35,9 +35,8 @@ public class RedisIndexFactory {
         this.config = new Properties();
         config.load(new FileInputStream(configFile));
 
-        
         this.jedisPooled = new JedisPooled(loadProperty("redis.host"), Integer.parseInt(loadProperty("redis.port")),
-                        loadProperty("redis.user"), loadProperty("redis.password"));
+                loadProperty("redis.user"), loadProperty("redis.password"));
 
         this.jedisPipeline = this.jedisPooled.pipelined();
 
@@ -59,6 +58,8 @@ public class RedisIndexFactory {
         // loop through the fields
         JsonArray fields = indexDefObj.getJsonArray("schema");
 
+        System.out.println("[RedisIndexFactory] Num Fields: " + fields.size());
+
         for (int f = 0; f < fields.size(); f++) {
             JsonObject fieldObj = fields.getJsonObject(f);
             String fieldType = fieldObj.getString("type");
@@ -79,15 +80,21 @@ public class RedisIndexFactory {
                 }
 
                 schema.addField(new Schema.TagField(fieldName, separator, caseSensitive, sortable)).as(fieldAlias);
-            }
-            if ("TEXT".equalsIgnoreCase(fieldType)) {
+
+            } else if ("TEXT".equalsIgnoreCase(fieldType)) {
                 double weight = 1.0;
                 boolean nostem = fieldObj.getBoolean("nostem", true);
                 schema.addField(new Schema.TextField(fieldName, weight, sortable, nostem)).as(fieldAlias);
+                
             } else if ("NUMERIC".equalsIgnoreCase(fieldType)) {
                 schema.addSortableNumericField(fieldName).as(fieldAlias);
             }
+            else if("GEO".equalsIgnoreCase(fieldType)) {
+                schema.addGeoField(fieldName).as(fieldAlias);
+            }
         }
+
+        System.out.println("[RedisIndexFactory] Schema Size: " + schema.fields.size());
 
         // set the options
         IndexDefinition def = new IndexDefinition(IndexDefinition.Type.valueOf(indexType.toUpperCase()))
@@ -120,74 +127,67 @@ public class RedisIndexFactory {
         JsonReader rdr = Json.createReader(new FileInputStream(indexDefFile));
         JsonObject indexDefObj = rdr.readObject();
 
-
         // loop through the fields
         return indexDefObj.getJsonArray("schema");
     }
 
-    public double getIndexMetric(String indexName, String attr)  {
+    public double getIndexMetric(String indexName, String attr) {
 
-        //Response<Map<java.lang.String,java.lang.Object>> resp = this.jedisPooled.ftInfo(indexName);
-        //Map<java.lang.String,java.lang.Object> infoMap = resp.get();
+        // Response<Map<java.lang.String,java.lang.Object>> resp =
+        // this.jedisPooled.ftInfo(indexName);
+        // Map<java.lang.String,java.lang.Object> infoMap = resp.get();
 
-        Map<java.lang.String,java.lang.Object> infoMap = this.jedisPooled.ftInfo(indexName);
+        Map<java.lang.String, java.lang.Object> infoMap = this.jedisPooled.ftInfo(indexName);
 
-        String attrVal = (String)infoMap.get(attr);
-        
+        String attrVal = (String) infoMap.get(attr);
+
         return Double.parseDouble(attrVal);
     }
-
 
     public void monitorIndex(String indexName, AppSearch appSearch) throws Exception {
 
         Thread anonymousThread = new Thread() {
             @Override
-            public void run()  {
-                try{
-                while(getIndexMetric(indexName, "percent_indexed") < 1.0) {
-                    Thread.sleep(1000l);
-                }
+            public void run() {
+                try {
+                    while (getIndexMetric(indexName, "percent_indexed") < 1.0) {
+                        Thread.sleep(1000l);
+                    }
 
-                System.err.println("[RedisIndexFactory] Index Completed");
-            }
-            catch(Exception e) {}
+                    System.err.println("[RedisIndexFactory] Index Completed");
+                } catch (Exception e) {
+                }
             }
         };
 
-        anonymousThread.start(); 
+        anonymousThread.start();
     }
 
     public String loadProperty(String property) {
         String prop = null;
-        
+
         String propEnv = System.getenv(config.getProperty(property));
 
-        if(propEnv != null) {
+        if (propEnv != null) {
             prop = propEnv;
-        }
-        else if("redis.host".equalsIgnoreCase(property)) {
+        } else if ("redis.host".equalsIgnoreCase(property)) {
             prop = config.getProperty(property, "localhost");
-            
-        }
-        else if("redis.port".equalsIgnoreCase(property)) {
+
+        } else if ("redis.port".equalsIgnoreCase(property)) {
             prop = config.getProperty(property, "6379");
-        }
-        else if("redis.user".equalsIgnoreCase(property)) {
+        } else if ("redis.user".equalsIgnoreCase(property)) {
             prop = config.getProperty(property, "default");
-        }
-        else {
+        } else {
             prop = config.getProperty(property);
         }
-        
+
         return prop;
     }
-
-
 
     public static void main(String[] args) throws Exception {
 
         RedisIndexFactory indexFactory = new RedisIndexFactory("./config.properties");
-        indexFactory.createIndex("idx:support", "./index-def-support.json");
+        indexFactory.createIndex("idx:api", "./index-def-dnb-api.json");
 
     }
 }

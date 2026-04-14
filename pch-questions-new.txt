@@ -1,0 +1,8 @@
+
+@QualQuestionPrecode:{43 1} AND (@QuotaQuestionPrecode:{42 50} @QuotaNumRespondents:[23 23]) 
+
+@QualQuestionPrecode:{42 18|43 1|45 11050|645 15|5729 7}
+
+@QualQuestionPrecode:{645 15} @SurveyID:{56299161}
+
+@QualQuestionPrecode:{43 1} AND (@QuotaType:{Total} @QuotaNumRespondents:[2500 +inf]) | (@QuotaType:{Client} @QuotaQuestionPrecode:{42 20})

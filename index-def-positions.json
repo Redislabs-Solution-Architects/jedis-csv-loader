@@ -1,0 +1,51 @@
+{
+	"type": "JSON",
+	"prefix": "accounts:",
+	"schema": [
+		{
+			"field": "$.ACCOUNTID",
+			"alias": "AccountID",
+			"sortable": true,
+			"type": "TAG"
+		},
+		{
+			"field": "$.ACC_NAME",
+			"alias": "Account",
+			"type": "TEXT",
+			"sortable": true,
+			"nostem": false
+		},
+		{
+			"field": "$.MANAGER",
+			"alias": "Manager",
+			"type": "TEXT",
+			"sortable": true,
+			"nostem": false
+		},
+		{
+			"field": "$.Positions.*.CUSIP",
+			"alias": "CUSIP",
+			"type": "TAG",
+			"sortable": true,
+			"nostem": false
+		},
+		{
+			"field": "$.Positions.*.QUANTITY",
+			"alias": "Quantity",
+			"type": "NUMERIC",
+			"sortable": true
+		},
+		{
+			"field": "$.ACC_VALUE",
+			"alias": "AccValue",
+			"type": "NUMERIC",
+			"sortable": true
+		},
+		{
+			"field": "$.DAY_CHANGE",
+			"alias": "DayChange",
+			"type": "NUMERIC",
+			"sortable": true
+		}
+	]
+}

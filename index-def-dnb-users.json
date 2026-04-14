@@ -1,0 +1,68 @@
+{
+    "schema": [
+        {
+            "field": "$.USERUUID",
+            "alias": "USERUUID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.UID",
+            "alias": "UID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.COMPANYNAME",
+            "alias": "COMPANYNAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ACCOUNT_TYPE",
+            "alias": "ACCOUNT_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.ARCHIVE_OPT_OUT",
+            "alias": "ARCHIVE_OPT_OUT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.AUTH_DOWNLOAD_TOOLKIT",
+            "alias": "AUTH_DOWNLOAD_TOOLKIT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CLOUDSYNC",
+            "alias": "CLOUDSYNC",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CN",
+            "alias": "CN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.DNB_RESTRICT_INDSTRRPTS",
+            "alias": "DNB_RESTRICT_INDSTRRPTS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.UserDetails[*].FIELD_VALUE",
+            "alias": "FIELD_VALUE",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "dnb:users:",
+    "type": "JSON"
+}
+
+

@@ -1,0 +1,131 @@
+{"header": {"schema": [
+    {
+        "field": "USER_PRODUCT_UUID",
+        "prefix": "USER_PRODUCT_UUID-",
+        "type": "UID"
+    },
+    {
+        "field": "APPLICATION_ID",
+        "prefix": "APPLICATION_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_DUNS_LINK_PWD",
+        "prefix": "DNB_DUNS_LINK_PWD-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DUNS_LINK_USER_ID",
+        "prefix": "DUNS_LINK_USER_ID-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_CUSTOM_ONELOGIN_ROLE",
+        "prefix": "DNB_CUSTOM_ONELOGIN_ROLE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ACCESS",
+        "prefix": "ACCESS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "STATUS",
+        "prefix": "STATUS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SUBSCRIBER_NUMBER",
+        "prefix": "SUBSCRIBER_NUMBER-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SEE_ALSO",
+        "prefix": "SEE_ALSO-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COUNTRY_CODE",
+        "prefix": "COUNTRY_CODE-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COMPANY_NAME",
+        "prefix": "COMPANY_NAME-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "DNB_CONTRACT_STATUS",
+        "prefix": "DNB_CONTRACT_STATUS-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MAIL",
+        "prefix": "MAIL-",
+        "options": [
+            1,
+            2000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CREATION_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "LAST_UPDATE_DATE",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    }
+]}}

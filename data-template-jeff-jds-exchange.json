@@ -1,0 +1,389 @@
+{
+    "exchange": {
+        "schema": [
+            {
+                "field": "CDR_COUNTRY_CODE",
+                "prefix": "CDR_COUNTRY_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CDR_SETTLE_CODE",
+                "prefix": "CDR_SETTLE_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CFI_CODE",
+                "prefix": "CFI_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CNTRY_ISSUE_ISO",
+                "prefix": "CNTRY_ISSUE_ISO-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "COMPOSITE_ID_BB_GLOBAL",
+                "prefix": "COMPOSITE_ID_BB_GLOBAL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "CRNCY",
+                "prefix": "CRNCY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "DVD_CRNCY",
+                "prefix": "DVD_CRNCY-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "DVD_DECLARED_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_EX_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_PAY_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_RECORD_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_SH_12M",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_SH_LAST",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "DVD_TYP_LAST",
+                "prefix": "DVD_TYP_LAST-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_DVD_EX_FLAG",
+                "prefix": "EQY_DVD_EX_FLAG-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_DVD_FREQ",
+                "prefix": "EQY_DVD_FREQ-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_DVD_SH_12M_NET",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_OPT_AVAIL",
+                "prefix": "EQY_OPT_AVAIL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PRIM_EXCH",
+                "prefix": "EQY_PRIM_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_PRIM_EXCH_SHRT",
+                "prefix": "EQY_PRIM_EXCH_SHRT-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EQY_SH_OUT",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_SH_OUT_DT",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EQY_SH_OUT_REAL",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "EXCHANGE_HK",
+                "prefix": "EXCHANGE_HK-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EXCHANGE_ID",
+                "prefix": "EXCHANGE_ID-",
+                "type": "UID"
+            },
+            {
+                "field": "EXCHANGE_ID_BASE",
+                "prefix": "EXCHANGE_ID_BASE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "EXCH_CODE",
+                "prefix": "EXCH_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "FILE_REGION",
+                "prefix": "FILE_REGION-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "FLAG_144A",
+                "prefix": "FLAG_144A-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_GLOBAL",
+                "prefix": "ID_BB_GLOBAL-",
+                "type": "UID"
+            },
+            {
+                "field": "ID_BB_PRIM_SECURITY_FLAG",
+                "prefix": "ID_BB_PRIM_SECURITY_FLAG-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_SECURITY",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "ID_BB_SEC_NUM_DES",
+                "prefix": "ID_BB_SEC_NUM_DES-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_BB_UNIQUE",
+                "prefix": "ID_BB_UNIQUE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_EXCH_SYMBOL",
+                "prefix": "ID_EXCH_SYMBOL-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_MIC_LOCAL_EXCH",
+                "prefix": "ID_MIC_LOCAL_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "ID_MIC_PRIM_EXCH",
+                "prefix": "ID_MIC_PRIM_EXCH-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "LAST_DPS_GROSS",
+                "options": [
+                    100,
+                    1000
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "LOAD_DATETIME",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "MARKET_STATUS",
+                "prefix": "MARKET_STATUS-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "RECORD_SOURCE",
+                "prefix": "RECORD_SOURCE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "SRC_UPDATE_DATE",
+                "options": [
+                    1563753600,
+                    1698883200
+                ],
+                "type": "NUM"
+            },
+            {
+                "field": "TICKER",
+                "prefix": "TICKER-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TICKER_AND_EXCH_CODE",
+                "prefix": "TICKER_AND_EXCH_CODE-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "WHEN_ISSUED",
+                "prefix": "WHEN_ISSUED-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            }
+        ]
+    }
+}

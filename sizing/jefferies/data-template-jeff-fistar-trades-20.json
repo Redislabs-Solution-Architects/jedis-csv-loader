@@ -1,0 +1,645 @@
+{
+      
+	"header": {
+		"schema": [
+			{
+				"field": "B1-DATE_OF_AUTHORIZATION",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "B1-TRANS_PACKED_COST_3_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_3_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_PACKED_COST_4_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B1-TRANS_COST_4_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_PACKED_COST_5_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_5_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B1-TRANS_COST_1_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_2_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_3_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B1-TRANS_COST_4_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_5_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRADE_CONTRACT_SIZE_R8",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_3_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_3_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_3_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_3_CODE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-MTGE_TBA_CODE_NUMBER",
+				"type": "AUTO-TEXT",
+                "prefix": "MTGE_TBA_CODE_NUMBER-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-USER_WHO_RELEASED_TRADE_2",
+				"type": "AUTO-TEXT",
+                "prefix": "USER_WHO_RELEASED_TRADE_2-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_5_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_5_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_5_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_5_CODE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_4_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_4_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_4_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_4_CODE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B1-STRIP_TICKET",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B1-PUT_CALL_INDICATOR",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},			
+            {
+				"field": "B1-TRANS_COST_4_EFFECT_FINL_MONEY",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B1-LOAD_WI_CONVERSION_FLAG_Y_N",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-TRADER_TO_TRADER_TICKET_FLAG",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B1-TRANS_COST_3_EFFECT_FINL_MONEY",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},			{
+				"field": "B1-MTGEPNL_CREATED_TRADE",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B1-PRICE_IS_PENCE_QUOTED",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-TRANSACTION_WORKOUT_DATE",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "B1-USER_WHO_RELEASED_TRADE",
+				"type": "AUTO-TEXT",
+                "prefix": "USER_WHO_RELEASED_TRADE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_1_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_1_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_1_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_1_CODE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_2_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_2_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B1-TRANS_COST_2_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_2_CODE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B1-TRANSACTION_WORKOUT_PRICE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_1_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_PACKED_COST_1_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_PACKED_COST_2_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRANS_COST_2_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-CANCEL_PORTION_OF_A_CORRECTION",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-WHEN_ISSUED_MUNI_TRANSACTION",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-SECURITY_IS_TRADING_FLAT",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-INVERT_EXCHANGE_RATE",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-USER_INPUT_ACCRUED_INTEREST",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-OFFLINE_TRANSACTION_RETAIL",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-AUTOEX_FLAG",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-TRANS_COST_1_EFFECT_FINL_MONEY",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B1-PREPAY_SPEED_OR_CONTRACT_SIZE",
+				"type": "AUTO-TEXT",
+                "prefix": "PREPAY_SPEED_OR_CONTRACT_SIZE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B1-VIEW_IN_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "VIEW_IN_CURRENCY-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B1-EXCHANGE_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-SEC_FEES",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-MTGE_FACTOR_GOVT_INDEX_FACTOR",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B1-POOL_GOOD_MILLION_NUM_TBA_ONLY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B1-POOL_LOT_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B1-CONCESSION_STIP_VAR_REPO_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B1-TRADER_NAME",
+				"type": "AUTO-TEXT",
+                "prefix": "TRADER_NAME-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B1-SALESPERSON",
+				"type": "AUTO-TEXT",
+                "prefix": "SALESPERSON-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B1-TRADER_LOGIN",
+				"type": "AUTO-TEXT",
+                "prefix": "TRADER_LOGIN-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B1-SALES_LOGIN",
+				"type": "AUTO-TEXT",
+                "prefix": "SALES_LOGIN-",
+				"options" : [1,20]
+			},
+
+			{
+				"field": "B2-DATE_OF_AUTHORIZATION",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "B2-TRANS_PACKED_COST_3_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_3_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_PACKED_COST_4_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B2-TRANS_COST_4_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_PACKED_COST_5_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_5_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B2-TRANS_COST_1_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_2_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_3_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B2-TRANS_COST_4_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_5_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRADE_CONTRACT_SIZE_R8",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_3_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_3_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_3_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_3_CODE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-MTGE_TBA_CODE_NUMBER",
+				"type": "AUTO-TEXT",
+                "prefix": "MTGE_TBA_CODE_NUMBER-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-USER_WHO_RELEASED_TRADE_2",
+				"type": "AUTO-TEXT",
+                "prefix": "USER_WHO_RELEASED_TRADE_2-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_5_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_5_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_5_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_5_CODE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_4_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_4_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_4_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_4_CODE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B2-STRIP_TICKET",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B2-PUT_CALL_INDICATOR",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},			
+            {
+				"field": "B2-TRANS_COST_4_EFFECT_FINL_MONEY",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B2-LOAD_WI_CONVERSION_FLAG_Y_N",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-TRADER_TO_TRADER_TICKET_FLAG",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B2-TRANS_COST_3_EFFECT_FINL_MONEY",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},			{
+				"field": "B2-MTGEPNL_CREATED_TRADE",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+            {
+				"field": "B2-PRICE_IS_PENCE_QUOTED",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-TRANSACTION_WORKOUT_DATE",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "B2-USER_WHO_RELEASED_TRADE",
+				"type": "AUTO-TEXT",
+                "prefix": "USER_WHO_RELEASED_TRADE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_1_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_1_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_1_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_1_CODE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_2_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_2_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "B2-TRANS_COST_2_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_2_CODE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B2-TRANSACTION_WORKOUT_PRICE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_1_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_PACKED_COST_1_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_PACKED_COST_2_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRANS_COST_2_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-CANCEL_PORTION_OF_A_CORRECTION",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-WHEN_ISSUED_MUNI_TRANSACTION",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-SECURITY_IS_TRADING_FLAT",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-INVERT_EXCHANGE_RATE",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-USER_INPUT_ACCRUED_INTEREST",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-OFFLINE_TRANSACTION_RETAIL",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-AUTOEX_FLAG",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-TRANS_COST_1_EFFECT_FINL_MONEY",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "B2-PREPAY_SPEED_OR_CONTRACT_SIZE",
+				"type": "AUTO-TEXT",
+                "prefix": "PREPAY_SPEED_OR_CONTRACT_SIZE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B2-VIEW_IN_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "VIEW_IN_CURRENCY-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B2-EXCHANGE_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-SEC_FEES",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-MTGE_FACTOR_GOVT_INDEX_FACTOR",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B2-POOL_GOOD_MILLION_NUM_TBA_ONLY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B2-POOL_LOT_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "B2-CONCESSION_STIP_VAR_REPO_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "B2-TRADER_NAME",
+				"type": "AUTO-TEXT",
+                "prefix": "TRADER_NAME-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B2-SALESPERSON",
+				"type": "AUTO-TEXT",
+                "prefix": "SALESPERSON-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B2-TRADER_LOGIN",
+				"type": "AUTO-TEXT",
+                "prefix": "TRADER_LOGIN-",
+				"options" : [1,20]
+			},
+			{
+				"field": "B2-SALES_LOGIN",
+				"type": "AUTO-TEXT",
+                "prefix": "SALES_LOGIN-",
+				"options" : [1,20]
+			}
+
+		]	
+	}
+}

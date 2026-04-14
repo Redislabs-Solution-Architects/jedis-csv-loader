@@ -1,0 +1,1410 @@
+{"header": {"schema": [
+    {
+        "field": "MONTHLY_PERIOD",
+        "prefix": "MONTHLY_PERIOD-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INSTRUMENT_PARENT_NK",
+        "prefix": "INSTRUMENT_PARENT_NK-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INSTRUMENT_NK",
+        "prefix": "INSTRUMENT_NK-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SOURCE_SYSTEM_KEY",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "INSTRUMENT_ID",
+        "prefix": "INSTRUMENT_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INSTRUMENT_ID_TYPE",
+        "prefix": "INSTRUMENT_ID_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INSTRUMENT_SOURCE",
+        "prefix": "INSTRUMENT_SOURCE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_ID",
+        "prefix": "JSEC_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_EXCHANGE_CODE",
+        "prefix": "JSEC_EXCHANGE_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_ISIN",
+        "prefix": "JSEC_ISIN-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_CUSIP",
+        "prefix": "JSEC_CUSIP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_SEDOL",
+        "prefix": "JSEC_SEDOL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_ADP_NUM",
+        "prefix": "JSEC_ADP_NUM-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_TICKER",
+        "prefix": "JSEC_TICKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_ID_BB_GLOBAL",
+        "prefix": "JSEC_ID_BB_GLOBAL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_ID_BB_UNIQUE",
+        "prefix": "JSEC_ID_BB_UNIQUE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_IOM_INSTID",
+        "prefix": "JSEC_IOM_INSTID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_GLOSS_ID",
+        "prefix": "JSEC_GLOSS_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_JDOE_FO_ID",
+        "prefix": "JSEC_JDOE_FO_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_JDOE_ID",
+        "prefix": "JSEC_JDOE_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_JDOE_NEW_OPRA",
+        "prefix": "JSEC_JDOE_NEW_OPRA-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_LIQ_FACILITY_ID",
+        "prefix": "JSEC_LIQ_FACILITY_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_OCC_CODE",
+        "prefix": "JSEC_OCC_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_OMNIUM_BB_YK_ID",
+        "prefix": "JSEC_OMNIUM_BB_YK_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_OPRA_SYMBOL",
+        "prefix": "JSEC_OPRA_SYMBOL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_SWAP_DEAL_REF",
+        "prefix": "JSEC_SWAP_DEAL_REF-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_TRADE_ID",
+        "prefix": "JSEC_TRADE_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_WINFITS_SEC_ID",
+        "prefix": "JSEC_WINFITS_SEC_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_OPRA_ROOT",
+        "prefix": "JSEC_OPRA_ROOT-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_PH_CODE",
+        "prefix": "JSEC_PH_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_PH_DESC",
+        "prefix": "JSEC_PH_DESC-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_PH_COLUMN_STRING",
+        "prefix": "JSEC_PH_COLUMN_STRING-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_PH_COLUMN_VALUE",
+        "prefix": "JSEC_PH_COLUMN_VALUE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_PROD_SUB_TYPE",
+        "prefix": "JSEC_PROD_SUB_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_PROD_SUB_TYPE_DRIVER",
+        "prefix": "JSEC_PROD_SUB_TYPE_DRIVER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_CAPRI_SUB_TYPE",
+        "prefix": "JSEC_CAPRI_SUB_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_NAME",
+        "prefix": "JSEC_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_ISSUER",
+        "prefix": "JSEC_ISSUER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_MATCHED_ID_TYPE",
+        "prefix": "JSEC_MATCHED_ID_TYPE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_HAS_EXTERNAL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "JSEC_HAS_INTERNAL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "JSEC_MATURITY_DATE",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "JSEC_ACTIVITY_FLAG",
+        "prefix": "JSEC_ACTIVITY_FLAG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BBRG_TABLE_NAME",
+        "prefix": "BBRG_TABLE_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BBRG_UNIQUE_KEY",
+        "prefix": "BBRG_UNIQUE_KEY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COUNTRY_ISO",
+        "prefix": "COUNTRY_ISO-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CNTRY_OF_INCORPORATION",
+        "prefix": "CNTRY_OF_INCORPORATION-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CPN_TYP",
+        "prefix": "CPN_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CALLABLE",
+        "prefix": "CALLABLE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PUTABLE",
+        "prefix": "PUTABLE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INFLATION_LINKED_INDICATOR",
+        "prefix": "INFLATION_LINKED_INDICATOR-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COLLAT_TYP",
+        "prefix": "COLLAT_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MTG_DEAL_TYP",
+        "prefix": "MTG_DEAL_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ISSUE_DT",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MTG_IS_AGENCY_BACKED",
+        "prefix": "MTG_IS_AGENCY_BACKED-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECURITY_TYP",
+        "prefix": "SECURITY_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "IS_PERPETUAL",
+        "prefix": "IS_PERPETUAL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OPT_PUT_CALL",
+        "prefix": "OPT_PUT_CALL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CNTRY_OF_DOMICILE",
+        "prefix": "CNTRY_OF_DOMICILE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "WHEN_ISSUED",
+        "prefix": "WHEN_ISSUED-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TYPE_OF_BOND",
+        "prefix": "TYPE_OF_BOND-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SHORT_NAME",
+        "prefix": "SHORT_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECURITY_TYP2",
+        "prefix": "SECURITY_TYP2-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SECURITY_DES",
+        "prefix": "SECURITY_DES-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "RTG_SP",
+        "prefix": "RTG_SP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "RTG_MOODY",
+        "prefix": "RTG_MOODY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MUNI_TAX_CODE",
+        "prefix": "MUNI_TAX_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MUNI_ISSUE_TYP",
+        "prefix": "MUNI_ISSUE_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MTG_TYP",
+        "prefix": "MTG_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MTG_TRANCHE_TYP_LONG",
+        "prefix": "MTG_TRANCHE_TYP_LONG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MTG_COLLAT_TYP",
+        "prefix": "MTG_COLLAT_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MTG_CMO_CLASS",
+        "prefix": "MTG_CMO_CLASS-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MATURITY",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MARKET_SECTOR_DES",
+        "prefix": "MARKET_SECTOR_DES-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MARKET_ISSUE",
+        "prefix": "MARKET_ISSUE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ISSUER",
+        "prefix": "ISSUER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INSURANCE_STATUS",
+        "prefix": "INSURANCE_STATUS-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INDUSTRY_SUBGROUP",
+        "prefix": "INDUSTRY_SUBGROUP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INDUSTRY_GROUP",
+        "prefix": "INDUSTRY_GROUP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ID_BB_GLOBAL_COMPANY_NAME",
+        "prefix": "ID_BB_GLOBAL_COMPANY_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CURRENCY",
+        "prefix": "CURRENCY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CRNCY",
+        "prefix": "CRNCY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CPN",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "COUNTRY",
+        "prefix": "COUNTRY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ID_BB_GLOBAL_COMPANY",
+        "prefix": "ID_BB_GLOBAL_COMPANY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "UNDERLYING_CUSIP",
+        "prefix": "UNDERLYING_CUSIP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OPT_UNDL_ISIN",
+        "prefix": "OPT_UNDL_ISIN-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EQY_PRIM_SECURITY_PRIM_EXCH",
+        "prefix": "EQY_PRIM_SECURITY_PRIM_EXCH-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EQY_SH_OUT_REAL",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "OPT_STRIKE_PX",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "OPT_EXER_TYP",
+        "prefix": "OPT_EXER_TYP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BB_COMPOSITE",
+        "prefix": "BB_COMPOSITE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AMT_ISSUED",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "DEFAULTED",
+        "prefix": "DEFAULTED-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "PRVT_PLACE",
+        "prefix": "PRVT_PLACE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "SRC_INSTRUMENT_NAME",
+        "prefix": "SRC_INSTRUMENT_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NAME_BBRG",
+        "prefix": "NAME_BBRG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EQY_PRIM_EXCH_SHRT",
+        "prefix": "EQY_PRIM_EXCH_SHRT-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CNTRY_ISSUE_ISO",
+        "prefix": "CNTRY_ISSUE_ISO-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TOTAL_VOTING_SHARES_VALUE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FUT_TICK_SIZE",
+        "prefix": "FUT_TICK_SIZE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FUT_TICK_VAL",
+        "prefix": "FUT_TICK_VAL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FUT_VAL_PT",
+        "prefix": "FUT_VAL_PT-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OPT_CONT_SIZE_REAL",
+        "prefix": "OPT_CONT_SIZE_REAL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OPT_TICK_VAL",
+        "prefix": "OPT_TICK_VAL-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "INDEX_RATIO",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FIRST_SETTLE_DT",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CONTRACT_VALUE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FUT_CONT_SIZE",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CASH_SETTLED",
+        "prefix": "CASH_SETTLED-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EXCH_CODE",
+        "prefix": "EXCH_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FUT_CTD",
+        "prefix": "FUT_CTD-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FUT_CTD_ISIN",
+        "prefix": "FUT_CTD_ISIN-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "FUT_CTD_MTY",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FUT_CTD_PX",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "OPT_CTD",
+        "prefix": "OPT_CTD-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OPT_EXPIRE_DT",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "OPT_UNDL_CRNCY",
+        "prefix": "OPT_UNDL_CRNCY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "UNDL_SPOT_TICKER",
+        "prefix": "UNDL_SPOT_TICKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EQY_PRIM_EXCH",
+        "prefix": "EQY_PRIM_EXCH-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "EQY_SH_OUT",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ADR_ADR_PER_SH",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "FLAG_144A",
+        "prefix": "FLAG_144A-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ID_BB_SEC_NUMBER_DES",
+        "prefix": "ID_BB_SEC_NUMBER_DES-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "UNDERLIER_JSEC_ID",
+        "prefix": "UNDERLIER_JSEC_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MX_PACKAGE_ID",
+        "prefix": "MX_PACKAGE_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_LOANX_ID",
+        "prefix": "JSEC_LOANX_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MX_CNT_ORG",
+        "prefix": "MX_CNT_ORG-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CLEARING_ID",
+        "prefix": "CLEARING_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "JSEC_BB_CUSIP",
+        "prefix": "JSEC_BB_CUSIP-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CCP_TRADE_ID",
+        "prefix": "CCP_TRADE_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CLEARING_BROKER",
+        "prefix": "CLEARING_BROKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CLEARING_BROKER_ID",
+        "prefix": "CLEARING_BROKER_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "USI_ID",
+        "prefix": "USI_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AFFIRMATION_ID",
+        "prefix": "AFFIRMATION_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "UTI_ID",
+        "prefix": "UTI_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COUNTERPARTY_ID",
+        "prefix": "COUNTERPARTY_ID-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ALTERNATE_PH",
+        "prefix": "ALTERNATE_PH-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MBSCC_ELIGIBLE",
+        "prefix": "MBSCC_ELIGIBLE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "GSCC_ELIGIBLE",
+        "prefix": "GSCC_ELIGIBLE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ID_BB_COMPANY",
+        "prefix": "ID_BB_COMPANY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MIN_INCREMENT",
+        "prefix": "MIN_INCREMENT-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "MIN_PIECE",
+        "prefix": "MIN_PIECE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OPT_UNDL_TICKER",
+        "prefix": "OPT_UNDL_TICKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "OTC_MATURITY_DATE",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "BASKET_NAME",
+        "prefix": "BASKET_NAME-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "USER_DEFND_TICKER",
+        "prefix": "USER_DEFND_TICKER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TICK_VALUE",
+        "prefix": "TICK_VALUE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "BBG_OCC_CODE",
+        "prefix": "BBG_OCC_CODE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CONV_PRICE",
+        "prefix": "CONV_PRICE-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CONV_RATIO",
+        "prefix": "CONV_RATIO-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "COUNTERPARTY_DESC",
+        "prefix": "COUNTERPARTY_DESC-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "RESET_IDX",
+        "prefix": "RESET_IDX-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "ISSUE_CRNCY",
+        "prefix": "ISSUE_CRNCY-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "CNTRY_OF_RISK",
+        "prefix": "CNTRY_OF_RISK-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AUDIT_INSERT_USER",
+        "prefix": "AUDIT_INSERT_USER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AUDIT_INSERT_DATE",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "AUDIT_UPDATE_USER",
+        "prefix": "AUDIT_UPDATE_USER-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "AUDIT_UPDATE_DATE",
+        "options": [
+            1725811200,
+            1735390000
+        ],
+        "type": "NUM"
+    }
+]}}

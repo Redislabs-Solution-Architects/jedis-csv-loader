@@ -259,6 +259,9 @@ public class App {
         System.out.print("Enter Key Prefix (e.g. trades:) ");
         String prefix = s.nextLine();
 
+        String  async = config.getProperty("async.delete","true");
+        System.out.println("Deleting Keys Async: " + async);
+
         long startTime = System.currentTimeMillis();
 
         int numKeys = redisDataLoader.deleteKeys(prefix);

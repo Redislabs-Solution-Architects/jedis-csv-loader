@@ -1,0 +1,54 @@
+{
+    "schema": [
+        {
+            "field": "$.CustomerID",
+            "alias": "CustomerID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Address.state",
+            "alias": "State",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Address.city",
+            "alias": "City",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.FullName",
+            "alias": "FullName",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Status",
+            "alias": "Status",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.CanContact",
+            "alias": "CanContact",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.AutoPay",
+            "alias": "AutoPay",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "$.Balance",
+            "alias": "Balance",
+            "sortable": true,
+            "type": "NUMERIC"
+        }
+    ],
+    "prefix": "comcast:customers:",
+    "type": "JSON"
+}

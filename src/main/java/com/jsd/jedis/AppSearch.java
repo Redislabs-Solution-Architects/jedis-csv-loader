@@ -476,11 +476,14 @@ public class AppSearch {
         ArrayList<String> tagFieldList = new ArrayList<String>();
         HashMap<String, ArrayList<String>> tagValueMap = new HashMap<String, ArrayList<String>>();
 
+        System.out.println("[AppSearch] Scanning TAG Values");
+
         // LOOP THROUGH THE SCHEMA AND EXTRACT ALL TAGS FIELDS AND THEIR DISTINCT VALUES
         for (int i = 0; i < indexSchema.size(); i++) {
             JsonObject fieldObj = indexSchema.getJsonObject(i);
 
-            if ("TAG".equalsIgnoreCase(fieldObj.getString("type"))) {
+
+            if ("TAG".equalsIgnoreCase(fieldObj.getString("type")) && fieldObj.getBoolean("scan", false)) {
                 String fieldName = fieldObj.getString("alias");
                 tagFieldList.add(fieldName);
                 tagValueMap.put(fieldName, toArrayList(jedisPooled.ftTagVals(indexName, fieldName)));
@@ -585,8 +588,15 @@ public class AppSearch {
 
         ArrayList<String> returnList = new ArrayList<String>();
 
+        //limit to 100 values
+        int i = 0;
+
         for (String val : valueSet) {
             returnList.add(val);
+
+            if(++i > 100) {
+                break;
+            }
         }
 
         return returnList;

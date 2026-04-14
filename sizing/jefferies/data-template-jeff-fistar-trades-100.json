@@ -1,0 +1,550 @@
+{
+      
+	"header": {
+		"schema": [
+			{
+				"field": "DATE_OF_AUTHORIZATION",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "TRANS_PACKED_COST_3_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_3_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_PACKED_COST_4_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "TRANS_COST_4_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_PACKED_COST_5_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_5_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "FIRM_TIME_HH_MM_SS",
+				"type": "AUTO-TEXT",
+                "prefix": "FIRM_TIME_HH_MM_SS-",
+				"options" : [1,20]
+			},
+			{
+				"field": "FIRM_AS_OF_TIME_HH_MM_SS",
+				"type": "AUTO-TEXT",
+                "prefix": "FIRM_AS_OF_TIME_HH_MM_SS-",
+				"options" : [1,20]
+			},
+			{
+				"field": "FIRM_TIME_OF_SLATE_HH_MM_SS",
+				"type": "AUTO-TEXT",
+                "prefix": "FIRM_TIME_OF_SLATE_HH_MM_SS-",
+				"options" : [1,20]
+			},
+			{
+				"field": "FIRM_TIME_OF_SALES2_HH_MM_SS",
+				"type": "AUTO-TEXT",
+                "prefix": "FIRM_TIME_OF_SALES2_HH_MM_SS-",
+				"options" : [1,20]
+			},
+			{
+				"field": "ML_ISSUER_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "ML_ISSUER_CODE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "YIELD_CONVENTION",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "IS_JP_BROKER_TRADE",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "PRIMARY_MMKT_ID",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "ISSUE_DATE",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "DELAYED_DELIVERY_DATE",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "FIRM_DATE_YYYYMMDD",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "JAPAN_TRADE_DATE",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "FIRM_AS_OF_DATE_YYYYMMDD",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "QUOTE_TYPE_INDICATOR",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "JAPAN_TRADE_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "JAPAN_BROKER_COMMISSION",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "JAPAN_TAX",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "JAPAN_OTHER_MARKET_FEES",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "JAPAN_NET_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "BENCHMARK_PRICE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "REPO_TRANSACTION_TYPE",
+				"type": "AUTO-TEXT",
+                "prefix": "REPO_TRANSACTION_TYPE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "TRANS_BUYSIDE_ORDER_NAME_CHAR",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "BUYSIDE_ORDER_PRIM_CNTG_PAIR",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "TKT_NUM_OF_THE_OTHER_SWING_TKT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TICKET_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "ORIGINAL_TICKET_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "MASTER_TICKET_NUM",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TBA_CODE_TICKET",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "BOND_OR_FX_TRADE_TKT_NO",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "FOUR_HOUR_TRADE_TICKET_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "SECOND_RELATED_TICKET_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "POST_TRDDATE_CANC_ORIG_TKT_RRN",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "AGY_TKT_NOLINK_NUMOFFSET_TRADE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "FX_SWAP_TICKET_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRADE_ENT_BY_MONEY_AMT_INDI",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "SLATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TKT_NUM_SALESTKT_USED_MATCHTKT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TURN_POOL_TICKET_NUMBER_TBAS",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "FORWARD_TICKET_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "AFFILIATED_TICKET",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "BENCHMARK_SPREAD",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "SPREAD",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "ASSET_SWAP_SPREAD",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "I_SPREAD",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "Z_SPREAD",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "D_SPREAD",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "OAS_SPREAD",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "DURATION",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "ORDER_NUMBER",
+				"type": "NUM",
+				"options": [100,300000]
+			},
+			{
+				"field": "EXTERNAL_SOURCE_CODE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "PIMCO_FIELD_DURATION",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANSACTION_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANSACTION_CODE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "DELTA_BEST_PRICE",
+				"type": "AUTO-TEXT",
+                "prefix": "DELTA_BEST_PRICE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "EXTERNAL_SOURCE",
+				"type": "AUTO-TEXT",
+                "prefix": "EXTERNAL_SOURCE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "I_SPREAD_CURVE",
+				"type": "AUTO-TEXT",
+                "prefix": "I_SPREAD_CURVE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "BENCHMARK",
+				"type": "AUTO-TEXT",
+                "prefix": "BENCHMARK-",
+				"options" : [1,20]
+			},
+			{
+				"field": "CANCEL_DUE_TO_MATCH",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "INT_EXT_TRADE_INDICATOR",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "NO_CALC_CALC_TYP_INDICATOR",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "TRANSACTION_ENTERED_BY_YIELD",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "TRANSACTION_SYSTEM_DATE",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "UNIQUE_BLOOMBERG_IDENTIFIER",
+				"type": "AUTO-TEXT",
+                "prefix": "XXUNIQUE_BLOOMBERG_IDENTIFIERXXX-",
+				"options" : [1,20]
+			},
+			{
+				"field": "CLEARING_BROKER",
+				"type": "AUTO-TEXT",
+                "prefix": "CLEARING_BROKER-",
+				"options" : [1,20]
+			},
+			{
+				"field": "JAPAN_NUMBER",
+				"type": "AUTO-TEXT",
+                "prefix": "JAPAN_NUMBER-",
+				"options" : [1,20]
+			},
+			{
+				"field": "SETTLEMENT_LOCATION_ABBREV",
+				"type": "AUTO-TEXT",
+                "prefix": "SETTLEMENT_LOCATION_ABBREV-",
+				"options" : [1,20]
+			},
+			{
+				"field": "EXTEND_TRANS_FXSTRATEGY_CODES",
+				"type": "AUTO-TEXT",
+                "prefix": "EXTEND_TRANS_FXSTRATEGY_CODES-",
+				"options" : [1,20]
+			},
+			{
+				"field": "EXTEND_TRANS_BUYSIDE_REASON",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANSACTION_TYPE-",
+				"options" : [1,20]
+			},
+			{
+				"field": "CUSTODY_SAFEKEEPING_NUMBER",
+				"type": "AUTO-TEXT",
+                "prefix": "CUSTODY_SAFEKEEPING_NUMBER-",
+				"options" : [1,20]
+			},
+			{
+				"field": "ONLINE_TRADEFEED_VER_NUM_RTFS",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "AUTO_EXECUTION_SEQUENCE_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRADE_PRICE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRADER_NUMBER",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "FOUR_HOUR_TRADE_FLAG_Y_N",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "UNIT_TRADED_INDICATOR",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "LATT_TKT_DOES_NOT_HIT_CASH",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "RECFLAG11_WEB_RETAIL_FEEDTRADE",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "CORRECTION_AS_ORIGINAL",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "SBBT_BSBT_ALLOCATED",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "IPO",
+				"type": "TEXT",
+				"options" : ["Y","N"]
+			},
+			{
+				"field": "DATE_OF_AUTHORIZATION",
+				"type": "NUM",
+				"options": [1725811200,1735390000]
+			},
+			{
+				"field": "TRANS_PACKED_COST_3_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_3_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_PACKED_COST_4_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "TRANS_COST_4_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_PACKED_COST_5_TYPE_CRNCY",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_5_AMOUNT",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "TRANS_COST_1_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_2_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_3_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+            {
+				"field": "TRANS_COST_4_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_5_RATE",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRADE_CONTRACT_SIZE_R8",
+				"type": "NUM",
+				"options": [100,1000]
+			},
+			{
+				"field": "TRANS_COST_3_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_3_CURRENCY-",
+				"options" : [1,20]
+			},
+            {
+				"field": "TRANS_COST_3_CODE",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_3_CODE-",
+				"options" : [1,20]
+			},
+            {
+				"field": "MTGE_TBA_CODE_NUMBER",
+				"type": "AUTO-TEXT",
+                "prefix": "MTGE_TBA_CODE_NUMBER-",
+				"options" : [1,20]
+			},
+            {
+				"field": "USER_WHO_RELEASED_TRADE_2",
+				"type": "AUTO-TEXT",
+                "prefix": "USER_WHO_RELEASED_TRADE_2-",
+				"options" : [1,20]
+			},
+            {
+				"field": "TRANS_COST_5_CURRENCY",
+				"type": "AUTO-TEXT",
+                "prefix": "TRANS_COST_5_CURRENCY-",
+				"options" : [1,20]
+			}
+		]	
+	}
+}

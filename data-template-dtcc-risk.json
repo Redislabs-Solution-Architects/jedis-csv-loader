@@ -1,0 +1,935 @@
+{"header": {"schema": [
+    {
+        "field": "TradeSeq",
+        "prefix": "TradeSeq-",
+        "type": "UID"
+    },
+    {
+        "field": "BusinessDate",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "CusipCode",
+		"type": "TEXT",
+		"options" : ["NVDA","NVDA","NVDA","NVDA","NVDA","NVDA","AAPL","AAPL","AAPL","AAPL","AAPL","TSLA","TSLA","TSLA","TSLA","T","AMZN","AMZN","AMZN","PFE","GM","META","META","JNJ"]
+    },
+    {
+        "field": "ShareQuantity",
+        "options": [
+            10,
+            500
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "SharePrice",
+        "options": [
+            20,
+            500
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "ContractAmount",
+        "options": [
+            1000,
+            50000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "BuyerCode",
+		"type": "TEXT",
+		"options" : ["Bridgewater Assoc","Bridgewater Assoc","Bridgewater Assoc","Citadel LLC","Millennium Mgmt","Millennium Mgmt","Renaissance Tech","Two Sigma Invst","Elliott Invst Mgmt",
+					 "Man Group","Brevan Howard","Lansdowne Partners","Marshall Wace"]
+    },
+    {
+        "field": "SellerCode",
+		"type": "TEXT",
+		"options" : ["Capula Invst Mgmt","Capula Invst Mgmt","BlueCrest Capital Mgmt","Rokos Capital Mgmt","BFAM Partners",
+					"Dymon Asia Capital","Pinpoint Asset Mgmt","Tybourne Capital Mgmt","Oasis Mgmt","Oasis Mgmt"]
+    },
+    {
+        "field": "SettlementDate",
+        "options": [
+            1563753600,
+            1698883200
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "MarketCode",
+		"type": "TEXT",
+		"options" : ["XNYS","XNYS","XNYS","XNYS","XNYS","XNAS","XNAS","XNAS","XLON","XLON","XTSE","XTKS","XHKG","XETR","XPAR","XMAD","XBOM"]
+    },
+    {
+        "field": "CurrencyCode",
+		"type": "TEXT",
+		"options" : ["USD","USD","USD","GBP","GBP","HKD"]
+    },
+    {
+        "field": "TradeCycleNum",
+        "prefix": "Cycle-",
+        "options": [
+            1,
+            10
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField1",
+        "prefix": "TextField1-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField2",
+        "prefix": "TextField2-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField3",
+        "prefix": "TextField3-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField4",
+        "prefix": "TextField4-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField5",
+        "prefix": "TextField5-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField6",
+        "prefix": "TextField6-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField7",
+        "prefix": "TextField7-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField8",
+        "prefix": "TextField8-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField9",
+        "prefix": "TextField9-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField10",
+        "prefix": "TextField10-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField11",
+        "prefix": "TextField11-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField12",
+        "prefix": "TextField12-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField13",
+        "prefix": "TextField13-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField14",
+        "prefix": "TextField14-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField15",
+        "prefix": "TextField15-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField16",
+        "prefix": "TextField16-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField17",
+        "prefix": "TextField17-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField18",
+        "prefix": "TextField18-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField19",
+        "prefix": "TextField19-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField20",
+        "prefix": "TextField20-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField21",
+        "prefix": "TextField21-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField22",
+        "prefix": "TextField22-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField23",
+        "prefix": "TextField23-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField24",
+        "prefix": "TextField24-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField25",
+        "prefix": "TextField25-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField26",
+        "prefix": "TextField26-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField27",
+        "prefix": "TextField27-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField28",
+        "prefix": "TextField28-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField29",
+        "prefix": "TextField29-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField30",
+        "prefix": "TextField30-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField31",
+        "prefix": "TextField31-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField32",
+        "prefix": "TextField32-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField33",
+        "prefix": "TextField33-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField34",
+        "prefix": "TextField34-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField35",
+        "prefix": "TextField35-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField36",
+        "prefix": "TextField36-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField37",
+        "prefix": "TextField37-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField38",
+        "prefix": "TextField38-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField39",
+        "prefix": "TextField39-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField40",
+        "prefix": "TextField40-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField41",
+        "prefix": "TextField41-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField42",
+        "prefix": "TextField42-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField43",
+        "prefix": "TextField43-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField44",
+        "prefix": "TextField44-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField45",
+        "prefix": "TextField45-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField46",
+        "prefix": "TextField46-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField47",
+        "prefix": "TextField47-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField48",
+        "prefix": "TextField48-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField49",
+        "prefix": "TextField49-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField50",
+        "prefix": "TextField50-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField51",
+        "prefix": "TextField51-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField52",
+        "prefix": "TextField52-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField53",
+        "prefix": "TextField53-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField54",
+        "prefix": "TextField54-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField55",
+        "prefix": "TextField55-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField56",
+        "prefix": "TextField56-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField57",
+        "prefix": "TextField57-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField58",
+        "prefix": "TextField58-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField59",
+        "prefix": "TextField59-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField60",
+        "prefix": "TextField60-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField61",
+        "prefix": "TextField61-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField62",
+        "prefix": "TextField62-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField63",
+        "prefix": "TextField63-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField64",
+        "prefix": "TextField64-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField65",
+        "prefix": "TextField65-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField66",
+        "prefix": "TextField66-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField67",
+        "prefix": "TextField67-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "TextField68",
+        "prefix": "TextField68-",
+        "options": [
+            1,
+            10000
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "NumericField1",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField2",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField3",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField4",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField5",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField6",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField7",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField8",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField9",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField10",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField11",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField12",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField13",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField14",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField15",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField16",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField17",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField18",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField19",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField20",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField21",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField22",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField23",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField24",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField25",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField26",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField27",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField28",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField29",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "NumericField30",
+        "options": [
+            100000,
+            1000000
+        ],
+        "type": "NUM"
+    }
+]}}

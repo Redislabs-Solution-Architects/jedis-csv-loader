@@ -4,7 +4,7 @@
 			{
 				"field": "TradeID",
 				"type": "UID",
-				"prefix": "T-"
+				"prefix": "T"
 			},
 			{
 				"field": "Security",
@@ -43,6 +43,12 @@
 				]
 			},
 			{
+				"field": "AccountNum",
+				"type": "AUTO-TEXT",
+				"options" : [1000,1200],
+				"prefix": "ACC-"
+			},
+			{
 				"field": "Action",
 				"type": "TEXT",
 				"options" : ["BUY","BUY","SELL","SELL","SELL"]
@@ -50,7 +56,7 @@
 			{
 				"field": "Status",
 				"type": "TEXT",
-				"options" : ["Initiated","Completed","Validation"]
+				"options" : ["Initiated","Initiated","Initiated","Validated","Allocation","Allocation","Compression","Compression"]
 			},
 			{
 				"field": "Quantity",

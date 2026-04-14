@@ -1,0 +1,932 @@
+{
+    "header": {
+        "schema": [
+            {
+                "field": "AccountNumber",
+                "type": "UID",
+                "prefix": "ACC-"
+            },
+            {
+                "field": "Moniker",
+                "prefix": "Moniker-",
+                "type": "UID"
+            },
+            {
+                "field": "IsIntlAccount",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "WorkflowStatus",
+                "prefix": "WorkflowStatus-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Branch",
+                "prefix": "Branch-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "AccountCd",
+                "prefix": "AccountCd-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC1",
+                "prefix": "TC1-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC2",
+                "prefix": "TC2-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC3",
+                "prefix": "TC3-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC4",
+                "prefix": "TC4-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC5",
+                "prefix": "TC5-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC6",
+                "prefix": "TC6-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC7",
+                "prefix": "TC7-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC8",
+                "prefix": "TC8-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "TC9",
+                "prefix": "TC9-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "AccessCode",
+                "prefix": "AccessCode-",
+                "options": [
+                    1,
+                    50
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field2",
+                "prefix": "Account_Field2-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field3",
+                "prefix": "Account_Field3-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field4",
+                "prefix": "Account_Field4-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field5",
+                "prefix": "Account_Field5-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field6",
+                "prefix": "Account_Field6-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field7",
+                "prefix": "Account_Field7-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field8",
+                "prefix": "Account_Field8-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field9",
+                "prefix": "Account_Field9-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field10",
+                "prefix": "Account_Field10-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field11",
+                "prefix": "Account_Field11-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field12",
+                "prefix": "Account_Field12-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field13",
+                "prefix": "Account_Field13-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field14",
+                "prefix": "Account_Field14-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field15",
+                "prefix": "Account_Field15-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field16",
+                "prefix": "Account_Field16-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field17",
+                "prefix": "Account_Field17-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field18",
+                "prefix": "Account_Field18-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field19",
+                "prefix": "Account_Field19-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field20",
+                "prefix": "Account_Field20-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field21",
+                "prefix": "Account_Field21-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field22",
+                "prefix": "Account_Field22-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field23",
+                "prefix": "Account_Field23-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field24",
+                "prefix": "Account_Field24-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field25",
+                "prefix": "Account_Field25-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field26",
+                "prefix": "Account_Field26-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field27",
+                "prefix": "Account_Field27-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field28",
+                "prefix": "Account_Field28-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field29",
+                "prefix": "Account_Field29-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field30",
+                "prefix": "Account_Field30-",
+                "options": [
+                    1,
+                    20
+                ],
+                "type": "AUTO-TEXT"
+            },
+            {
+                "field": "Account_Field31",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field32",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field33",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field34",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field35",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field36",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field37",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field38",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field39",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field40",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field41",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field42",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field43",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field44",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field45",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field46",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field47",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field48",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field49",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field50",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field51",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field52",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field53",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field54",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field55",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field56",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field57",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field58",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field59",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field60",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field61",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field62",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field63",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field64",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field65",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field66",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field67",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field68",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field69",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field70",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field71",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field72",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field73",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field74",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "Account_Field75",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            },
+            {
+                "field": "StandardSettlementInstructions",
+                "type": "ARR",
+                "obj": "StandardSettlementInstructions",
+                "range": [
+                    25,
+                    50
+                ]
+            },
+            {
+                "field": "MarketIdentifier",
+                "type": "ARR",
+                "obj": "MarketIdentifier",
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        ]
+    },
+
+    "MarketIdentifier": {
+        "schema": [
+            {
+                "field": "MarketIdentifierField1",
+                "type": "AUTO-TEXT",
+                "prefix": "MarketIdentifierField1-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "MarketIdentifierField2",
+                "type": "AUTO-TEXT",
+                "prefix": "MarketIdentifierField2-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "MarketIdentifierField3",
+                "options": [
+                    "true",
+                    "false"
+                ],
+                "type": "TEXT"
+            }
+        ]
+    },
+    "StandardSettlementInstructions": {
+        "schema": [
+            {
+                "field": "Reference",
+                "type": "AUTO-TEXT",
+                "prefix": "Reference-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "IsActive",
+                "type": "AUTO-TEXT",
+                "prefix": "IsActive-",
+                "options": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "field": "IsCrestHighPriority",
+                "type": "AUTO-TEXT",
+                "prefix": "IsCrestHighPriority-",
+                "options": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "field": "IsDoNotSendToGloss",
+                "type": "AUTO-TEXT",
+                "prefix": "IsDoNotSendToGloss-",
+                "options": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "field": "HasCorrespondent",
+                "type": "AUTO-TEXT",
+                "prefix": "HasCorrespondent-",
+                "options": [
+                    1,
+                    2
+                ]
+            },
+            {
+                "field": "InstructionName",
+                "type": "AUTO-TEXT",
+                "prefix": "Name-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "AccountLocation",
+                "type": "AUTO-TEXT",
+                "prefix": "AccountLocation-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "Type",
+                "type": "AUTO-TEXT",
+                "prefix": "InstructionType-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "Narrative3",
+                "type": "AUTO-TEXT",
+                "prefix": "Narrative3-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "Narrative3",
+                "type": "AUTO-TEXT",
+                "prefix": "Narrative3-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "CommService",
+                "type": "AUTO-TEXT",
+                "prefix": "CommService-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "SettleCode",
+                "type": "AUTO-TEXT",
+                "prefix": "SettleCode-",
+                "options": [
+                    1,
+                    25
+                ]
+            },
+            {
+                "field": "BeneficiaryBIC",
+                "type": "AUTO-TEXT",
+                "prefix": "BeneficiaryBIC-",
+                "options": [
+                    1,
+                    25
+                ]
+            }
+        ]
+    }
+}

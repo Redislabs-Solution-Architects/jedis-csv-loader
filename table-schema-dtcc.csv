@@ -1,0 +1,13 @@
+productId,string
+activityStatusId,numeric
+activityStatusMessage,string
+recievedFileName,UID
+fileSize,numeric
+trackingId,string
+optionalRecordText,UID
+srcFileExpiryDate,string
+srcJobLogId,string
+srcJobLogName,string
+notifyStatus,string
+actualActivityTs,UID
+activityRecordTs,UID

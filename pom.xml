@@ -33,6 +33,13 @@
       <artifactId>redis-streams-java</artifactId>
       <version>0.3.5</version>
     </dependency>
+
+    <dependency>
+        <groupId>org.redisson</groupId>
+        <artifactId>redisson</artifactId>
+        <version>3.52.0</version>
+    </dependency>
+
 		<dependency>
 			<groupId>io.github.resilience4j</groupId>
 			<artifactId>resilience4j-all</artifactId>

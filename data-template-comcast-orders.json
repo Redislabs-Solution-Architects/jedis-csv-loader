@@ -1,0 +1,66 @@
+{
+	"header": {
+		"schema": [
+			{
+				"field": "OrderID",
+				"type": "UID",
+				"prefix": "INV-"
+			},
+			{
+				"field": "Store",
+				"type": "OBJ",
+				"options" : [{"StoreID" : "S1", "City" : "West Orange", "Location": "-74.257546,40.801239"},
+							{"StoreID" : "S2", "City" : "Union", "Location": "-74.294948,40.695557"},
+							{"StoreID" : "S3", "City" : "Woodbridge", "Location": "-74.294425,40.577192"},
+							{"StoreID" : "S4", "City" : "Hillsborough", "Location": "-74.630032,40.531282"},
+							{"StoreID" : "S5", "City" : "Jersey City", "Location": "-74.038449,40.734475"},
+							{"StoreID" : "S6", "City" : "Princeton", "Location": "-74.680232,40.311420"},
+							{"StoreID" : "S5", "City" : "Philadelphia", "Location": "-75.029215,40.093705"},
+							{"StoreID" : "S6", "City" : "Danbury", "Location": "-73.500470,41.413896"}
+							]
+			},
+            {
+                "field": "Customer",
+                "prefix": "CID-",
+                "options": [1,20000],
+                "type": "AUTO-TEXT"
+            },
+			{
+				"field": "Status",
+				"type": "TEXT",
+				"options": ["Open","Closed","Delivery","Cancelled"]
+			},
+            {
+                "field": "OrderDate",
+                "options": [1563753600, 1698883200],
+                "type": "NUM"
+            },
+			{
+				"field": "Amount",
+				"type": "NUM",
+				"options" : [2000,10000]
+			},	
+			{
+				"field": "LineItems",
+				"type": "ARR",
+				"obj": "details",
+				"range" : [1,3]
+			}		
+		]	
+	},
+
+	"details" : {
+		"schema": [
+			{
+				"field": "Product",
+				"type": "TEXT",
+				"options": ["IPhone17","IPhone17","IPhone17","IPhone17","IPhone16","IPhone16","GalazyS25","GalazyS25","GalazyS25","Google Pixel","Optical Modem","Optical Modem","Optical Modem","Optical Modem","Optical Modem","Cable Modem"]
+			},
+			{
+				"field": "Quantity",
+				"type": "NUM",
+				"options" : [1,3]
+			}
+		]
+	}
+}

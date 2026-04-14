@@ -383,14 +383,12 @@ public class RedisDataLoader {
 
     public int deleteKeys(String keyPrefix) throws Exception {
 
-
         AtomicInteger threadCount = new AtomicInteger(0);
 
         int batchSize = Integer.parseInt(config.getProperty("delete.batch.size","10000"));
 
         String  async = config.getProperty("async.delete","true");
-        System.out.println("[RedisDataLoader] Deleting Keys Async: " + async);
-
+        
         ScanParams scanParams = new ScanParams().count(batchSize).match(keyPrefix + "*"); // Set the chunk size
         String cursor = ScanParams.SCAN_POINTER_START;
 

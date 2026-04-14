@@ -1,0 +1,150 @@
+{
+  "attributes": {
+    "type": "Case",
+    "url": "/services/data/v42.0/sobjects/Case/500Rg00000FbBlVIAV"
+  },
+  "AccountId": "001i000000cKAnsAAG",
+  "Business_Purpose__c": "Lorem ipsum dolor sit amet",
+  "CaseNumber": "00940935",
+  "ClosedDate": "2024-08-10T04:35:20.000+0000",
+  "Contact": {
+    "attributes": {
+      "type": "Contact",
+      "url": "/services/data/v42.0/sobjects/Contact/0030H00005MPJ7TQAX"
+    },
+    "Email": "lorem.ipsum@example.net",
+    "Name": "Lorem Ipsum",
+    "Phone": "123-456-7890",
+    "Title": "Dolor Sit Amet"
+  },
+  "CreatedDate": "2024-08-07T07:35:55.000+0000",
+  "Customer_Ticket_Number__c": "400112",
+  "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "Id": "500Rg00000FbBlVIAV",
+  "IsClosed": true,
+  "Close_Code__c": "Lorem Ipsum Completed",
+  "Maintenance_Date__c": null,
+  "Portal_Ticket_Type__c": null,
+  "RecordType": {
+    "attributes": {
+      "type": "RecordType",
+      "url": "/services/data/v42.0/sobjects/RecordType/0120H000000yUTiQAM"
+    },
+    "Name": "Lorem Ipsum"
+  },
+  "Service__r": {
+    "attributes": {
+      "type": "Service__c",
+      "url": "/services/data/v42.0/sobjects/Service__c/a1f6S00000AQmNAQA1"
+    },
+    "Asymmetrical_Bandwidth__c": false,
+    "Bandwidth_Downstream__c": "Lorem",
+    "Bandwidth_Upstream__c": "Ipsum",
+    "Vendor__r": {
+      "attributes": {
+        "type": "Account",
+        "url": "/services/data/v42.0/sobjects/Account/001i000001ctsroAAA"
+      },
+      "Name": "Lorem Ipsum",
+      "Display_Alias__c": "Dolor"
+    },
+    "Name": "Lorem Ipsum Service",
+    "RecordType": {
+      "attributes": {
+        "type": "RecordType",
+        "url": "/services/data/v42.0/sobjects/RecordType/0120H000000yUUdQAM"
+      },
+      "Name": "Lorem Ipsum"
+    }
+  },
+  "RecordTypeId": "0120H000000yUTiQAM",
+  "Service_Location_Address__c": "123 Lorem Ipsum St, Dolor, SI 12345",
+  "Status": "Closed",
+  "Time_to_Repair_Days__c": null,
+  "Time_to_Repair_Hours__c": null,
+  "Time_to_Repair__c": null,
+  "First_touch_time__c": 0.000486,
+  "First_touch__c": "2024-08-07T07:36:37.000+0000",
+  "Subject": "Lorem Ipsum - Dolor Sit",
+  "Comments__r": {
+    "totalSize": 3,
+    "done": true,
+    "records": [
+      {
+        "attributes": {
+          "type": "Comment__c",
+          "url": "/services/data/v42.0/sobjects/Comment__c/a13Rg00000EqPn9IAF"
+        },
+        "Body__c": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+        "Case__c": "500Rg00000FbBlVIAV",
+        "Contact__c": null,
+        "Contact__r": null,
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v42.0/sobjects/User/0050H00000DINdgQAH"
+          },
+          "FirstName": "Lorem",
+          "Name": "Ipsum Dolor"
+        },
+        "CreatedById": "0050H00000DINdgQAH",
+        "CreatedDate": "2024-08-08T13:03:05.000+0000",
+        "Id": "a13Rg00000EqPn9IAF",
+        "Is_Read__c": false,
+        "Name": "C-12345678",
+        "User__c": null,
+        "User__r": null
+      },
+      {
+        "attributes": {
+          "type": "Comment__c",
+          "url": "/services/data/v42.0/sobjects/Comment__c/a13Rg00000EpOhmIAF"
+        },
+        "Body__c": "<p>Dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique.</p>",
+        "Case__c": "500Rg00000FbBlVIAV",
+        "Contact__c": null,
+        "Contact__r": null,
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v42.0/sobjects/User/0050H00000DINdgQAH"
+          },
+          "FirstName": "Lorem",
+          "Name": "Ipsum Dolor"
+        },
+        "CreatedById": "0050H00000DINdgQAH",
+        "CreatedDate": "2024-08-08T04:43:39.000+0000",
+        "Id": "a13Rg00000EpOhmIAF",
+        "Is_Read__c": false,
+        "Name": "C-87654321",
+        "User__c": null,
+        "User__r": null
+      },
+      {
+        "attributes": {
+          "type": "Comment__c",
+          "url": "/services/data/v42.0/sobjects/Comment__c/a13Rg00000ElxfqIAB"
+        },
+        "Body__c": "<p>Curabitur vel dui nec sapien vehicula ullamcorper eget non justo.</p>",
+        "Case__c": "500Rg00000FbBlVIAV",
+        "Contact__c": null,
+        "Contact__r": null,
+        "CreatedBy": {
+          "attributes": {
+            "type": "User",
+            "url": "/services/data/v42.0/sobjects/User/0050H00000DINdgQAH"
+          },
+          "FirstName": "Lorem",
+          "Name": "Ipsum Dolor"
+        },
+        "CreatedById": "0050H00000DINdgQAH",
+        "CreatedDate": "2024-08-07T07:47:42.000+0000",
+        "Id": "a13Rg00000ElxfqIAB",
+        "Is_Read__c": false,
+        "Name": "C-11223344",
+        "User__c": null,
+        "User__r": null
+      }
+    ]
+  }
+}

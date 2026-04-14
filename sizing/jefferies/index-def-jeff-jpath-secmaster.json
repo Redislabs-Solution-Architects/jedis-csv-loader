@@ -1,0 +1,486 @@
+{
+    "schema": [
+        {
+            "field": "MONTHLY_PERIOD",
+            "alias": "MONTHLY_PERIOD",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INSTRUMENT_PARENT_NK",
+            "alias": "INSTRUMENT_PARENT_NK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INSTRUMENT_NK",
+            "alias": "INSTRUMENT_NK",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SOURCE_SYSTEM_KEY",
+            "alias": "SOURCE_SYSTEM_KEY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "INSTRUMENT_ID",
+            "alias": "INSTRUMENT_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INSTRUMENT_ID_TYPE",
+            "alias": "INSTRUMENT_ID_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INSTRUMENT_SOURCE",
+            "alias": "INSTRUMENT_SOURCE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_ID",
+            "alias": "JSEC_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_EXCHANGE_CODE",
+            "alias": "JSEC_EXCHANGE_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_ISIN",
+            "alias": "JSEC_ISIN",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_CUSIP",
+            "alias": "JSEC_CUSIP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_SEDOL",
+            "alias": "JSEC_SEDOL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_ADP_NUM",
+            "alias": "JSEC_ADP_NUM",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_TICKER",
+            "alias": "JSEC_TICKER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_ID_BB_GLOBAL",
+            "alias": "JSEC_ID_BB_GLOBAL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_ID_BB_UNIQUE",
+            "alias": "JSEC_ID_BB_UNIQUE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_IOM_INSTID",
+            "alias": "JSEC_IOM_INSTID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_GLOSS_ID",
+            "alias": "JSEC_GLOSS_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_JDOE_FO_ID",
+            "alias": "JSEC_JDOE_FO_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_JDOE_ID",
+            "alias": "JSEC_JDOE_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_JDOE_NEW_OPRA",
+            "alias": "JSEC_JDOE_NEW_OPRA",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_LIQ_FACILITY_ID",
+            "alias": "JSEC_LIQ_FACILITY_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_OCC_CODE",
+            "alias": "JSEC_OCC_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_OMNIUM_BB_YK_ID",
+            "alias": "JSEC_OMNIUM_BB_YK_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_OPRA_SYMBOL",
+            "alias": "JSEC_OPRA_SYMBOL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_SWAP_DEAL_REF",
+            "alias": "JSEC_SWAP_DEAL_REF",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_TRADE_ID",
+            "alias": "JSEC_TRADE_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_WINFITS_SEC_ID",
+            "alias": "JSEC_WINFITS_SEC_ID",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_OPRA_ROOT",
+            "alias": "JSEC_OPRA_ROOT",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_PH_CODE",
+            "alias": "JSEC_PH_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_PH_DESC",
+            "alias": "JSEC_PH_DESC",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_PH_COLUMN_STRING",
+            "alias": "JSEC_PH_COLUMN_STRING",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_PH_COLUMN_VALUE",
+            "alias": "JSEC_PH_COLUMN_VALUE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_PROD_SUB_TYPE",
+            "alias": "JSEC_PROD_SUB_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_PROD_SUB_TYPE_DRIVER",
+            "alias": "JSEC_PROD_SUB_TYPE_DRIVER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_CAPRI_SUB_TYPE",
+            "alias": "JSEC_CAPRI_SUB_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_NAME",
+            "alias": "JSEC_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_ISSUER",
+            "alias": "JSEC_ISSUER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_MATCHED_ID_TYPE",
+            "alias": "JSEC_MATCHED_ID_TYPE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "JSEC_HAS_EXTERNAL",
+            "alias": "JSEC_HAS_EXTERNAL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JSEC_HAS_INTERNAL",
+            "alias": "JSEC_HAS_INTERNAL",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JSEC_MATURITY_DATE",
+            "alias": "JSEC_MATURITY_DATE",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "JSEC_ACTIVITY_FLAG",
+            "alias": "JSEC_ACTIVITY_FLAG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BBRG_TABLE_NAME",
+            "alias": "BBRG_TABLE_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "BBRG_UNIQUE_KEY",
+            "alias": "BBRG_UNIQUE_KEY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COUNTRY_ISO",
+            "alias": "COUNTRY_ISO",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CNTRY_OF_INCORPORATION",
+            "alias": "CNTRY_OF_INCORPORATION",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CPN_TYP",
+            "alias": "CPN_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CALLABLE",
+            "alias": "CALLABLE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "PUTABLE",
+            "alias": "PUTABLE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INFLATION_LINKED_INDICATOR",
+            "alias": "INFLATION_LINKED_INDICATOR",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "COLLAT_TYP",
+            "alias": "COLLAT_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MTG_DEAL_TYP",
+            "alias": "MTG_DEAL_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ISSUE_DT",
+            "alias": "ISSUE_DT",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MTG_IS_AGENCY_BACKED",
+            "alias": "MTG_IS_AGENCY_BACKED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SECURITY_TYP",
+            "alias": "SECURITY_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "IS_PERPETUAL",
+            "alias": "IS_PERPETUAL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "OPT_PUT_CALL",
+            "alias": "OPT_PUT_CALL",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "CNTRY_OF_DOMICILE",
+            "alias": "CNTRY_OF_DOMICILE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "WHEN_ISSUED",
+            "alias": "WHEN_ISSUED",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "TYPE_OF_BOND",
+            "alias": "TYPE_OF_BOND",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SHORT_NAME",
+            "alias": "SHORT_NAME",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SECURITY_TYP2",
+            "alias": "SECURITY_TYP2",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "SECURITY_DES",
+            "alias": "SECURITY_DES",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "RTG_SP",
+            "alias": "RTG_SP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "RTG_MOODY",
+            "alias": "RTG_MOODY",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MUNI_TAX_CODE",
+            "alias": "MUNI_TAX_CODE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MUNI_ISSUE_TYP",
+            "alias": "MUNI_ISSUE_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MTG_TYP",
+            "alias": "MTG_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MTG_TRANCHE_TYP_LONG",
+            "alias": "MTG_TRANCHE_TYP_LONG",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MTG_COLLAT_TYP",
+            "alias": "MTG_COLLAT_TYP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MTG_CMO_CLASS",
+            "alias": "MTG_CMO_CLASS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MATURITY",
+            "alias": "MATURITY",
+            "sortable": true,
+            "type": "NUMERIC"
+        },
+        {
+            "field": "MARKET_SECTOR_DES",
+            "alias": "MARKET_SECTOR_DES",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "MARKET_ISSUE",
+            "alias": "MARKET_ISSUE",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ISSUER",
+            "alias": "ISSUER",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INSURANCE_STATUS",
+            "alias": "INSURANCE_STATUS",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INDUSTRY_SUBGROUP",
+            "alias": "INDUSTRY_SUBGROUP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "INDUSTRY_GROUP",
+            "alias": "INDUSTRY_GROUP",
+            "sortable": true,
+            "type": "TAG"
+        },
+        {
+            "field": "ID_BB_GLOBAL_COMPANY_NAME",
+            "alias": "ID_BB_GLOBAL_COMPANY_NAME",
+            "sortable": true,
+            "type": "TAG"
+        }
+    ],
+    "prefix": "jpath:sec:",
+    "type": "HASH"
+}

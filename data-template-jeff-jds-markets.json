@@ -1,0 +1,101 @@
+{"header": {"schema": [
+    {
+        "field": "productId",
+        "prefix": "productId-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "activityStatusId",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "activityStatusMessage",
+        "prefix": "activityStatusMessage-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "recievedFileName",
+        "prefix": "recievedFileName-",
+        "type": "UID"
+    },
+    {
+        "field": "fileSize",
+        "options": [
+            100,
+            1000
+        ],
+        "type": "NUM"
+    },
+    {
+        "field": "trackingId",
+        "prefix": "trackingId-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "optionalRecordText",
+        "prefix": "optionalRecordText-",
+        "type": "UID"
+    },
+    {
+        "field": "srcFileExpiryDate",
+        "prefix": "srcFileExpiryDate-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "srcJobLogId",
+        "prefix": "srcJobLogId-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "srcJobLogName",
+        "prefix": "srcJobLogName-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "notifyStatus",
+        "prefix": "notifyStatus-",
+        "options": [
+            1,
+            20
+        ],
+        "type": "AUTO-TEXT"
+    },
+    {
+        "field": "actualActivityTs",
+        "prefix": "actualActivityTs-",
+        "type": "UID"
+    },
+    {
+        "field": "activityRecordTs",
+        "prefix": "activityRecordTs-",
+        "type": "UID"
+    }
+]}}
