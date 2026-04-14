@@ -18,4 +18,6 @@ To run the application.
 
 #2 Create a .properties with connection details (use config.properties as the template)
 
-#3 Execute App.java
+#3 Execute App.java for loading sample data, buld deletion etc
+
+#4 Execute AppSearch.java for creating a search index and running search queries.
