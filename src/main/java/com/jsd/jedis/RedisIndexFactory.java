@@ -85,11 +85,15 @@ public class RedisIndexFactory {
                 double weight = 1.0;
                 boolean nostem = fieldObj.getBoolean("nostem", true);
                 schema.addField(new Schema.TextField(fieldName, weight, sortable, nostem)).as(fieldAlias);
-                
+
             } else if ("NUMERIC".equalsIgnoreCase(fieldType)) {
-                schema.addSortableNumericField(fieldName).as(fieldAlias);
-            }
-            else if("GEO".equalsIgnoreCase(fieldType)) {
+                if (sortable) {
+                    schema.addSortableNumericField(fieldName).as(fieldAlias);
+                } else {
+                    schema.addNumericField(fieldName).as(fieldAlias);
+                }
+
+            } else if ("GEO".equalsIgnoreCase(fieldType)) {
                 schema.addGeoField(fieldName).as(fieldAlias);
             }
         }
