@@ -3,6 +3,8 @@ package com.jsd.jedis;
 import com.jsd.utils.*;
 
 import java.io.FileInputStream;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -13,6 +15,7 @@ import redis.clients.jedis.params.ScanParams;
 import redis.clients.jedis.resps.ScanResult;
 
 import redis.clients.jedis.csc.Cache;
+import redis.clients.jedis.json.Path2;
 
 /**
  * Simple Jedis Client
@@ -42,14 +45,15 @@ public class App {
         config.load(new FileInputStream(configFile));
         RedisDataLoader redisDataLoader = new RedisDataLoader(configFile);
 
-        System.err.print("\nChoose Option:\n[1] Generate Random Data\n[2] Delete Keys\n[3] HA - Failover\n[4] Client-Side Caching\nSelect: ");
+        System.err.print(
+                "\nChoose Option:\n[1] Generate Random Data\n[2] Delete Keys\n[3] HA - Failover\n[4] Client-Side Caching\n[5] Get/Set Data\nSelect: ");
 
         String option = s.nextLine();
 
         if ("1".equalsIgnoreCase(option)) {
- 
+
             generateRandomData(redisDataLoader, config);
-           
+
         } else if ("2".equalsIgnoreCase(option)) {
 
             deleteKeys(redisDataLoader, config);
@@ -61,9 +65,11 @@ public class App {
         } else if ("4".equalsIgnoreCase(option)) {
             redisDataLoader = new RedisDataLoader(configFile, true);
             clientSideCache(redisDataLoader, config);
-        }
-        else {
-            //misc use cases
+
+        } else if ("5".equalsIgnoreCase(option)) {
+            dataUpdates(redisDataLoader, config);
+        } else {
+            // misc use cases
             generateRandomPrimitive(redisDataLoader, config);
         }
 
@@ -76,24 +82,18 @@ public class App {
         RandomDataGenerator dataGenerator = new RandomDataGenerator(randomFilePath);
 
         int numRecords = Math.max(Integer.parseInt(config.getProperty("data.record.limit")), 10000);
-        int numBatch = numRecords / 10000;
-        int batchSize = 10000;
+        int batchSize = Integer.parseInt(config.getProperty("data.batch.size", "10000"));
+        int numThreads = Integer.parseInt(config.getProperty("data.num.threads", "1"));
+        long  batchInterval = Long.parseLong(config.getProperty("data.batch.interval", "10000"));
 
         String recordType = config.getProperty("data.record.type", "JSON");
         String keyPrefix = config.getProperty("data.key.prefix");
 
+        
+        redisDataLoader.loadData(recordType, keyPrefix,  dataGenerator,  numRecords,  batchSize, batchInterval, numThreads);
 
-        for (int b = 0; b < numBatch; b++) {
-            if ("HASH".equalsIgnoreCase(recordType)) {
-                redisDataLoader.loadHash(keyPrefix, dataGenerator, batchSize);
-            }
-            else {
-                redisDataLoader.loadJSON(keyPrefix, dataGenerator, batchSize);
-            }
-
-            Thread.sleep(Long.parseLong(config.getProperty("data.batch.interval", "500")));
-        }
     }
+
 
     public static void generateRandomPrimitive(RedisDataLoader redisDataLoader, Properties config) throws Exception {
 
@@ -104,23 +104,23 @@ public class App {
 
         Pipeline jedisPipeline = redisDataLoader.getJedisPipeline();
 
-        
         for (int b = 0; b < numBatch; b++) {
             String sysTime = "" + System.currentTimeMillis();
 
-            for(int r = 0; r <  batchSize; r++) {
-                jedisPipeline.incrBy(keyPrefix + sysTime + "-" + r, (long)ThreadLocalRandom.current().nextInt(1, 10000));
-                jedisPipeline.expire(keyPrefix + sysTime + "-" + r, 600l);
+            for (int r = 0; r < batchSize; r++) {
+                jedisPipeline.incrBy(keyPrefix + sysTime + "-" + r,
+                        (long) ThreadLocalRandom.current().nextInt(1, 10000));
+                // jedisPipeline.expire(keyPrefix + sysTime + "-" + r, 600l);
             }
 
             jedisPipeline.sync();
 
-            //Thread.sleep(Long.parseLong(config.getProperty("data.batch.interval", "500")));
+            // Thread.sleep(Long.parseLong(config.getProperty("data.batch.interval",
+            // "500")));
         }
 
-
         jedisPipeline.sync();
-    
+
     }
 
     public static void clientSideCache(RedisDataLoader redisDataLoader, Properties config) {
@@ -129,11 +129,10 @@ public class App {
         Cache clientCache = redisDataLoader.getClientCache();
         Scanner s = new Scanner(System.in);
 
-
-        //KEY PREFIX random generator appends the uts to the key prefix e.g. trades:123455667-1
+        // KEY PREFIX random generator appends the uts to the key prefix e.g.
+        // trades:123455667-1
         ScanParams scanParams = new ScanParams().count(100).match(config.getProperty("client.cache.key.prefix") + "*");
         String cursor = ScanParams.SCAN_POINTER_START;
-
 
         String keyPrefix0 = "";
 
@@ -156,7 +155,7 @@ public class App {
             }
         }
 
-        int cacheSize = Integer.parseInt(config.getProperty("client.cache.size","10000"));
+        int cacheSize = Integer.parseInt(config.getProperty("client.cache.size", "10000"));
 
         while (true) {
 
@@ -255,11 +254,11 @@ public class App {
     }
 
     public static void deleteKeys(RedisDataLoader redisDataLoader, Properties config) throws Exception {
-        Scanner s = new Scanner(System.in);  
+        Scanner s = new Scanner(System.in);
         System.out.print("Enter Key Prefix (e.g. trades:) ");
         String prefix = s.nextLine();
 
-        String  async = config.getProperty("async.delete","true");
+        String async = config.getProperty("async.delete", "true");
         System.out.println("Deleting Keys Async: " + async);
 
         long startTime = System.currentTimeMillis();
@@ -271,9 +270,98 @@ public class App {
         System.out.println("Deleted " + numKeys + " from the DB in " + getExecutionTime(startTime, endTime));
 
         s.close();
- 
+
     }
 
+    public static void dataUpdates(RedisDataLoader redisDataLoader, Properties config) throws Exception {
+
+        JedisPooled jedisPooled = redisDataLoader.getJedisPooled();
+
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter Key Prefix (e.g. trades:) ");
+        String keyPrefix = s.nextLine();
+
+        System.out.print("Action Type (r/w:) ");
+        String action = s.nextLine();
+
+        action = ("".equals(action)) ? "w" : action;
+
+        System.out.print("Enter (actions/sec) ");
+        int batchSize = Integer.parseInt(s.nextLine());
+
+        int scanBatchSize = (batchSize < 1000) ? batchSize : 1000;
+
+        System.out.print("Key Type (JSON/HASH) : ");
+        String keyType = s.nextLine();
+
+        keyType = ("".equals(keyType)) ? "HASH" : keyType;
+
+        System.out.print("Field to Edit (e.g. $.amount, amount) : ");
+        String keyAttribute = s.nextLine();
+
+        System.out.print("Run Time (min) : ");
+        int runTime = Integer.parseInt(s.nextLine());
+
+        ScanParams scanParams = new ScanParams().count(scanBatchSize).match(keyPrefix + "*"); // Set the chunk size
+        String cursor = ScanParams.SCAN_POINTER_START;
+
+        int keyCount = 0;
+
+        List<String> keyList = new ArrayList<String>();
+
+        System.out.println("Scanning Keys: ");
+
+        while (true) {
+            ScanResult<String> scanResult = jedisPooled.scan(cursor, scanParams);
+
+            keyList.addAll(scanResult.getResult());
+            keyCount = keyCount + keyList.size();
+
+            cursor = scanResult.getCursor();
+
+            if (cursor.equals("0") || keyCount >= batchSize) {
+                break; // End of scan
+            }
+        }
+
+        Pipeline jedisPipeline = redisDataLoader.getJedisPipeline();
+
+        System.out.println("Keys: " + keyList.getFirst() + " ... " + keyList.getLast());
+
+        int numKeys = keyList.size();
+        int pipeBatch = numKeys / 10;
+
+        for (int i = 0; i < runTime * 60; i++) {
+
+            for (int k = 0; k < numKeys; k++) {
+                int delta = ThreadLocalRandom.current().nextInt(10000, 100000); // 1000–10000
+
+                if (keyType.startsWith("H")) {
+                    if ("w".equalsIgnoreCase(action)) {
+                        jedisPipeline.hincrBy(keyList.get(k), keyAttribute, delta);
+                    } else {
+                        jedisPipeline.hget(keyList.get(k), keyAttribute);
+                    }
+
+                } else {
+                    if ("w".equalsIgnoreCase(action)) {
+                        jedisPipeline.jsonNumIncrBy(keyList.get(k), Path2.of(keyAttribute), delta);
+                    } else {
+                        jedisPipeline.jsonGet(keyList.get(k), Path2.of(keyAttribute));
+                    }
+
+                }
+
+                if ((k + 1) % pipeBatch == 0) {
+                    jedisPipeline.sync();
+                    Thread.sleep(100l);
+                }
+            }
+        }
+
+        s.close();
+
+    }
 
     public static void loadFile(RedisDataLoader redisDataLoader, Properties config) throws Exception {
         // FILE DATA
