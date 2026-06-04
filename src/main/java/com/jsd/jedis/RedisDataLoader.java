@@ -3,8 +3,10 @@ package com.jsd.jedis;
 import com.jsd.utils.*;
 
 import java.io.FileInputStream;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Properties;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.List;
 
@@ -52,15 +54,23 @@ public class RedisDataLoader {
 
         } else {
 
+            ConnectionPoolConfig poolConfig = new ConnectionPoolConfig();
+            poolConfig.setMaxTotal(24);
+            poolConfig.setMaxIdle(24);
+            poolConfig.setTestWhileIdle(true);
+            poolConfig.setTimeBetweenEvictionRuns(Duration.ofSeconds(1));
+
             HostAndPort host = HostAndPort.from(loadProperty("redis.host") + ":" + loadProperty("redis.port"));
             JedisClientConfig clientConfig = DefaultJedisClientConfig.builder().resp3()
                     .user(loadProperty("redis.user"))
                     .password(loadProperty("redis.password"))
-                    .socketTimeoutMillis(10000)
-                    .connectionTimeoutMillis(10000)
+                    .socketTimeoutMillis(600000)
+                    .timeoutMillis(600000)
+                    .connectionTimeoutMillis(600000)
                     .build();
 
-            this.jedisPooled = new JedisPooled(host, clientConfig);
+            // this.jedisPooled = new JedisPooled(host, clientConfig);
+            this.jedisPooled = new JedisPooled(poolConfig, host, clientConfig);
 
         }
 
@@ -381,14 +391,62 @@ public class RedisDataLoader {
 
     }
 
+    public void loadData(String recordType, String keyPrefix, RandomDataGenerator dataGenerator, int numRows,
+            int batchSize,long  batchInterval, int numThreads) throws Exception {
+
+        CountDownLatch latch = new CountDownLatch(numThreads);
+ 
+        int threadRows = (int) (numRows / numThreads);
+
+        for (int t = 0; t < numThreads; t++) {
+            loadDataThread(recordType, keyPrefix, threadRows, batchSize, batchInterval, t, dataGenerator, latch);
+        }
+
+        latch.await();
+
+    }
+
+    private void loadDataThread(String recordType, String keyPrefix, int numRows, int batchSize, long batchInterval, 
+        int threadNum, RandomDataGenerator dataGenerator, CountDownLatch latch) {
+
+        Pipeline jedisPipeline1 = this.jedisPooled.pipelined();
+
+        int numBatches = numRows / batchSize;
+
+        Thread t = new Thread() {
+
+            public void run() {
+                for (int b = 0; b < numBatches; b++) {
+                    long sysTime = System.currentTimeMillis();
+                    for (int r = 0; r < batchSize; r++) {
+                        if ("JSON".equalsIgnoreCase(recordType)) {
+                            jedisPipeline1.jsonSet(keyPrefix + sysTime + "-" + threadNum + "-" + r, dataGenerator.generateRecord("header"));
+                        } else {
+                            jedisPipeline.hset(keyPrefix + sysTime + "-" + r, dataGenerator.generateHashRecord("header"));
+                        }
+                    }
+
+                    jedisPipeline1.sync();
+                    try{Thread.sleep(batchInterval);}catch(Exception e){}
+                }
+
+                jedisPipeline1.close();
+
+                latch.countDown();     
+            }
+        };
+
+        t.start();
+    }
+
     public int deleteKeys(String keyPrefix) throws Exception {
 
         AtomicInteger threadCount = new AtomicInteger(0);
 
-        int batchSize = Integer.parseInt(config.getProperty("delete.batch.size","10000"));
+        int batchSize = Integer.parseInt(config.getProperty("delete.batch.size", "10000"));
 
-        String  async = config.getProperty("async.delete","true");
-        
+        String async = config.getProperty("async.delete", "true");
+
         ScanParams scanParams = new ScanParams().count(batchSize).match(keyPrefix + "*"); // Set the chunk size
         String cursor = ScanParams.SCAN_POINTER_START;
 
@@ -402,27 +460,27 @@ public class RedisDataLoader {
             deleteKeyBatch(keyList, async, threadCount);
             keyCount = keyCount + keyList.size();
 
-
             cursor = scanResult.getCursor();
             if (cursor.equals("0")) {
                 break; // End of scan
             }
         }
 
-        //long finalSize = initialSize - keyCount;
+        // long finalSize = initialSize - keyCount;
 
-        while(threadCount.get() > 0) {}
+        while (threadCount.get() > 0) {
+        }
 
         return keyCount;
     }
 
-    private void deleteKeyBatch(List<String> keyList, String  async, AtomicInteger threadCount) {
+    private void deleteKeyBatch(List<String> keyList, String async, AtomicInteger threadCount) {
         Pipeline pipeline = this.jedisPooled.pipelined();
         Thread t = new Thread() {
             public void run() {
-                
+
                 for (String key : keyList) {
-                    pipeline.del(key);   
+                    pipeline.del(key);
                 }
 
                 pipeline.sync();
@@ -432,12 +490,11 @@ public class RedisDataLoader {
             }
         };
 
-        if("true".equalsIgnoreCase(async)) {
+        if ("true".equalsIgnoreCase(async)) {
             t.start();
-        }
-        else {
+        } else {
             t.run();
-        }    
+        }
     }
 
     private void setValue(JSONObject jobj, String key, String stringValue) {
