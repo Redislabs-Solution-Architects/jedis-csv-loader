@@ -11,6 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import redis.clients.jedis.JedisPooled;
 import redis.clients.jedis.Pipeline;
+import redis.clients.jedis.AbstractTransaction;
 import redis.clients.jedis.params.ScanParams;
 import redis.clients.jedis.resps.ScanResult;
 
@@ -25,6 +26,8 @@ import redis.clients.jedis.json.Path2;
  * The JSON loader supports the loading on nested JSON.
  */
 public class App {
+
+    public static RedisDataLoader redisDataLoader;
 
     public static void main(String[] args) throws Exception {
 
@@ -43,10 +46,10 @@ public class App {
         }
 
         config.load(new FileInputStream(configFile));
-        RedisDataLoader redisDataLoader = new RedisDataLoader(configFile);
+        redisDataLoader = new RedisDataLoader(configFile);
 
         System.err.print(
-                "\nChoose Option:\n[1] Generate Random Data\n[2] Delete Keys\n[3] HA - Failover\n[4] Client-Side Caching\n[5] Get/Set Data\nSelect: ");
+                "\nChoose Option:\n[1] Generate Random Data\n[2] Delete Keys\n[3] HA - Failover\n[4] Client-Side Caching\n[5] Get/Set Data\n[6] Track Key\nSelect: ");
 
         String option = s.nextLine();
 
@@ -68,6 +71,42 @@ public class App {
 
         } else if ("5".equalsIgnoreCase(option)) {
             dataUpdates(redisDataLoader, config);
+        } else if ("6".equalsIgnoreCase(option)) {
+            System.out.print("Enter Key: ");
+            String key = s.nextLine();
+
+            System.out.print("Key Type (JSON/HASH): ");
+            String keyType = s.nextLine();
+
+            System.out.print("Enter Fields (field1,field2,...): ");
+            String[] fields = s.nextLine().split(",");
+
+            System.out.print("Enter Label e.g (region=us-east): ");
+            String labelField = s.nextLine();
+
+            System.out.print("Increment By: ");
+            int value = s.nextInt();
+
+            System.out.print("Interval (msec): ");
+            int interval = s.nextInt();
+
+            System.out.print("Num Itterations : ");
+            int itterations = s.nextInt();
+
+            // add the label field to the list of fields to be tracked
+            String[] allFields = new String[fields.length + 1];
+            System.arraycopy(fields, 0, allFields, 0, fields.length);
+            allFields[allFields.length - 1] = labelField.substring(0, labelField.indexOf("="));
+
+            int trackInterval = interval / 2;
+            int trackDuration = (itterations * interval) + 4000;
+
+            trackKey(redisDataLoader, key, keyType, trackInterval, trackDuration, allFields, true);
+
+            updateKey(redisDataLoader, key, keyType, interval, itterations, fields, value, labelField);
+
+            Thread.sleep(trackDuration);
+
         } else {
             // misc use cases
             generateRandomPrimitive(redisDataLoader, config);
@@ -84,16 +123,82 @@ public class App {
         int numRecords = Math.max(Integer.parseInt(config.getProperty("data.record.limit")), 10000);
         int batchSize = Integer.parseInt(config.getProperty("data.batch.size", "10000"));
         int numThreads = Integer.parseInt(config.getProperty("data.num.threads", "1"));
-        long  batchInterval = Long.parseLong(config.getProperty("data.batch.interval", "10000"));
+        long batchInterval = Long.parseLong(config.getProperty("data.batch.interval", "10000"));
 
         String recordType = config.getProperty("data.record.type", "JSON");
         String keyPrefix = config.getProperty("data.key.prefix");
 
-        
-        redisDataLoader.loadData(recordType, keyPrefix,  dataGenerator,  numRecords,  batchSize, batchInterval, numThreads);
+        redisDataLoader.loadData(recordType, keyPrefix, dataGenerator, numRecords, batchSize, batchInterval,
+                numThreads);
 
     }
 
+    public static void updateKey(RedisDataLoader redisDataLoader, String key, String keyType, int interval,
+            int itterations, String[] fields, int value, String labelField) throws Exception {
+
+        // int durationCount = durationSec * (1000 / interval);
+
+        String[] labelSet = labelField.split("=");
+
+        Pipeline p = redisDataLoader.getJedisPipeline();
+
+        for (int s = 0; s < itterations; s++) {
+
+            for (String field : fields) {
+                if ("HASH".equalsIgnoreCase(keyType)) {
+                    p.hincrBy(key, field, value);
+                } else {
+                    p.jsonNumIncrBy(key, Path2.of(field), (double) value);
+                }
+            }
+
+            if ("HASH".equalsIgnoreCase(keyType)) {
+                p.hset(key, labelSet[0], labelSet[1]);
+            }
+
+            p.sync();;
+
+            try {
+                Thread.sleep((long) interval);
+            } catch (Exception e) {
+            }
+        }
+    }
+
+    public static void trackKey(RedisDataLoader redisDataLoader, String key, String keyType, int trackInterval,
+            int trackDuration, String[] fields, boolean async) throws Exception {
+        JedisPooled jedisPooled = redisDataLoader.getJedisPooled();
+
+        Thread t = new Thread() {
+            public void run() {
+
+                int durationCount = trackDuration / trackInterval;
+
+                for (int s = 0; s < durationCount; s++) {
+                    if ("HASH".equalsIgnoreCase(keyType)) {
+                        List<String> results = jedisPooled.hmget(key, fields);
+                        String displayString = "[" + System.currentTimeMillis() + "] ";
+                        for (String val : results) {
+                            displayString = displayString + val + " | ";
+                        }
+
+                        System.err.println(displayString);
+
+                        try {
+                            Thread.sleep((long) trackInterval);
+                        } catch (Exception e) {
+                        }
+                    }
+                }
+            }
+        };
+
+        if (async) {
+            t.start();
+        } else {
+            t.run();
+        }
+    }
 
     public static void generateRandomPrimitive(RedisDataLoader redisDataLoader, Properties config) throws Exception {
 
