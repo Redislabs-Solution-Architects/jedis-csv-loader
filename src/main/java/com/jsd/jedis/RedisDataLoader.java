@@ -48,7 +48,7 @@ public class RedisDataLoader {
             CacheConfig cacheConfig = getCacheConfig();
             this.clientCache = CacheFactory.getCache(cacheConfig);
 
-            this.jedisPooled = new JedisPooled(host, clientConfig, clientCache);
+            jedisPooled = new JedisPooled(host, clientConfig, clientCache);
 
             System.out.println("[RedisDataLoader] Client Side Caching Enabled");
 
@@ -69,12 +69,12 @@ public class RedisDataLoader {
                     .connectionTimeoutMillis(600000)
                     .build();
 
-            // this.jedisPooled = new JedisPooled(host, clientConfig);
-            this.jedisPooled = new JedisPooled(poolConfig, host, clientConfig);
+            jedisPooled = new JedisPooled(host, clientConfig);
+            jedisPooled = new JedisPooled(poolConfig, host, clientConfig);
 
         }
 
-        this.jedisPipeline = this.jedisPooled.pipelined();
+        this.jedisPipeline = jedisPooled.pipelined();
 
         System.out.println("[RedisDataLoader] Connection Successful Sent PING >>> Received " + jedisPooled.ping());
     }
@@ -94,16 +94,16 @@ public class RedisDataLoader {
             CacheConfig cacheConfig = getCacheConfig();
             this.clientCache = CacheFactory.getCache(cacheConfig);
 
-            this.jedisPooled = new JedisPooled(host, clientConfig, clientCache);
+            jedisPooled = new JedisPooled(host, clientConfig, clientCache);
 
             System.out.println("[RedisDataLoader] Client Side Caching Enabled");
 
         } else {
-            this.jedisPooled = new JedisPooled(loadProperty("redis.host"), Integer.parseInt(loadProperty("redis.port")),
+            jedisPooled = new JedisPooled(loadProperty("redis.host"), Integer.parseInt(loadProperty("redis.port")),
                     loadProperty("redis.user"), loadProperty("redis.password"));
         }
 
-        this.jedisPipeline = this.jedisPooled.pipelined();
+        this.jedisPipeline = jedisPooled.pipelined();
 
         System.out.println("[RedisDataLoader] Connection Successful PING >> " + jedisPooled.ping());
     }
@@ -157,30 +157,30 @@ public class RedisDataLoader {
         boolean isValid = true;
 
         try {
-            this.jedisPooled.ping();
+            jedisPooled.ping();
 
         } catch (Exception e) {
 
             System.out.println("[RedisDataLoader] Test Failed:\n" + e.toString());
-            System.out.println("[RedisDataLoader] Pool Status: Created: " + this.jedisPooled.getPool().getCreatedCount()
+            System.out.println("[RedisDataLoader] Pool Status: Created: " + jedisPooled.getPool().getCreatedCount()
                     + " Active: " +
-                    this.jedisPooled.getPool().getNumActive() + " Idle: " + this.jedisPooled.getPool().getNumIdle());
+                    jedisPooled.getPool().getNumActive() + " Idle: " + jedisPooled.getPool().getNumIdle());
 
             isValid = false;
 
-            this.jedisPooled.close();
+            jedisPooled.close();
 
-            this.jedisPooled = new JedisPooled(config.getProperty("redis.host", "localhost"),
+            jedisPooled = new JedisPooled(config.getProperty("redis.host", "localhost"),
                     Integer.parseInt(config.getProperty("redis.port", "6379")),
                     config.getProperty("redis.user", "default"), config.getProperty("redis.password"));
 
-            this.jedisPipeline = this.jedisPooled.pipelined();
+            jedisPipeline = jedisPooled.pipelined();
 
-            this.jedisPooled.ping();
+            jedisPooled.ping();
 
-            System.out.println("[RedisDataLoader] New Pool Created: " + this.jedisPooled.getPool().getCreatedCount()
+            System.out.println("[RedisDataLoader] New Pool Created: " + jedisPooled.getPool().getCreatedCount()
                     + " Active: " +
-                    this.jedisPooled.getPool().getNumActive() + " Idle: " + this.jedisPooled.getPool().getNumIdle());
+                    jedisPooled.getPool().getNumActive() + " Idle: " + jedisPooled.getPool().getNumIdle());
         }
 
         return isValid;
@@ -191,7 +191,7 @@ public class RedisDataLoader {
     }
 
     public JedisPooled getJedisPooled() {
-        return this.jedisPooled;
+        return jedisPooled;
     }
 
     public Cache getClientCache() {
@@ -199,7 +199,7 @@ public class RedisDataLoader {
     }
 
     public void close() {
-        this.jedisPooled.close();
+        jedisPooled.close();
     }
 
     public void loadGEO(String key, CSVScanner csvScanner, String geoCol, String longCol, String latCol,
@@ -409,7 +409,7 @@ public class RedisDataLoader {
     private void loadDataThread(String recordType, String keyPrefix, int numRows, int batchSize, long batchInterval, 
         int threadNum, RandomDataGenerator dataGenerator, CountDownLatch latch) {
 
-        Pipeline jedisPipeline1 = this.jedisPooled.pipelined();
+        Pipeline jedisPipeline1 = jedisPooled.pipelined();
 
         int numBatches = numRows / batchSize;
 
@@ -422,7 +422,7 @@ public class RedisDataLoader {
                         if ("JSON".equalsIgnoreCase(recordType)) {
                             jedisPipeline1.jsonSet(keyPrefix + sysTime + "-" + threadNum + "-" + r, dataGenerator.generateRecord("header"));
                         } else {
-                            jedisPipeline.hset(keyPrefix + sysTime + "-" + r, dataGenerator.generateHashRecord("header"));
+                            jedisPipeline1.hset(keyPrefix + sysTime + "-" + threadNum + "-" + r, dataGenerator.generateHashRecord("header"));
                         }
                     }
 
@@ -438,6 +438,7 @@ public class RedisDataLoader {
 
         t.start();
     }
+
 
     public int deleteKeys(String keyPrefix) throws Exception {
 
@@ -475,7 +476,7 @@ public class RedisDataLoader {
     }
 
     private void deleteKeyBatch(List<String> keyList, String async, AtomicInteger threadCount) {
-        Pipeline pipeline = this.jedisPooled.pipelined();
+        Pipeline pipeline = jedisPooled.pipelined();
         Thread t = new Thread() {
             public void run() {
 
