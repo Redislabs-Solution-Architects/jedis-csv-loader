@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import redis.clients.jedis.JedisPooled;
 import redis.clients.jedis.Pipeline;
-import redis.clients.jedis.AbstractTransaction;
 import redis.clients.jedis.params.ScanParams;
 import redis.clients.jedis.resps.ScanResult;
 
@@ -78,6 +78,8 @@ public class App {
             System.out.print("Key Type (JSON/HASH): ");
             String keyType = s.nextLine();
 
+            keyType = ("".equals(keyType)) ? "HASH" : keyType;
+
             System.out.print("Enter Fields (field1,field2,...): ");
             String[] fields = s.nextLine().split(",");
 
@@ -90,7 +92,7 @@ public class App {
             System.out.print("Interval (msec): ");
             int interval = s.nextInt();
 
-            System.out.print("Num Itterations : ");
+            System.out.print("Itterations : ");
             int itterations = s.nextInt();
 
             // add the label field to the list of fields to be tracked
@@ -98,14 +100,20 @@ public class App {
             System.arraycopy(fields, 0, allFields, 0, fields.length);
             allFields[allFields.length - 1] = labelField.substring(0, labelField.indexOf("="));
 
-            int trackInterval = interval / 2;
-            int trackDuration = (itterations * interval) + 4000;
+            int trackInterval = Integer.parseInt(config.getProperty("track.key.interval", "10"));
 
-            trackKey(redisDataLoader, key, keyType, trackInterval, trackDuration, allFields, true);
+            int randomFactor = Integer.parseInt(config.getProperty("track.random.factor", "10"));
+            int randomDuration = Integer.parseInt(config.getProperty("track.random.duration", "100"));
 
-            updateKey(redisDataLoader, key, keyType, interval, itterations, fields, value, labelField);
+            
+            AtomicInteger itterationTracker = new AtomicInteger(0);
 
-            Thread.sleep(trackDuration);
+            trackKey(redisDataLoader, key, keyType, itterationTracker, trackInterval, itterations, allFields, true);
+
+            updateKey(redisDataLoader, key, keyType, itterationTracker, interval, itterations, randomFactor, randomDuration, fields, value,
+                    labelField);
+
+            Thread.sleep(120000l);
 
         } else {
             // misc use cases
@@ -133,16 +141,19 @@ public class App {
 
     }
 
-    public static void updateKey(RedisDataLoader redisDataLoader, String key, String keyType, int interval,
-            int itterations, String[] fields, int value, String labelField) throws Exception {
+    public static void updateKey(RedisDataLoader redisDataLoader, String key, String keyType,
+            AtomicInteger itterationTracker, int interval,
+            int itterations, int randomFactor, int randomDuration, String[] fields, int value, String labelField) throws Exception {
 
-        // int durationCount = durationSec * (1000 / interval);
+  
 
         String[] labelSet = labelField.split("=");
 
         Pipeline p = redisDataLoader.getJedisPipeline();
 
         for (int s = 0; s < itterations; s++) {
+
+            itterationTracker.incrementAndGet();
 
             for (String field : fields) {
                 if ("HASH".equalsIgnoreCase(keyType)) {
@@ -156,25 +167,33 @@ public class App {
                 p.hset(key, labelSet[0], labelSet[1]);
             }
 
-            p.sync();;
+            p.sync();
 
             try {
-                Thread.sleep((long) interval);
+
+                if (s % randomFactor == 0) {
+                    Thread.sleep((long)randomDuration);
+                } else {
+                    Thread.sleep((long) interval);
+                }
+
             } catch (Exception e) {
             }
         }
+
+        itterationTracker.incrementAndGet();
     }
 
-    public static void trackKey(RedisDataLoader redisDataLoader, String key, String keyType, int trackInterval,
-            int trackDuration, String[] fields, boolean async) throws Exception {
+    public static void trackKey(RedisDataLoader redisDataLoader, String key, String keyType,
+            AtomicInteger itterationTracker, int trackInterval,
+            int itterations, String[] fields, boolean async) throws Exception {
         JedisPooled jedisPooled = redisDataLoader.getJedisPooled();
 
         Thread t = new Thread() {
             public void run() {
 
-                int durationCount = trackDuration / trackInterval;
 
-                for (int s = 0; s < durationCount; s++) {
+                while (true) {
                     if ("HASH".equalsIgnoreCase(keyType)) {
                         List<String> results = jedisPooled.hmget(key, fields);
                         String displayString = "[" + System.currentTimeMillis() + "] ";
@@ -184,12 +203,16 @@ public class App {
 
                         System.err.println(displayString);
 
-                        try {
-                            Thread.sleep((long) trackInterval);
-                        } catch (Exception e) {
+                        if(itterationTracker.get() <= itterations) {
+                            try {Thread.sleep((long) trackInterval);} catch (Exception e) {}
+                        }
+                        else {
+                            try {Thread.sleep(500l);} catch (Exception e) {}
                         }
                     }
                 }
+
+                //System.out.println("[App] Tracking Complete after Itterations: " + (itterationTracker.get() - 1));
             }
         };
 
@@ -489,4 +512,6 @@ public class App {
 
         return "" + sec + " s : " + msec + " ms";
     }
+
+
 }
