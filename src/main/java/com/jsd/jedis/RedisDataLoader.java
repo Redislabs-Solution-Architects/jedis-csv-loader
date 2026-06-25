@@ -470,6 +470,7 @@ public class RedisDataLoader {
         // long finalSize = initialSize - keyCount;
 
         while (threadCount.get() > 0) {
+            Thread.sleep(200l);
         }
 
         return keyCount;
