@@ -61,22 +61,29 @@ public class RedisDataLoader {
             poolConfig.setTimeBetweenEvictionRuns(Duration.ofSeconds(1));
 
             HostAndPort host = HostAndPort.from(loadProperty("redis.host") + ":" + loadProperty("redis.port"));
-            JedisClientConfig clientConfig = DefaultJedisClientConfig.builder().resp3()
+            JedisClientConfig clientConfig = DefaultJedisClientConfig.builder()
                     .user(loadProperty("redis.user"))
                     .password(loadProperty("redis.password"))
-                    .socketTimeoutMillis(600000)
-                    .timeoutMillis(600000)
-                    .connectionTimeoutMillis(600000)
+                    .timeoutMillis(1800000)
                     .build();
 
-            jedisPooled = new JedisPooled(host, clientConfig);
             jedisPooled = new JedisPooled(poolConfig, host, clientConfig);
+
+            // .connectionTimeoutMillis(600000)
+            // .socketTimeoutMillis(600000)
+            // .resp3()
+            // .build();
+
+            // jedisPooled = new JedisPooled(host, clientConfig);
+            // CustomSocketFactory socketFactory = new CustomSocketFactory(host,
+            // clientConfig);
+            // jedisPooled = new JedisPooled(poolConfig, socketFactory, clientConfig);
 
         }
 
         this.jedisPipeline = jedisPooled.pipelined();
 
-        System.out.println("[RedisDataLoader] Connection Successful Sent PING >>> Received " + jedisPooled.ping());
+        System.out.println("[RedisDataLoader] RESP2 Connection Successful PING ::: " + jedisPooled.ping());
     }
 
     public RedisDataLoader(String configFile, boolean enableClientCache) throws Exception {
@@ -392,10 +399,10 @@ public class RedisDataLoader {
     }
 
     public void loadData(String recordType, String keyPrefix, RandomDataGenerator dataGenerator, int numRows,
-            int batchSize,long  batchInterval, int numThreads) throws Exception {
+            int batchSize, long batchInterval, int numThreads) throws Exception {
 
         CountDownLatch latch = new CountDownLatch(numThreads);
- 
+
         int threadRows = (int) (numRows / numThreads);
 
         for (int t = 0; t < numThreads; t++) {
@@ -406,8 +413,8 @@ public class RedisDataLoader {
 
     }
 
-    private void loadDataThread(String recordType, String keyPrefix, int numRows, int batchSize, long batchInterval, 
-        int threadNum, RandomDataGenerator dataGenerator, CountDownLatch latch) {
+    private void loadDataThread(String recordType, String keyPrefix, int numRows, int batchSize, long batchInterval,
+            int threadNum, RandomDataGenerator dataGenerator, CountDownLatch latch) {
 
         Pipeline jedisPipeline1 = jedisPooled.pipelined();
 
@@ -420,25 +427,29 @@ public class RedisDataLoader {
                     long sysTime = System.currentTimeMillis();
                     for (int r = 0; r < batchSize; r++) {
                         if ("JSON".equalsIgnoreCase(recordType)) {
-                            jedisPipeline1.jsonSet(keyPrefix + sysTime + "-" + threadNum + "-" + r, dataGenerator.generateRecord("header"));
+                            jedisPipeline1.jsonSet(keyPrefix + sysTime + "-" + threadNum + "-" + r,
+                                    dataGenerator.generateRecord("header"));
                         } else {
-                            jedisPipeline1.hset(keyPrefix + sysTime + "-" + threadNum + "-" + r, dataGenerator.generateHashRecord("header"));
+                            jedisPipeline1.hset(keyPrefix + sysTime + "-" + threadNum + "-" + r,
+                                    dataGenerator.generateHashRecord("header"));
                         }
                     }
 
                     jedisPipeline1.sync();
-                    try{Thread.sleep(batchInterval);}catch(Exception e){}
+                    try {
+                        Thread.sleep(batchInterval);
+                    } catch (Exception e) {
+                    }
                 }
 
                 jedisPipeline1.close();
 
-                latch.countDown();     
+                latch.countDown();
             }
         };
 
         t.start();
     }
-
 
     public int deleteKeys(String keyPrefix) throws Exception {
 
