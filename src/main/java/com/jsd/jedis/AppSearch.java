@@ -2,6 +2,8 @@ package com.jsd.jedis;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
@@ -26,6 +28,8 @@ import redis.clients.jedis.search.Query;
 import redis.clients.jedis.search.SearchResult;
 import redis.clients.jedis.search.aggr.AggregationBuilder;
 import redis.clients.jedis.search.aggr.AggregationResult;
+import redis.clients.jedis.search.aggr.Group;
+import redis.clients.jedis.search.aggr.Reducer;
 import redis.clients.jedis.search.aggr.Reducers;
 import redis.clients.jedis.search.aggr.Row;
 import redis.clients.jedis.search.aggr.SortedField;
@@ -120,7 +124,7 @@ public class AppSearch {
         }
 
         while (true) {
-        
+
             if (reconnect) {
                 redisDataLoader = new RedisDataLoader(configFile);
                 jedisPipeline = redisDataLoader.getJedisPipeline();
@@ -129,7 +133,6 @@ public class AppSearch {
             }
 
             System.out.println("\n[----------------------------------------------------------------------------]");
-
 
             if (burstCount == maxBurst) {
                 burstCount = 0;
@@ -163,11 +166,35 @@ public class AppSearch {
 
                 // TOP N QUERY
                 if (queryStr.startsWith("aggr")) {
-                    executeTopNQuery(queryStr, indexName, jedisPipeline, jedisPooled);
+                    executeTopNQuery(queryStr, indexName, jedisPooled);
                     continue;
                 }
 
                 int queryDialect = Integer.parseInt(config.getProperty("query.dialect", "1"));
+
+                // FT.AGGREGATE GROUP AND AGG QUERY
+                if ("gag".equalsIgnoreCase(queryStr)) {
+
+                    System.out.print("Filter String: ");
+                    String queryString = s.nextLine();
+
+                    System.out.print("GroupBy Fields : ");
+                    String groupFields = s.nextLine();
+
+                    System.out.print("Aggregation (count,countd,countdish,sum,avg) : ");
+                    String aggregation = s.nextLine();
+
+                    System.out.print("Aggr Field : ");
+                    String aggrField = s.nextLine();
+
+                    System.out.print("Num Records : ");
+                    int numRecords = Integer.parseInt(s.nextLine());
+
+                    executeGrpAggQuery(queryString, indexName, jedisPooled, groupFields, aggregation, aggrField, queryDialect, numRecords);
+                    continue;
+                }
+
+                
 
                 String queryStrExec = "";
 
@@ -207,17 +234,16 @@ public class AppSearch {
                 // FT.SEARCH QUERY
                 Query q = new Query(queryStrExec);
                 q.dialect(queryDialect);
-                q.limit(Integer.valueOf(resultCursor),Integer.valueOf(recordLimit));
-                
+                q.limit(Integer.valueOf(resultCursor), Integer.valueOf(recordLimit));
 
                 if (!"".equals(searchSortField)) {
                     q.setSortBy(searchSortField, true);
                 }
 
                 // EXECUTE QUERY
-                //Response<SearchResult> res0 = jedisPipeline.ftSearch(indexName, q);
-                //jedisPipeline.sync();
-                //SearchResult searchResult = res0.get();
+                // Response<SearchResult> res0 = jedisPipeline.ftSearch(indexName, q);
+                // jedisPipeline.sync();
+                // SearchResult searchResult = res0.get();
 
                 SearchResult searchResult = jedisPooled.ftSearch(indexName, q);
 
@@ -234,12 +260,11 @@ public class AppSearch {
                 // loop through the results
                 for (Document doc : docs) {
 
-                    //FIX to address cumulative results returned with offset and limit
-                    if(resultNum < resultCursor) {
+                    // FIX to address cumulative results returned with offset and limit
+                    if (resultNum < resultCursor) {
                         resultNum++;
                         continue;
                     }
-
 
                     // print the keys for each result object
                     if ("key".equalsIgnoreCase(searchDisplay)) {
@@ -271,8 +296,8 @@ public class AppSearch {
                         if (queryDialect == 4) {
                             JSONArray arrObj = new JSONArray((String) doc.get("$"));
                             obj = arrObj.getJSONObject(0);
-                            
-                            if(!obj.isEmpty()) {
+
+                            if (!obj.isEmpty()) {
                                 System.out.println(obj);
                             }
 
@@ -362,8 +387,7 @@ public class AppSearch {
         }
     }
 
-    public static void executeTopNQuery(String queryStr, String indexName, Pipeline jedisPipeline,
-            JedisPooled jedisPooled) throws Exception {
+    public static void executeTopNQuery(String queryStr, String indexName, JedisPooled jedisPooled) throws Exception {
 
         // e.g
         // aggr Top 5 Customer by count
@@ -410,8 +434,8 @@ public class AppSearch {
 
             aggr.sortBy(SortedField.desc("@" + aggrCol));
             aggr.limit(0, topN);
-            aggr.cursor(topN, 10000l);
-            aggr.timeout(20000l);
+            aggr.cursor(topN, 5000l);
+            aggr.timeout(120000l);
 
             AggregationResult result = jedisPooled.ftAggregate(indexName, aggr);
 
@@ -419,6 +443,7 @@ public class AppSearch {
             // AggregationResult cursorResult = jedisPooled.ftCursorRead(indexName,
             // cursorID, topN);
 
+            // RESULT SET SIZE IS SAME AS CURSOR FETCH SIZE, SO NO NEED TO ITTERATE
             List<Row> rows = result.getRows();
 
             for (Row row : rows) {
@@ -427,6 +452,93 @@ public class AppSearch {
         }
 
     }
+
+    public static void executeGrpAggQuery(String queryStr, String indexName, JedisPooled jedisPooled,
+            String groupFields, String aggregation, String aggrField, int queryDialect, int numRecords) throws Exception {
+
+        AggregationBuilder builder = new AggregationBuilder(queryStr);
+
+        Collection<String> groupColList = new ArrayList<String>();
+
+        if (!"NA".equalsIgnoreCase(groupFields) && !"".equals(groupFields)) {
+            String[] groups = groupFields.split(",");
+
+            for (int i = 0; i < groups.length; i++) {
+                groupColList.add("@" + groups[i].trim());
+            }
+        }
+
+        Collection<Reducer> aggColList = new ArrayList<Reducer>();
+
+        switch (aggregation.toLowerCase()) {
+            case "sum":
+
+                aggColList.add(Reducers.sum("@" + aggrField));
+                break;
+
+            case "avg":
+                aggColList.add(Reducers.avg("@" + aggrField));
+                break;
+
+            case "countd":
+                aggColList.add(Reducers.count_distinct("@" + aggrField));
+                break;
+
+            case "countdish":
+                aggColList.add(Reducers.count_distinctish("@" + aggrField));
+                break;
+
+            case "count":
+            default:
+                // COUNT has nargs=0 and ignores aggrField
+                aggColList.add(Reducers.count());
+                break;
+        }
+
+        
+
+        if(groupColList.size() == 0) {
+            //optimization for aggregation without any groupby
+            builder.groupBy("@" + aggrField);
+            builder.groupBy(Collections.emptyList(), aggColList);
+        }
+        else {
+            builder.groupBy(groupColList, aggColList);
+        }
+
+        builder.limit(numRecords);
+        builder.cursor(numRecords, 10000);
+
+        builder.timeout(1800000l);
+        builder.dialect(queryDialect);
+
+        // EXECUTE QUERY
+        AggregationResult result = null;
+
+        long startTime = System.currentTimeMillis();
+
+        try {
+
+            result = jedisPooled.ftAggregate(indexName, builder);
+
+        } catch (Exception e) {
+            System.err.println(e);
+            e.printStackTrace();
+        }
+
+        long endTime = System.currentTimeMillis();
+
+        System.out.println("[AppSearch] Query Execution Time: " + getExecutionTime(startTime, endTime));
+
+        List<Row> rows = result.getRows();
+
+        for (Row row : rows) {
+            System.out.println(row.toString());
+        }
+
+    }
+
+
 
     public static String printIndexSchema(JsonArray indexArray, String indexName) {
 
@@ -481,7 +593,6 @@ public class AppSearch {
         // LOOP THROUGH THE SCHEMA AND EXTRACT ALL TAGS FIELDS AND THEIR DISTINCT VALUES
         for (int i = 0; i < indexSchema.size(); i++) {
             JsonObject fieldObj = indexSchema.getJsonObject(i);
-
 
             if ("TAG".equalsIgnoreCase(fieldObj.getString("type")) && fieldObj.getBoolean("scan", false)) {
                 String fieldName = fieldObj.getString("alias");
@@ -588,13 +699,13 @@ public class AppSearch {
 
         ArrayList<String> returnList = new ArrayList<String>();
 
-        //limit to 100 values
+        // limit to 100 values
         int i = 0;
 
         for (String val : valueSet) {
             returnList.add(val);
 
-            if(++i > 100) {
+            if (++i > 100) {
                 break;
             }
         }
