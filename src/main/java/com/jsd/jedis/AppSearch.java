@@ -190,11 +190,10 @@ public class AppSearch {
                     System.out.print("Num Records : ");
                     int numRecords = Integer.parseInt(s.nextLine());
 
-                    executeGrpAggQuery(queryString, indexName, jedisPooled, groupFields, aggregation, aggrField, queryDialect, numRecords);
+                    executeGrpAggQuery(queryString, indexName, jedisPooled, groupFields, aggregation, aggrField,
+                            queryDialect, numRecords, s);
                     continue;
                 }
-
-                
 
                 String queryStrExec = "";
 
@@ -263,7 +262,7 @@ public class AppSearch {
                     // FIX to address cumulative results returned with offset and limit
                     if (resultNum < resultCursor) {
                         resultNum++;
-                        continue;
+                        // continue;
                     }
 
                     // print the keys for each result object
@@ -454,7 +453,8 @@ public class AppSearch {
     }
 
     public static void executeGrpAggQuery(String queryStr, String indexName, JedisPooled jedisPooled,
-            String groupFields, String aggregation, String aggrField, int queryDialect, int numRecords) throws Exception {
+            String groupFields, String aggregation, String aggrField, int queryDialect, int numRecords, Scanner s)
+            throws Exception {
 
         AggregationBuilder builder = new AggregationBuilder(queryStr);
 
@@ -489,25 +489,34 @@ public class AppSearch {
                 break;
 
             case "count":
-            default:
-                // COUNT has nargs=0 and ignores aggrField
                 aggColList.add(Reducers.count());
                 break;
+            default:
+                aggColList.addAll(Collections.emptyList());
+
         }
 
-        
-
-        if(groupColList.size() == 0) {
-            //optimization for aggregation without any groupby
+        if (groupColList.size() == 0 && "countd".equalsIgnoreCase(aggregation)) {
+            // optimization for distint count
             builder.groupBy("@" + aggrField);
             builder.groupBy(Collections.emptyList(), aggColList);
-        }
-        else {
+        } else {
             builder.groupBy(groupColList, aggColList);
         }
 
-        builder.limit(numRecords);
-        builder.cursor(numRecords, 10000);
+        int cursorBatchSize = 1000;
+
+        // IF numRecords = 0 THEN USE CURSOR TO ITTERATE
+
+        if (numRecords == 0) {
+            System.out.print("Cursor Batch Size :");
+            cursorBatchSize = Integer.parseInt(s.nextLine());
+
+            builder.cursor(cursorBatchSize, 10000);
+        } else {
+            builder.limit(numRecords);
+            builder.cursor(numRecords, 10000);
+        }
 
         builder.timeout(1800000l);
         builder.dialect(queryDialect);
@@ -530,15 +539,38 @@ public class AppSearch {
 
         System.out.println("[AppSearch] Query Execution Time: " + getExecutionTime(startTime, endTime));
 
-        List<Row> rows = result.getRows();
+        if (numRecords > 0) {
+            List<Row> rows = result.getRows();
 
-        for (Row row : rows) {
-            System.out.println(row.toString());
+            for (Row row : rows) {
+                System.out.println(row.toString());
+            }
+        } else {
+            // ITTERATE WITH CURSOR
+            long cursorID = result.getCursorId();
+
+            while (true) {
+                AggregationResult cursorResult = jedisPooled.ftCursorRead(indexName, cursorID, cursorBatchSize);
+
+                List<Row> rows = cursorResult.getRows();
+
+                for (Row row : rows) {
+                    System.out.println(row.toString());
+                }
+
+                System.out.print("Fetch Next Batch (y/n) :");
+                String nextBatch = s.nextLine();
+
+                if("n".equals(nextBatch)) {
+                    break;
+                }
+                else {
+                    continue;
+                }
+            }
         }
 
     }
-
-
 
     public static String printIndexSchema(JsonArray indexArray, String indexName) {
 
